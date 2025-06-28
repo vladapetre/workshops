@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Principles - My Docs</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Principles";
+        var mkdocs_page_input_path = "clean-architecture/02_principles.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> My Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Clean Architecture</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../01_introduction/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Principles</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#general-introduction-to-the-principles">General Introduction to the Principles</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#1-layered-architecture-supports-separation-of-concerns">1. Layered Architecture (Supports: Separation of Concerns)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2-the-dependency-rule-directly-reflects-dependency-inversion-principle">🔄 2. The Dependency Rule (Directly Reflects: Dependency Inversion Principle)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#3-independence-from-frameworks-and-tools-supports-openclosed-principle">3. Independence from Frameworks and Tools (Supports: Open/Closed Principle)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#4-testability-enabled-by-srp-dip">4. Testability (Enabled by: SRP, DIP)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#5-separation-of-concerns-core-principle-of-clean-architecture">5. Separation of Concerns (Core Principle of Clean Architecture)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#6-explicit-boundaries-supports-interface-segregation-encapsulation">6. Explicit Boundaries (Supports: Interface Segregation, Encapsulation)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#summary-clean-architecture-and-solid">Summary: Clean Architecture and SOLID</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">My Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Clean Architecture</li>
+      <li class="breadcrumb-item active">Principles</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="understand-the-core-principles-of-clean-architecture">Understand the Core Principles of Clean Architecture</h1>
+<p>Clean Architecture is a design philosophy that aims to build <strong>flexible, maintainable, and scalable software systems</strong>. It focuses on organizing code into <strong>well-defined layers</strong>, enforcing <strong>clear boundaries</strong>, and ensuring that <strong>core business logic is independent</strong> of frameworks, databases, and external tools.</p>
+<p>At its foundation, Clean Architecture embraces time-tested software principles, especially those from <strong>SOLID</strong>, with a strong emphasis on the <strong>Dependency Inversion Principle (DIP)</strong> and <strong>Separation of Concerns</strong>. These principles work together to support long-term maintainability and adaptability.</p>
+<h2 id="general-introduction-to-the-principles">General Introduction to the Principles</h2>
+<p>Clean Architecture is a layered approach to structuring systems that ensures <strong>the most important part of your software — the business logic — remains isolated and protected</strong>. It’s not about using specific tools or frameworks, but about controlling <strong>how your code depends on other code</strong>, and <strong>what responsibilities each part of your system has</strong>.c</p>
+<p>Here are the foundational principles that define Clean Architecture:</p>
+<h3 id="1-layered-architecture-supports-separation-of-concerns">1. Layered Architecture (Supports: Separation of Concerns)</h3>
+<p>Clean Architecture organizes a system into <strong>concentric layers</strong>, each with a specific responsibility:</p>
+<ul>
+<li><strong>Entities</strong>: Enterprise-wide business rules. These are the most abstract and reusable.</li>
+<li><strong>Use Cases</strong>: Application-specific business rules. They orchestrate interactions between entities and the outside world.</li>
+<li><strong>Interface Adapters</strong>: Controllers, presenters, and gateways that convert data from external formats (e.g., JSON, DB rows) into a form usable by the application.</li>
+<li><strong>Frameworks &amp; Drivers</strong>: External agents like the web server, database, UI framework, and so on.</li>
+</ul>
+<p>This structure enforces <strong>Separation of Concerns</strong> by isolating different responsibilities into well-defined layers.</p>
+<h3 id="2-the-dependency-rule-directly-reflects-dependency-inversion-principle">🔄 2. The Dependency Rule (Directly Reflects: Dependency Inversion Principle)</h3>
+<blockquote>
+<p><strong>"Dependencies must point inward — toward higher-level, more abstract layers."</strong></p>
+</blockquote>
+<p>In Clean Architecture:
+- Inner layers (like entities and use cases) <strong>must not depend</strong> on outer layers (like the database or web).
+- Instead, outer layers depend on <strong>abstractions</strong> defined in the inner layers.</p>
+<p>This reflects the <strong>Dependency Inversion Principle (DIP)</strong>, which states:</p>
+<blockquote>
+<p><em>High-level modules should not depend on low-level modules. Both should depend on abstractions.</em></p>
+</blockquote>
+<p>By inverting the usual flow of control and dependencies, Clean Architecture:
+- Protects business rules from changes in infrastructure or technology.
+- Encourages plug-and-play flexibility with databases, UIs, APIs, etc.</p>
+<h3 id="3-independence-from-frameworks-and-tools-supports-openclosed-principle">3. Independence from Frameworks and Tools (Supports: Open/Closed Principle)</h3>
+<p>Frameworks are <strong>implementation details</strong>, not architectural building blocks. Your application should work <strong>without being tightly coupled</strong> to any specific ORM, HTTP layer, or library.</p>
+<p>By depending on <strong>interfaces, not concrete implementations</strong>, you keep the system <strong>open to extension</strong> (you can add new tools) but <strong>closed to modification</strong> (your business logic stays untouched). This reflects the <strong>Open/Closed Principle (OCP)</strong>.</p>
+<h3 id="4-testability-enabled-by-srp-dip">4. Testability (Enabled by: SRP, DIP)</h3>
+<p>Thanks to strict boundaries and the use of abstractions, the inner parts of your system are easy to test in isolation:
+- You can unit test your use cases without spinning up a database.
+- You can mock I/O layers using interfaces defined in the domain.</p>
+<p>This improves speed and reliability of tests, and aligns with the <strong>Single Responsibility Principle (SRP)</strong> and <strong>DIP</strong>.</p>
+<h3 id="5-separation-of-concerns-core-principle-of-clean-architecture">5. Separation of Concerns (Core Principle of Clean Architecture)</h3>
+<p>Clean Architecture is fundamentally a codified form of <strong>Separation of Concerns</strong>:
+- Business logic is kept separate from UI, database, and frameworks.
+- Each layer has a single, clear responsibility.</p>
+<p>This reduces complexity, makes the codebase easier to reason about, and lowers the risk of unintended side effects when making changes.</p>
+<h3 id="6-explicit-boundaries-supports-interface-segregation-encapsulation">6. Explicit Boundaries (Supports: Interface Segregation, Encapsulation)</h3>
+<p>Boundaries are often implemented through <strong>interfaces</strong> or <strong>DTOs</strong>, which define <strong>clear contracts</strong> between layers:
+- UI doesn’t need to know how the use case is implemented — only how to call it.
+- The database adapter implements a gateway interface defined in the application layer.</p>
+<p>This approach supports the <strong>Interface Segregation Principle (ISP)</strong> by keeping interfaces small and focused, and encourages strong <strong>encapsulation</strong> between concerns.</p>
+<h2 id="summary-clean-architecture-and-solid">Summary: Clean Architecture and SOLID</h2>
+<p>Clean Architecture is <strong>not just an organizational scheme</strong> — it's a concrete application of <strong>SOLID principles</strong> and <strong>Separation of Concerns</strong> at the architectural level.</p>
+<table>
+<thead>
+<tr>
+<th>Clean Architecture Feature</th>
+<th>Related SOLID Principle</th>
+<th>Benefit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dependency Rule</td>
+<td>Dependency Inversion Principle (DIP)</td>
+<td>Decouples logic from frameworks</td>
+</tr>
+<tr>
+<td>Layered Structure</td>
+<td>Single Responsibility Principle (SRP)</td>
+<td>Clear roles and responsibilities</td>
+</tr>
+<tr>
+<td>Use of Interfaces/Ports</td>
+<td>Interface Segregation Principle (ISP)</td>
+<td>Modular and replaceable components</td>
+</tr>
+<tr>
+<td>Isolation of Business Logic</td>
+<td>Open/Closed Principle (OCP)</td>
+<td>Easy to extend, hard to break</td>
+</tr>
+<tr>
+<td>Strict boundaries between layers</td>
+<td>Separation of Concerns</td>
+<td>Easier maintenance and comprehension</td>
+</tr>
+</tbody>
+</table>
+<p>By grounding architecture in these principles, we ensure our systems are <strong>adaptable, robust, and built to last</strong> — no matter what tools or technologies we use.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../01_introduction/" class="btn btn-neutral float-left" title="Introduction"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../01_introduction/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
