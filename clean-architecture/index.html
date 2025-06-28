@@ -47,7 +47,13 @@
               <ul class="current">
                   <li class="toctree-l1 current"><a class="reference internal current" href="#">Introduction</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#what-is-clean-architecture">🧱 What Is Clean Architecture?</a>
+    <li class="toctree-l2"><a class="reference internal" href="#what-is-clean-architecture">What Is Clean Architecture?</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#the-problems-it-aims-to-solve">The Problems It Aims to Solve</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what-makes-it-clean">What Makes It “Clean”?</a>
+    </li>
+        </ul>
     </li>
     </ul>
                   </li>
@@ -77,17 +83,52 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="clean-architecture">Clean Architecture</h1>
-<p>Whether you’re working in .NET, Java, Python, or even JavaScript — the principles you'll learn here are <strong>technology-agnostic</strong> and apply across languages and frameworks.c</p>
-<h2 id="what-is-clean-architecture">🧱 What Is Clean Architecture?</h2>
-<p>Clean Architecture is a set of software design principles that help you <strong>organize your codebase</strong> in a way that:</p>
+<p>Whether you’re working in .NET, Java, Python, or even JavaScript — the principles you'll learn here are <strong>technology-agnostic</strong> and apply across languages and frameworks.</p>
+<h2 id="what-is-clean-architecture">What Is Clean Architecture?</h2>
+<p>Clean Architecture is a set of software design principles that help you <strong>organize your codebase</strong>. Popularized by <a href="http://www.cleancoder.com/products">Robert C. Martin (Uncle Bob)</a>, it emphasizes the separation of concerns by organizing code into distinct layers, with the core business logic at the center, isolated from external dependencies, in a way that:</p>
 <ul>
 <li>Keeps business rules at the center of the application</li>
 <li>Makes your system easy to test and modify</li>
 <li>Decouples framework code (like ORM, HTTP servers) from business logic</li>
 </ul>
-<blockquote>
 <p>Clean Architecture is about drawing clear <strong>boundaries</strong> between layers of your application, and ensuring that dependencies <strong>always point inward</strong> — toward your core logic.</p>
+<p>Clean Architecture was introduced as a <strong>response to these common pain points</strong>, aiming to provide a <strong>flexible, maintainable, and scalable</strong> structure for software systems.</p>
+<h3 id="the-problems-it-aims-to-solve">The Problems It Aims to Solve</h3>
+<ol>
+<li>
+<p><strong>Tight Coupling to Frameworks and Tools</strong><br />
+   Most applications start off relying heavily on frameworks (like Django, Spring, or ASP.NET). Over time, business logic becomes entangled with framework-specific code, making it hard to switch tools or upgrade.</p>
+</li>
+<li>
+<p><strong>Difficult Testing</strong><br />
+   When UI, database, and logic layers are all mixed together, writing meaningful, fast, and isolated tests becomes nearly impossible.</p>
+</li>
+<li>
+<p><strong>Poor Separation of Concerns</strong><br />
+   Without clear boundaries, changes in one part of the system ripple unpredictably through others. This slows down development and increases the risk of regressions.</p>
+</li>
+<li>
+<p><strong>Low Reusability and Portability</strong><br />
+   Code written with no clear architecture is hard to extract, reuse, or move into another context (e.g., a CLI tool, background job, or mobile app).</p>
+</li>
+<li>
+<p><strong>Software that Ages Poorly</strong><br />
+   Projects often start clean, but without structure, they gradually deteriorate as more features are added under pressure, without considering long-term maintainability.</p>
+</li>
+</ol>
+<h3 id="what-makes-it-clean">What Makes It “Clean”?</h3>
+<p>Clean Architecture is "clean" not because it's minimal or elegant, but because it <strong>clarifies dependencies</strong>, <strong>preserves intent</strong>, and <strong>protects core business logic</strong> from becoming polluted by technical concerns.</p>
+<p>At its core is the <strong>Dependency Rule</strong>:</p>
+<blockquote>
+<p><strong>"Source code dependencies must always point inward — from the outer layers (UI, database, frameworks) to the inner layers (business rules)."</strong></p>
 </blockquote>
+<p>This ensures that:</p>
+<ul>
+<li>You can swap the database without rewriting your logic.</li>
+<li>You can test application use cases without booting a web server.</li>
+<li>You can grow and maintain the system without accruing technical debt at every turn.</li>
+</ul>
+<p>Clean Architecture was created as a <strong>long-term solution</strong> to help software systems <strong>survive change</strong>, <strong>encourage good design</strong>, and allow developers to <strong>work with confidence</strong> rather than fear.</p>
               
             </div>
           </div><footer>
