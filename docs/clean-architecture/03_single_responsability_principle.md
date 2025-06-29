@@ -1,30 +1,36 @@
-# Single Responsability Principle (SRP)
+# Single Responsibility Principle (SRP)
+
+## Understanding the Single Responsibility Principle
 
 The **Single Responsibility Principle (SRP)** is the first of the five SOLID principles of object-oriented design. It states:
 
-> A module should have one, and only one, reason to change.
+> A module should have one, and only one, reason to change.  
 > — Robert C. Martin (Uncle Bob)
 
-In simpler terms:  
-Each class, module, or function should **do one thing** and **do it well**. It should have **only one responsibility**, and that responsibility should be **encapsulated entirely** by the unit.
+SRP encourages you to design classes, modules, or functions so that each one **does one thing and does it well**. Every unit should have a **single, clearly defined responsibility**, fully encapsulated within that unit.
 
+### Why SRP Matters
 
-## Why Is SRP Important?
+Violating SRP introduces several risks:
 
-When code has multiple responsibilities:
+- Code becomes harder to understand and maintain.
+- Changes in one responsibility can unintentionally affect others.
+- Unrelated parts of the system become tightly coupled, making refactoring and testing more difficult.
 
-* It becomes harder to understand.
-* A change in one responsibility may unintentionally affect another.
-* It increases the risk of **coupling** between unrelated parts of the system.
+By following SRP, you:
 
-### Example
+- Separate concerns, making each part of your codebase easier to test, extend, and modify.
+- Reduce the risk of unintended side effects when making changes.
 
-In this example, the `Vehicle` class does too much:
+---
 
-* Maintains its own state (data)
-* Tax rules (business rules)
-* Technical inspection (possibly hardware or external system logic)
+## Example: SRP Violation
 
+Consider this `Vehicle` class, which tries to do too much:
+
+- Maintains its own state (data)
+- Contains tax calculation logic (business rules)
+- Handles technical inspection (possibly infrastructure or external system logic)
 
 ```csharp
 public class Vehicle 
@@ -65,15 +71,18 @@ public class Vehicle
 }
 ```
 
-In the next example, we refactor the `Vehicle` class with SRP in mind: 
+**Problems:**
 
-* Vehicle now only manages its domain state and simple transitions (IsRegistered, Mileage).
-* Business rules (CalculateTax) and infrastructure logic (VerifyInspection) are handled by dedicated services.
-* Easier to test, extend, and maintain.
-* Each component has one reason to change.
+- The class is responsible for too many things.
+- Multiple reasons to change—a clear SRP violation.
+
+---
+
+## Refactoring for SRP
+
+To follow SRP, move each responsibility into its own class or interface. This makes your code easier to maintain and extend.
 
 ```csharp
-
 public class Vehicle
 {
     public string Make { get; private set; }
@@ -96,9 +105,8 @@ public class Vehicle
 
 public interface ITaxCalculator
 {
-    double CalculateTax(IVehicle vehicle);
+    double CalculateTax(Vehicle vehicle);
 }
-
 
 public class StandardTaxCalculator : ITaxCalculator
 {
@@ -107,17 +115,15 @@ public class StandardTaxCalculator : ITaxCalculator
         return vehicle.Mileage < 50000 ? 150 : 250;
     }
 }
-
-
 ```
 
 <details>
-<summary>Exercise: Complete the refactoring for the VerifyPeriodicTechnicalInspection method</summary>
-```csharp
+<summary>Exercise: Refactor the inspection logic for SRP</summary>
 
+```csharp
 public interface IInspectionService 
 {
-    bool Verify(IVehicle vehicle);
+    bool Verify(Vehicle vehicle);
 }
 
 public class SimpleInspectionService : IInspectionService
@@ -130,6 +136,26 @@ public class SimpleInspectionService : IInspectionService
 ```
 </details>
 
+---
+
+## Key Improvements
+
+- `Vehicle` only manages its own state and registration.
+- Tax calculation is handled by `StandardTaxCalculator`.
+- Technical inspection logic is handled by `SimpleInspectionService`.
+- Each class has a single responsibility and a single reason to change.
+
+---
+
+## Best Practices for SRP
+
+- Assign one responsibility per class or module.
+- If a class or function changes for more than one reason, split it up.
+- Keep business rules, infrastructure, and data management separate.
+
+---
+
 ## Takeaway
 
-SRP isn't about splitting for the sake of splitting — it's about isolating reasons to change. Each concern deserves its own home.
+SRP is about **isolating reasons to change**.  
+When each concern has its own home, your codebase becomes easier to understand, maintain, and extend.

@@ -3,13 +3,57 @@ site_name: Workshops
 nav:
   - Clean Architecture: 
       - Introduction: clean-architecture/01_introduction.md
-      - Principles: clean-architecture/02_design_principles.md
-      - SOLID: 
+      - Design Principles:
+        - Intro: clean-architecture/02_design_principles.md
         - Single Responsability Principle: clean-architecture/03_single_responsability_principle.md
         - Open Closed Principle: clean-architecture/04_open_closed_principle.md
         - Liskov Substitution Principle: clean-architecture/05_liskov_substitution_principle.md
+        - Interface Segregation Principle: clean-architecture/06_interface_segregation_principle.md
+        - Dependency Inversion Principle: clean-architecture/07_dependency_inversion_principle.md
+      - Component Principles:
+        - Intro: clean-architecture/08_component_principles.md
+        - Component Cohesion: clean-architecture/09_component_cohesion.md
+        - Component Coupling: clean-architecture/10_component_coupling.md
+      - Architectural Patterns:
+        - Intro: clean-architecture/11_architectural_patterns.md
+        - Layered Architecture: clean-architecture/12_layered_architecture.md
+        - Onion Architecture: clean-architecture/13_onion_architecture.md
+      #   - Layered Architecture: clean-architecture/15_layered_architecture.md
+      #   - Hexagonal Architecture: clean-architecture/16_hexagonal_architecture.md
+      #   - Microservices: clean-architecture/17_microservices.md
+      #   - Event-Driven Architecture: clean-architecture/18_event_driven_architecture.md 
 
 theme:
   name: material
-  features:
-    - navigation.expand
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: blue
+      accent: blue
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue
+      accent: blue  
+
+extra_css:
+  - css/style.css
+
+plugins:
+- plantuml:
+    puml_url: https://www.plantuml.com/plantuml/
+    puml_keyword: puml
+    local_file_inclusion: true
+    request_timeout: 300
+    verify_ssl: true
+    verbose: true
+    theme:
+      enabled: true
+      light: nord/day
+      dark: nord/night
+    cache:
+      backend: local
+      local:
+        path: "~/.cache/mkdocs_puml"
+        join_project_name: true
+    interaction:
+      enabled: true

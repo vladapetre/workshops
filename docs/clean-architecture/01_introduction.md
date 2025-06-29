@@ -1,47 +1,63 @@
 # Clean Architecture
 
-Whether you’re working in .NET, Java, Python, or even JavaScript — the principles you'll learn here are **technology-agnostic** and apply across languages and frameworks.
+**Clean Architecture** is a set of design principles that help you build software that is robust, adaptable, and easy to maintain. These principles are **technology-agnostic**—they apply whether you use .NET, Java, Python, JavaScript, or any other language.
 
 ## What Is Clean Architecture?
 
-Clean Architecture is a set of software design principles that help you **organize your codebase**. Popularized by [Robert C. Martin (Uncle Bob)](http://www.cleancoder.com/products), it emphasizes the separation of concerns by organizing code into distinct layers, with the core business logic at the center, isolated from external dependencies, in a way that:
+Clean Architecture structures your code so that **business logic** is at the center, insulated from external concerns like frameworks, databases, or user interfaces. Popularized by [Robert C. Martin (Uncle Bob)](http://www.cleancoder.com/products), this approach enforces **separation of concerns** by organizing code into layers.
 
-- Keeps business rules at the center of the application
-- Makes your system easy to test and modify
-- Decouples framework code (like ORM, HTTP servers) from business logic
+**Your goals:**
 
-Clean Architecture is about drawing clear **boundaries** between layers of your application, and ensuring that dependencies **always point inward** — toward your core logic. It was introduced as a **response to these common pain points**, aiming to provide a **flexible, maintainable, and scalable** structure for software systems.
+- Keep business rules independent and central to your application.
+- Make your system easy to test, modify, and extend as requirements evolve.
+- Decouple framework and infrastructure code (databases, web servers, UI) from your core logic.
 
+By drawing clear boundaries, you reduce the risk that changes in one area will break another. This leads to code that is easier to understand, safer to refactor, and more resilient to change.
 
-### The Problems It Aims to Solve
+## Common Problems Clean Architecture Solves
 
-1. **Tight Coupling to Frameworks and Tools**  
-   Most applications start off relying heavily on frameworks (like Django, Spring, or ASP.NET). Over time, business logic becomes entangled with framework-specific code, making it hard to switch tools or upgrade.
+Without a clear architectural approach, you often face these issues:
 
-2. **Difficult Testing**  
-   When UI, database, and logic layers are all mixed together, writing meaningful, fast, and isolated tests becomes nearly impossible.
+- **Tight Coupling to Frameworks and Tools:**  
+  Business logic mixed with framework-specific code makes upgrades and technology changes risky and difficult.
 
-3. **Poor Separation of Concerns**  
-   Without clear boundaries, changes in one part of the system ripple unpredictably through others. This slows down development and increases the risk of regressions.
+- **Difficult Testing:**  
+  Tangled UI, database, and business logic make fast, reliable, and isolated tests nearly impossible.
 
-4. **Low Reusability and Portability**  
-   Code written with no clear architecture is hard to extract, reuse, or move into another context (e.g., a CLI tool, background job, or mobile app).
+- **Poor Separation of Concerns:**  
+  Changes in one part of the system can cause unexpected issues elsewhere, slowing development and increasing bugs.
 
-5. **Software that Ages Poorly**  
-   Projects often start clean, but without structure, they gradually deteriorate as more features are added under pressure, without considering long-term maintainability.
+- **Low Reusability and Portability:**  
+  Poorly structured code is hard to reuse or adapt for other contexts, like CLI tools or mobile apps.
 
-### What Makes It “Clean”?
+- **Software That Ages Poorly:**  
+  Without a solid structure, projects become harder to maintain as new features are added, leading to technical debt.
 
-Clean Architecture is "clean" not because it's minimal or elegant, but because it **clarifies dependencies**, **preserves intent**, and **protects core business logic** from becoming polluted by technical concerns.
+## What Makes Architecture “Clean”?
 
-At its core is the **Dependency Rule**:
+A clean architecture is not just about tidy code—it’s about creating a structure that:
 
-> **"Source code dependencies must always point inward — from the outer layers (UI, database, frameworks) to the inner layers (business rules)."**
+- **Clarifies dependencies:**  
+  Makes it obvious what depends on what.
 
-This ensures that:
+- **Preserves intent:**  
+  Keeps business logic clear and isolated.
 
-- You can swap the database without rewriting your logic.
-- You can test application use cases without booting a web server.
-- You can grow and maintain the system without accruing technical debt at every turn.
+- **Protects core business logic:**  
+  Shields it from technical concerns and external changes.
 
-Clean Architecture was created as a **long-term solution** to help software systems **survive change**, **encourage good design**, and allow developers to **work with confidence** rather than fear.
+At the heart of Clean Architecture is the **Dependency Rule**:
+
+> *Source code dependencies must always point inward—from the outer layers (UI, database, frameworks) to the inner layers (business rules).*
+
+**Following this rule ensures:**
+
+- You can swap out databases or frameworks without rewriting core logic.
+- You can test use cases without starting a web server or connecting to a database.
+- You can grow and maintain your system without accumulating technical debt.
+
+**Investing in Clean Architecture pays off over time:**
+
+- Your software adapts to change more easily.
+- You encourage sound design habits.
+- You work with confidence as your system evolves.
