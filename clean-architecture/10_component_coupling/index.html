@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../04_open_closed_principle/">
+        <link rel="prev" href="../09_component_cohesion/">
       
       
-        <link rel="next" href="../06_interface_segregation_principle/">
+        <link rel="next" href="../11_architectural_patterns/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Liskov Substitution Principle - Workshops</title>
+        <title>Component Coupling - Workshops</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#liskov-substitution-principle-lsp" class="md-skip">
+        <a href="#component-coupling-in-clean-architecture" class="md-skip">
           Skip to content
         </a>
       
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Liskov Substitution Principle
+              Component Coupling
             
           </span>
         </div>
@@ -248,20 +248,18 @@
                 
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" >
         
           
           <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
@@ -277,7 +275,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_1_2">
             <span class="md-nav__icon md-icon"></span>
             Design Principles
@@ -357,32 +355,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Liskov Substitution Principle
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../05_liskov_substitution_principle/" class="md-nav__link">
         
   
   
@@ -393,92 +369,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#what-is-the-liskov-substitution-principle" class="md-nav__link">
-    <span class="md-ellipsis">
-      What is the Liskov Substitution Principle?
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="What is the Liskov Substitution Principle?">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#why-lsp-matters" class="md-nav__link">
-    <span class="md-ellipsis">
-      Why LSP Matters
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example-lsp-violation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example: LSP Violation
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Example: LSP Violation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#refactoring-for-lsp" class="md-nav__link">
-    <span class="md-ellipsis">
-      Refactoring for LSP
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#best-practices-for-applying-lsp" class="md-nav__link">
-    <span class="md-ellipsis">
-      Best Practices for Applying LSP
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#takeaway" class="md-nav__link">
-    <span class="md-ellipsis">
-      Takeaway
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -542,18 +432,20 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3" checked>
         
           
           <label class="md-nav__link" for="__nav_1_3" id="__nav_1_3_label" tabindex="0">
@@ -569,7 +461,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_1_3">
             <span class="md-nav__icon md-icon"></span>
             Component Principles
@@ -626,10 +518,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../10_component_coupling/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Component Coupling
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -640,6 +554,104 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-component-coupling" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is Component Coupling?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-three-principles-of-component-coupling" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Three Principles of Component Coupling
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Three Principles of Component Coupling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-acyclic-dependencies-principle-adp" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Acyclic Dependencies Principle (ADP)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-stable-dependencies-principle-sdp" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Stable Dependencies Principle (SDP)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-stable-abstractions-principle-sap" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Stable Abstractions Principle (SAP)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices-for-component-coupling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices for Component Coupling
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#takeaway" class="md-nav__link">
+    <span class="md-ellipsis">
+      Takeaway
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -802,19 +814,46 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#what-is-the-liskov-substitution-principle" class="md-nav__link">
+  <a href="#what-is-component-coupling" class="md-nav__link">
     <span class="md-ellipsis">
-      What is the Liskov Substitution Principle?
+      What Is Component Coupling?
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="What is the Liskov Substitution Principle?">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-three-principles-of-component-coupling" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Three Principles of Component Coupling
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Three Principles of Component Coupling">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#why-lsp-matters" class="md-nav__link">
+  <a href="#1-acyclic-dependencies-principle-adp" class="md-nav__link">
     <span class="md-ellipsis">
-      Why LSP Matters
+      1. Acyclic Dependencies Principle (ADP)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-stable-dependencies-principle-sdp" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Stable Dependencies Principle (SDP)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-stable-abstractions-principle-sap" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Stable Abstractions Principle (SAP)
     </span>
   </a>
   
@@ -826,33 +865,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#example-lsp-violation" class="md-nav__link">
+  <a href="#best-practices-for-component-coupling" class="md-nav__link">
     <span class="md-ellipsis">
-      Example: LSP Violation
+      Best Practices for Component Coupling
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Example: LSP Violation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#refactoring-for-lsp" class="md-nav__link">
-    <span class="md-ellipsis">
-      Refactoring for LSP
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#best-practices-for-applying-lsp" class="md-nav__link">
+  <a href="#summary" class="md-nav__link">
     <span class="md-ellipsis">
-      Best Practices for Applying LSP
+      Summary
     </span>
   </a>
   
@@ -883,140 +907,97 @@
 
 
 
-<h1 id="liskov-substitution-principle-lsp">Liskov Substitution Principle (LSP)</h1>
-<h2 id="what-is-the-liskov-substitution-principle">What is the Liskov Substitution Principle?</h2>
-<p>The <strong>Liskov Substitution Principle (LSP)</strong> is the third of the five SOLID principles of object-oriented design. It states:</p>
+<h1 id="component-coupling-in-clean-architecture">Component Coupling in Clean Architecture</h1>
+<h2 id="what-is-component-coupling">What Is Component Coupling?</h2>
+<p>After defining components in your architecture, the next challenge is to <strong>manage how they depend on each other</strong>. Component Coupling principles ensure that:</p>
+<ul>
+<li>Dependencies between components are <strong>stable</strong>, <strong>flexible</strong>, and <strong>testable</strong></li>
+<li>Changes in one component do <strong>not ripple through</strong> the entire codebase</li>
+<li>Higher-level components stay <strong>decoupled from implementation details</strong></li>
+</ul>
+<hr />
+<h2 id="the-three-principles-of-component-coupling">The Three Principles of Component Coupling</h2>
+<p>Robert C. Martin introduced three key principles for <strong>managing dependencies between components</strong>:</p>
+<hr />
+<h3 id="1-acyclic-dependencies-principle-adp">1. <strong>Acyclic Dependencies Principle (ADP)</strong></h3>
 <blockquote>
-<p><strong>Objects of a superclass should be replaceable with objects of its subclasses without affecting the correctness of the program.</strong><br />
-– Barbara Liskov</p>
+<p><em>“The dependency graph of components must have no cycles.”</em></p>
 </blockquote>
-<p>LSP means that you should be able to use any subtype of an interface or base class <strong>without altering the expected behavior</strong> of the program. Subtypes must honor the contract and intent of their base types, ensuring consistent and predictable behavior.</p>
-<h3 id="why-lsp-matters">Why LSP Matters</h3>
-<p>When LSP is violated:</p>
 <ul>
-<li>Subtypes break expectations, causing bugs or unexpected behavior.</li>
-<li>Code that works with the base type may fail or behave incorrectly with certain subtypes.</li>
-<li>The abstraction becomes unreliable and hard to maintain.</li>
+<li>Cycles between components make builds fragile and deployment unpredictable.</li>
+<li>Ensure components depend <strong>in one direction only</strong>.</li>
+<li>Use <strong>dependency inversion</strong> or <strong>interfaces</strong> to break circularity.</li>
+<li>Apply tools or build systems that <strong>enforce acyclic graphs</strong>.</li>
 </ul>
-<p>By following LSP, you ensure your abstractions are robust and your code is easier to extend and reason about.</p>
+<p>✅ Example: UI → Application → Domain ← Infrastructure<br />
+⛔ Avoid: UI → Application → Domain → Infrastructure → UI</p>
 <hr />
-<h2 id="example-lsp-violation">Example: LSP Violation</h2>
-<p>In this example, a subclass <code>UnregisteredVehicle</code> throws an exception when trying to register, violating the contract of <code>Vehicle</code>. If a method expects any <code>IVehicle</code> and calls <code>CreateRegistration()</code>, this will throw unexpectedly—a clear violation of LSP.</p>
-<pre><code class="language-csharp">public interface IVehicle
-{
-    string Make { get; }
-    string Model { get; }
-    decimal Mileage { get; }
-
-    double CalculateTax();
-    void CreateRegistration();
-    bool VerifyPeriodicTechnicalInspection();
-}
-
-public class UnregisteredVehicle : IVehicle
-{
-    public string Make =&gt; &quot;Prototype&quot;;
-    public string Model =&gt; &quot;Test Rig&quot;;
-    public bool IsRegistered =&gt; false;
-    public decimal Mileage =&gt; 0;
-
-    public double CalculateTax()
-    {
-        return 0;
-    }
-
-    public void CreateRegistration()
-    {
-        throw new NotSupportedException(&quot;This vehicle cannot be registered.&quot;);
-    }
-
-    public bool VerifyPeriodicTechnicalInspection()
-    {
-        return false;
-    }
-}
-</code></pre>
-<p>This breaks the expectation that all <code>IVehicle</code> objects can be registered.</p>
-<h3 id="refactoring-for-lsp">Refactoring for LSP</h3>
-<p>To comply with LSP, only types that support registration should expose registration behavior. Move registration to a separate interface, so unsupported operations are not part of the contract.</p>
-<pre><code class="language-csharp">public interface IVehicle
-{
-    string Make { get; }
-    string Model { get; }
-    decimal Mileage { get; }
-
-    double CalculateTax();
-    bool VerifyPeriodicTechnicalInspection();
-}
-
-public interface IRegistrableVehicle : IVehicle
-{
-    bool IsRegistered { get; }
-    void Register();
-}
-
-public class UnregisteredVehicle : IVehicle
-{
-    public string Make =&gt; &quot;Prototype&quot;;
-    public string Model =&gt; &quot;Test Rig&quot;;
-    public bool IsRegistered =&gt; false;
-    public decimal Mileage =&gt; 0;
-
-    public double CalculateTax()
-    {
-        return 0;
-    }
-
-    public bool VerifyPeriodicTechnicalInspection()
-    {
-        return false;
-    }
-}
-</code></pre>
-<details>
-<summary>Exercise: Complete the refactoring for the Register method</summary>
-
-<pre><code class="language-csharp">public interface IRegistractionService 
-{
-    bool Register(IVehicle vehicle);
-}
-
-public class SimpleRegistractionService : IRegistractionService
-{
-    public bool Register(IVehicle vehicle)
-    {
-        if (vehicle is IRegistrableVehicle registrable &amp;&amp; !registrable.IsRegistered)
-        {
-            registrable.Register();
-            return true;
-        }
-        return false;
-    }
-}
-</code></pre>
-
-</details>
-
-<p><strong>Key improvements:</strong></p>
+<h3 id="2-stable-dependencies-principle-sdp">2. <strong>Stable Dependencies Principle (SDP)</strong></h3>
+<blockquote>
+<p><em>“Depend in the direction of stability.”</em></p>
+</blockquote>
 <ul>
-<li>Only vehicles that support registration implement the registration interface.</li>
-<li>The contract for <code>IVehicle</code> is clear and safe for all subtypes.</li>
-<li>Code that works with <code>IVehicle</code> does not risk unexpected exceptions.</li>
+<li>A <strong>stable component</strong> is one that many others depend on but rarely changes.</li>
+<li>An <strong>unstable component</strong> changes frequently and should not be depended upon by stable ones.</li>
+<li>Domain models and interfaces tend to be <strong>stable</strong>.</li>
+<li>UIs and adapters are <strong>unstable</strong> and should depend on core logic.</li>
+<li>Use <strong>interfaces</strong> to invert dependencies when necessary.</li>
 </ul>
 <hr />
-<h2 id="best-practices-for-applying-lsp">Best Practices for Applying LSP</h2>
+<h3 id="3-stable-abstractions-principle-sap">3. <strong>Stable Abstractions Principle (SAP)</strong></h3>
+<blockquote>
+<p><em>“A component should be as abstract as it is stable.”</em></p>
+</blockquote>
 <ul>
-<li><strong>Design clear contracts:</strong> Only include methods and properties in base interfaces or classes that make sense for all subtypes.</li>
-<li><strong>Avoid unsupported operations:</strong> Don’t force subtypes to implement methods they can’t support—move those to separate interfaces.</li>
-<li><strong>Honor invariants:</strong> Subtypes should not weaken preconditions or strengthen postconditions of base type methods.</li>
-<li><strong>Test substitutability:</strong> Regularly verify that your subtypes can replace base types in real scenarios without breaking behavior.</li>
-<li><strong>Document expectations:</strong> Clearly state the intended use and constraints of your abstractions.</li>
+<li>If a component is very stable (i.e., many depend on it), it should expose <strong>abstract interfaces</strong> rather than concrete implementations.</li>
+<li>This ensures flexibility and allows changes without affecting dependent components.</li>
+<li><strong>Abstractions are easier to extend</strong> without modifying the stable core.</li>
 </ul>
+<p><strong>Rule of thumb:</strong>  </p>
+<blockquote>
+<p><strong>Stable = Abstract</strong><br />
+<strong>Unstable = Concrete</strong></p>
+</blockquote>
+<hr />
+<h2 id="best-practices-for-component-coupling">Best Practices for Component Coupling</h2>
+<ul>
+<li>Keep the dependency graph acyclic—no circular dependencies.</li>
+<li>Depend on stable, abstract components, not on unstable, concrete ones.</li>
+<li>Use interfaces to invert dependencies and decouple components.</li>
+<li>Regularly review your component structure as the system evolves.</li>
+</ul>
+<hr />
+<h2 id="summary">Summary</h2>
+<table>
+<thead>
+<tr>
+<th>Principle</th>
+<th>Focus</th>
+<th>Goal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ADP</strong></td>
+<td>Graph structure</td>
+<td>Avoid cycles</td>
+</tr>
+<tr>
+<td><strong>SDP</strong></td>
+<td>Dependency direction</td>
+<td>Depend on stable components</td>
+</tr>
+<tr>
+<td><strong>SAP</strong></td>
+<td>Design maturity</td>
+<td>Stable = abstract, not rigid</td>
+</tr>
+</tbody>
+</table>
 <hr />
 <h2 id="takeaway">Takeaway</h2>
-<p>Subtypes must honor the intent of their base types.<br />
-If a method or property doesn’t make sense for all variants, don’t put it in the base interface.<br />
-This keeps your abstractions reliable and your codebase robust.</p>
+<p>Component Coupling principles guide the <strong>relationships between modules</strong>—keeping systems loosely coupled, testable, and scalable.<br />
+Combine them with cohesion principles (REP, CCP, CRP) for a strong Clean Architecture foundation.</p>
 
 
 

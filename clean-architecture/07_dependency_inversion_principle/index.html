@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../04_open_closed_principle/">
+        <link rel="prev" href="../06_interface_segregation_principle/">
       
       
-        <link rel="next" href="../06_interface_segregation_principle/">
+        <link rel="next" href="../08_component_principles/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Liskov Substitution Principle - Workshops</title>
+        <title>Dependency Inversion Principle - Workshops</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#liskov-substitution-principle-lsp" class="md-skip">
+        <a href="#dependency-inversion-principle-dip" class="md-skip">
           Skip to content
         </a>
       
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Liskov Substitution Principle
+              Dependency Inversion Principle
             
           </span>
         </div>
@@ -357,32 +357,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Liskov Substitution Principle
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../05_liskov_substitution_principle/" class="md-nav__link">
         
   
   
@@ -393,92 +371,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#what-is-the-liskov-substitution-principle" class="md-nav__link">
-    <span class="md-ellipsis">
-      What is the Liskov Substitution Principle?
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="What is the Liskov Substitution Principle?">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#why-lsp-matters" class="md-nav__link">
-    <span class="md-ellipsis">
-      Why LSP Matters
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example-lsp-violation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example: LSP Violation
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Example: LSP Violation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#refactoring-for-lsp" class="md-nav__link">
-    <span class="md-ellipsis">
-      Refactoring for LSP
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#best-practices-for-applying-lsp" class="md-nav__link">
-    <span class="md-ellipsis">
-      Best Practices for Applying LSP
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#takeaway" class="md-nav__link">
-    <span class="md-ellipsis">
-      Takeaway
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -511,10 +403,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../07_dependency_inversion_principle/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Dependency Inversion Principle
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -525,6 +439,95 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#understanding-the-dependency-inversion-principle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understanding the Dependency Inversion Principle
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Understanding the Dependency Inversion Principle">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-dip-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why DIP Matters
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-dip-violation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: DIP Violation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#refactoring-for-dip" class="md-nav__link">
+    <span class="md-ellipsis">
+      Refactoring for DIP
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-benefits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Benefits
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices-for-applying-dip" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices for Applying DIP
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#takeaway" class="md-nav__link">
+    <span class="md-ellipsis">
+      Takeaway
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -802,19 +805,19 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#what-is-the-liskov-substitution-principle" class="md-nav__link">
+  <a href="#understanding-the-dependency-inversion-principle" class="md-nav__link">
     <span class="md-ellipsis">
-      What is the Liskov Substitution Principle?
+      Understanding the Dependency Inversion Principle
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="What is the Liskov Substitution Principle?">
+    <nav class="md-nav" aria-label="Understanding the Dependency Inversion Principle">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#why-lsp-matters" class="md-nav__link">
+  <a href="#why-dip-matters" class="md-nav__link">
     <span class="md-ellipsis">
-      Why LSP Matters
+      Why DIP Matters
     </span>
   </a>
   
@@ -826,33 +829,36 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#example-lsp-violation" class="md-nav__link">
+  <a href="#example-dip-violation" class="md-nav__link">
     <span class="md-ellipsis">
-      Example: LSP Violation
+      Example: DIP Violation
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Example: LSP Violation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#refactoring-for-lsp" class="md-nav__link">
-    <span class="md-ellipsis">
-      Refactoring for LSP
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#best-practices-for-applying-lsp" class="md-nav__link">
+  <a href="#refactoring-for-dip" class="md-nav__link">
     <span class="md-ellipsis">
-      Best Practices for Applying LSP
+      Refactoring for DIP
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-benefits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Benefits
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices-for-applying-dip" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices for Applying DIP
     </span>
   </a>
   
@@ -883,140 +889,101 @@
 
 
 
-<h1 id="liskov-substitution-principle-lsp">Liskov Substitution Principle (LSP)</h1>
-<h2 id="what-is-the-liskov-substitution-principle">What is the Liskov Substitution Principle?</h2>
-<p>The <strong>Liskov Substitution Principle (LSP)</strong> is the third of the five SOLID principles of object-oriented design. It states:</p>
+<h1 id="dependency-inversion-principle-dip">Dependency Inversion Principle (DIP)</h1>
+<h2 id="understanding-the-dependency-inversion-principle">Understanding the Dependency Inversion Principle</h2>
+<p>The <strong>Dependency Inversion Principle (DIP)</strong> is the fifth of the five SOLID principles of object-oriented design. It states:</p>
 <blockquote>
-<p><strong>Objects of a superclass should be replaceable with objects of its subclasses without affecting the correctness of the program.</strong><br />
-– Barbara Liskov</p>
+<p><strong>High-level modules should not depend on low-level modules. Both should depend on abstractions.</strong><br />
+<strong>Abstractions should not depend on details. Details should depend on abstractions.</strong></p>
 </blockquote>
-<p>LSP means that you should be able to use any subtype of an interface or base class <strong>without altering the expected behavior</strong> of the program. Subtypes must honor the contract and intent of their base types, ensuring consistent and predictable behavior.</p>
-<h3 id="why-lsp-matters">Why LSP Matters</h3>
-<p>When LSP is violated:</p>
+<p><strong>DIP</strong> means your core logic (high-level modules) should depend on <strong>interfaces or abstractions</strong>, not on concrete implementations (low-level modules). This decouples your business logic from infrastructure and details, making your codebase more flexible, testable, and maintainable.</p>
+<h3 id="why-dip-matters">Why DIP Matters</h3>
+<p>When DIP is violated:</p>
 <ul>
-<li>Subtypes break expectations, causing bugs or unexpected behavior.</li>
-<li>Code that works with the base type may fail or behave incorrectly with certain subtypes.</li>
-<li>The abstraction becomes unreliable and hard to maintain.</li>
+<li>High-level code is tightly coupled to low-level details.</li>
+<li>Changing infrastructure or implementation details requires changes in core logic.</li>
+<li>Testing and extending the system becomes difficult.</li>
 </ul>
-<p>By following LSP, you ensure your abstractions are robust and your code is easier to extend and reason about.</p>
+<p>By following DIP, you:</p>
+<ul>
+<li>Enable clean architecture boundaries.</li>
+<li>Make your code easier to adapt and test.</li>
+<li>Reduce the risk of breaking core logic when details change.</li>
+</ul>
 <hr />
-<h2 id="example-lsp-violation">Example: LSP Violation</h2>
-<p>In this example, a subclass <code>UnregisteredVehicle</code> throws an exception when trying to register, violating the contract of <code>Vehicle</code>. If a method expects any <code>IVehicle</code> and calls <code>CreateRegistration()</code>, this will throw unexpectedly—a clear violation of LSP.</p>
-<pre><code class="language-csharp">public interface IVehicle
+<h2 id="example-dip-violation">Example: DIP Violation</h2>
+<p>Suppose your application logic directly instantiates concrete classes:</p>
+<pre><code class="language-csharp">public class VehicleInspectionProcessor
 {
-    string Make { get; }
-    string Model { get; }
-    decimal Mileage { get; }
-
-    double CalculateTax();
-    void CreateRegistration();
-    bool VerifyPeriodicTechnicalInspection();
-}
-
-public class UnregisteredVehicle : IVehicle
-{
-    public string Make =&gt; &quot;Prototype&quot;;
-    public string Model =&gt; &quot;Test Rig&quot;;
-    public bool IsRegistered =&gt; false;
-    public decimal Mileage =&gt; 0;
-
-    public double CalculateTax()
+    public bool ProcessInspection(IVehicle vehicle)
     {
-        return 0;
-    }
-
-    public void CreateRegistration()
-    {
-        throw new NotSupportedException(&quot;This vehicle cannot be registered.&quot;);
-    }
-
-    public bool VerifyPeriodicTechnicalInspection()
-    {
-        return false;
+        var service = new SimpleInspectionService(); // ⚠ tightly coupled to a concrete class
+        return service.Verify(vehicle);
     }
 }
 </code></pre>
-<p>This breaks the expectation that all <code>IVehicle</code> objects can be registered.</p>
-<h3 id="refactoring-for-lsp">Refactoring for LSP</h3>
-<p>To comply with LSP, only types that support registration should expose registration behavior. Move registration to a separate interface, so unsupported operations are not part of the contract.</p>
-<pre><code class="language-csharp">public interface IVehicle
+<p><strong>Problems:</strong></p>
+<ul>
+<li>The processor is tightly bound to a specific implementation.</li>
+<li>Hard to swap out the inspection logic or test the processor in isolation.</li>
+</ul>
+<hr />
+<h2 id="refactoring-for-dip">Refactoring for DIP</h2>
+<p>Refactor the processor to depend on an abstraction (<code>IInspectionService</code>) and inject the dependency:</p>
+<pre><code class="language-csharp">public interface IInspectionService
 {
-    string Make { get; }
-    string Model { get; }
-    decimal Mileage { get; }
-
-    double CalculateTax();
-    bool VerifyPeriodicTechnicalInspection();
+    bool Verify(IVehicle vehicle);
 }
 
-public interface IRegistrableVehicle : IVehicle
+public class SimpleInspectionService : IInspectionService
 {
-    bool IsRegistered { get; }
-    void Register();
-}
-
-public class UnregisteredVehicle : IVehicle
-{
-    public string Make =&gt; &quot;Prototype&quot;;
-    public string Model =&gt; &quot;Test Rig&quot;;
-    public bool IsRegistered =&gt; false;
-    public decimal Mileage =&gt; 0;
-
-    public double CalculateTax()
+    public bool Verify(IVehicle vehicle)
     {
-        return 0;
-    }
-
-    public bool VerifyPeriodicTechnicalInspection()
-    {
-        return false;
+        return vehicle.Mileage &lt; 100000;
     }
 }
 </code></pre>
 <details>
-<summary>Exercise: Complete the refactoring for the Register method</summary>
+<summary>Exercise: Refactor the VehicleInspectionProcessor for DIP</summary>
 
-<pre><code class="language-csharp">public interface IRegistractionService 
-{
-    bool Register(IVehicle vehicle);
-}
 
-public class SimpleRegistractionService : IRegistractionService
+<pre><code class="language-csharp">public class VehicleInspectionProcessor
 {
-    public bool Register(IVehicle vehicle)
+    private readonly IInspectionService _inspectionService;
+
+    public VehicleInspectionProcessor(IInspectionService inspectionService)
     {
-        if (vehicle is IRegistrableVehicle registrable &amp;&amp; !registrable.IsRegistered)
-        {
-            registrable.Register();
-            return true;
-        }
-        return false;
+        _inspectionService = inspectionService;
+    }
+
+    public bool ProcessInspection(IVehicle vehicle)
+    {
+        return _inspectionService.Verify(vehicle);
     }
 }
 </code></pre>
 
 </details>
 
-<p><strong>Key improvements:</strong></p>
+<hr />
+<h2 id="key-benefits">Key Benefits</h2>
 <ul>
-<li>Only vehicles that support registration implement the registration interface.</li>
-<li>The contract for <code>IVehicle</code> is clear and safe for all subtypes.</li>
-<li>Code that works with <code>IVehicle</code> does not risk unexpected exceptions.</li>
+<li><strong>Decoupled design:</strong> High-level modules depend on abstractions, not concrete implementations.</li>
+<li><strong>Easier testing:</strong> Dependencies are injected, making the code easier to test and extend.</li>
+<li><strong>Flexible architecture:</strong> Infrastructure and business logic are separated.</li>
 </ul>
 <hr />
-<h2 id="best-practices-for-applying-lsp">Best Practices for Applying LSP</h2>
+<h2 id="best-practices-for-applying-dip">Best Practices for Applying DIP</h2>
 <ul>
-<li><strong>Design clear contracts:</strong> Only include methods and properties in base interfaces or classes that make sense for all subtypes.</li>
-<li><strong>Avoid unsupported operations:</strong> Don’t force subtypes to implement methods they can’t support—move those to separate interfaces.</li>
-<li><strong>Honor invariants:</strong> Subtypes should not weaken preconditions or strengthen postconditions of base type methods.</li>
-<li><strong>Test substitutability:</strong> Regularly verify that your subtypes can replace base types in real scenarios without breaking behavior.</li>
-<li><strong>Document expectations:</strong> Clearly state the intended use and constraints of your abstractions.</li>
+<li>Depend on <strong>interfaces</strong> or <strong>abstract classes</strong>, not concrete types.</li>
+<li>Use <strong>dependency injection</strong> to provide implementations at runtime.</li>
+<li>Keep abstractions in core layers; implement details in outer layers.</li>
+<li>Avoid new-ing up dependencies inside your business logic.</li>
 </ul>
 <hr />
 <h2 id="takeaway">Takeaway</h2>
-<p>Subtypes must honor the intent of their base types.<br />
-If a method or property doesn’t make sense for all variants, don’t put it in the base interface.<br />
-This keeps your abstractions reliable and your codebase robust.</p>
+<p>DIP encourages designing your system around <strong>interfaces</strong> and <strong>injection</strong>, not <strong>instantiation</strong>.<br />
+This decouples your core logic from infrastructure and allows for clean architecture boundaries.</p>
 
 
 

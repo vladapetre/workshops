@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../04_open_closed_principle/">
+        <link rel="prev" href="../07_dependency_inversion_principle/">
       
       
-        <link rel="next" href="../06_interface_segregation_principle/">
+        <link rel="next" href="../09_component_cohesion/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Liskov Substitution Principle - Workshops</title>
+        <title>Intro - Workshops</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#liskov-substitution-principle-lsp" class="md-skip">
+        <a href="#introduction-to-component-principles-in-clean-architecture" class="md-skip">
           Skip to content
         </a>
       
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Liskov Substitution Principle
+              Intro
             
           </span>
         </div>
@@ -248,20 +248,18 @@
                 
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" >
         
           
           <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
@@ -277,7 +275,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_1_2">
             <span class="md-nav__icon md-icon"></span>
             Design Principles
@@ -357,32 +355,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Liskov Substitution Principle
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../05_liskov_substitution_principle/" class="md-nav__link">
         
   
   
@@ -393,92 +369,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#what-is-the-liskov-substitution-principle" class="md-nav__link">
-    <span class="md-ellipsis">
-      What is the Liskov Substitution Principle?
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="What is the Liskov Substitution Principle?">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#why-lsp-matters" class="md-nav__link">
-    <span class="md-ellipsis">
-      Why LSP Matters
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example-lsp-violation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example: LSP Violation
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Example: LSP Violation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#refactoring-for-lsp" class="md-nav__link">
-    <span class="md-ellipsis">
-      Refactoring for LSP
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#best-practices-for-applying-lsp" class="md-nav__link">
-    <span class="md-ellipsis">
-      Best Practices for Applying LSP
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#takeaway" class="md-nav__link">
-    <span class="md-ellipsis">
-      Takeaway
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -542,18 +432,20 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3" checked>
         
           
           <label class="md-nav__link" for="__nav_1_3" id="__nav_1_3_label" tabindex="0">
@@ -569,7 +461,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_1_3">
             <span class="md-nav__icon md-icon"></span>
             Component Principles
@@ -580,10 +472,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../08_component_principles/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Intro
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -594,6 +508,44 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-are-component-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Are Component Principles?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-component-principles-matter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Component Principles Matter
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -802,66 +754,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#what-is-the-liskov-substitution-principle" class="md-nav__link">
+  <a href="#what-are-component-principles" class="md-nav__link">
     <span class="md-ellipsis">
-      What is the Liskov Substitution Principle?
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="What is the Liskov Substitution Principle?">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#why-lsp-matters" class="md-nav__link">
-    <span class="md-ellipsis">
-      Why LSP Matters
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example-lsp-violation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example: LSP Violation
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Example: LSP Violation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#refactoring-for-lsp" class="md-nav__link">
-    <span class="md-ellipsis">
-      Refactoring for LSP
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#best-practices-for-applying-lsp" class="md-nav__link">
-    <span class="md-ellipsis">
-      Best Practices for Applying LSP
+      What Are Component Principles?
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#takeaway" class="md-nav__link">
+  <a href="#why-component-principles-matter" class="md-nav__link">
     <span class="md-ellipsis">
-      Takeaway
+      Why Component Principles Matter
     </span>
   </a>
   
@@ -883,140 +787,32 @@
 
 
 
-<h1 id="liskov-substitution-principle-lsp">Liskov Substitution Principle (LSP)</h1>
-<h2 id="what-is-the-liskov-substitution-principle">What is the Liskov Substitution Principle?</h2>
-<p>The <strong>Liskov Substitution Principle (LSP)</strong> is the third of the five SOLID principles of object-oriented design. It states:</p>
-<blockquote>
-<p><strong>Objects of a superclass should be replaceable with objects of its subclasses without affecting the correctness of the program.</strong><br />
-– Barbara Liskov</p>
-</blockquote>
-<p>LSP means that you should be able to use any subtype of an interface or base class <strong>without altering the expected behavior</strong> of the program. Subtypes must honor the contract and intent of their base types, ensuring consistent and predictable behavior.</p>
-<h3 id="why-lsp-matters">Why LSP Matters</h3>
-<p>When LSP is violated:</p>
+<h1 id="introduction-to-component-principles-in-clean-architecture">Introduction to Component Principles in Clean Architecture</h1>
+<h2 id="what-are-component-principles">What Are Component Principles?</h2>
+<p>In Clean Architecture, after decomposing your application into meaningful <strong>components</strong> or <strong>modules</strong> (such as core, services, adapters, infrastructure), you need guiding principles to manage the <strong>relationships between these components</strong>.</p>
+<p>While <strong>SOLID</strong> focuses on <strong>class-level and object-level design</strong>, <strong>Component Principles</strong> guide <strong>package-level architecture</strong> and ensure that components remain:</p>
 <ul>
-<li>Subtypes break expectations, causing bugs or unexpected behavior.</li>
-<li>Code that works with the base type may fail or behave incorrectly with certain subtypes.</li>
-<li>The abstraction becomes unreliable and hard to maintain.</li>
-</ul>
-<p>By following LSP, you ensure your abstractions are robust and your code is easier to extend and reason about.</p>
-<hr />
-<h2 id="example-lsp-violation">Example: LSP Violation</h2>
-<p>In this example, a subclass <code>UnregisteredVehicle</code> throws an exception when trying to register, violating the contract of <code>Vehicle</code>. If a method expects any <code>IVehicle</code> and calls <code>CreateRegistration()</code>, this will throw unexpectedly—a clear violation of LSP.</p>
-<pre><code class="language-csharp">public interface IVehicle
-{
-    string Make { get; }
-    string Model { get; }
-    decimal Mileage { get; }
-
-    double CalculateTax();
-    void CreateRegistration();
-    bool VerifyPeriodicTechnicalInspection();
-}
-
-public class UnregisteredVehicle : IVehicle
-{
-    public string Make =&gt; &quot;Prototype&quot;;
-    public string Model =&gt; &quot;Test Rig&quot;;
-    public bool IsRegistered =&gt; false;
-    public decimal Mileage =&gt; 0;
-
-    public double CalculateTax()
-    {
-        return 0;
-    }
-
-    public void CreateRegistration()
-    {
-        throw new NotSupportedException(&quot;This vehicle cannot be registered.&quot;);
-    }
-
-    public bool VerifyPeriodicTechnicalInspection()
-    {
-        return false;
-    }
-}
-</code></pre>
-<p>This breaks the expectation that all <code>IVehicle</code> objects can be registered.</p>
-<h3 id="refactoring-for-lsp">Refactoring for LSP</h3>
-<p>To comply with LSP, only types that support registration should expose registration behavior. Move registration to a separate interface, so unsupported operations are not part of the contract.</p>
-<pre><code class="language-csharp">public interface IVehicle
-{
-    string Make { get; }
-    string Model { get; }
-    decimal Mileage { get; }
-
-    double CalculateTax();
-    bool VerifyPeriodicTechnicalInspection();
-}
-
-public interface IRegistrableVehicle : IVehicle
-{
-    bool IsRegistered { get; }
-    void Register();
-}
-
-public class UnregisteredVehicle : IVehicle
-{
-    public string Make =&gt; &quot;Prototype&quot;;
-    public string Model =&gt; &quot;Test Rig&quot;;
-    public bool IsRegistered =&gt; false;
-    public decimal Mileage =&gt; 0;
-
-    public double CalculateTax()
-    {
-        return 0;
-    }
-
-    public bool VerifyPeriodicTechnicalInspection()
-    {
-        return false;
-    }
-}
-</code></pre>
-<details>
-<summary>Exercise: Complete the refactoring for the Register method</summary>
-
-<pre><code class="language-csharp">public interface IRegistractionService 
-{
-    bool Register(IVehicle vehicle);
-}
-
-public class SimpleRegistractionService : IRegistractionService
-{
-    public bool Register(IVehicle vehicle)
-    {
-        if (vehicle is IRegistrableVehicle registrable &amp;&amp; !registrable.IsRegistered)
-        {
-            registrable.Register();
-            return true;
-        }
-        return false;
-    }
-}
-</code></pre>
-
-</details>
-
-<p><strong>Key improvements:</strong></p>
-<ul>
-<li>Only vehicles that support registration implement the registration interface.</li>
-<li>The contract for <code>IVehicle</code> is clear and safe for all subtypes.</li>
-<li>Code that works with <code>IVehicle</code> does not risk unexpected exceptions.</li>
+<li><strong>Reusable</strong></li>
+<li><strong>Maintainable</strong></li>
+<li><strong>Flexible</strong></li>
+<li><strong>Independent</strong></li>
 </ul>
 <hr />
-<h2 id="best-practices-for-applying-lsp">Best Practices for Applying LSP</h2>
+<h2 id="why-component-principles-matter">Why Component Principles Matter</h2>
+<p>As projects grow, codebases naturally fragment into multiple layers, domains, and technical concerns. Without structure, this leads to:</p>
 <ul>
-<li><strong>Design clear contracts:</strong> Only include methods and properties in base interfaces or classes that make sense for all subtypes.</li>
-<li><strong>Avoid unsupported operations:</strong> Don’t force subtypes to implement methods they can’t support—move those to separate interfaces.</li>
-<li><strong>Honor invariants:</strong> Subtypes should not weaken preconditions or strengthen postconditions of base type methods.</li>
-<li><strong>Test substitutability:</strong> Regularly verify that your subtypes can replace base types in real scenarios without breaking behavior.</li>
-<li><strong>Document expectations:</strong> Clearly state the intended use and constraints of your abstractions.</li>
+<li>Circular dependencies between packages</li>
+<li>Painful refactoring</li>
+<li>Fragile build processes</li>
+<li>Poor modularization and tight coupling</li>
 </ul>
-<hr />
-<h2 id="takeaway">Takeaway</h2>
-<p>Subtypes must honor the intent of their base types.<br />
-If a method or property doesn’t make sense for all variants, don’t put it in the base interface.<br />
-This keeps your abstractions reliable and your codebase robust.</p>
+<p><strong>Component principles</strong> help ensure that each module is:</p>
+<ul>
+<li>Well-defined</li>
+<li>Independently deployable</li>
+<li>Respectful of architectural boundaries</li>
+</ul>
+<p>Applying these principles keeps your architecture scalable and your codebase manageable as your system evolves.</p>
 
 
 

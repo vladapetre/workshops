@@ -24,6 +24,9 @@
     
       <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
       
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
       
 
 
@@ -41,6 +44,12 @@
       
     
     
+      <link rel="stylesheet" href="../../css/style.css">
+    
+      <link rel="stylesheet" href="../../assets/mkdocs_puml/puml.css">
+    
+      <link rel="stylesheet" href="../../assets/mkdocs_puml/interaction.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -51,7 +60,14 @@
   </head>
   
   
-    <body dir="ltr">
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -103,50 +119,28 @@
       </div>
     </div>
     
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="blue"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    
+  
+</form>
+      
+    
     
       <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
-    
-      
-      
-        <label class="md-header__button md-icon" for="__search">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-        </label>
-        <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Search">
-        
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
-        </button>
-      </nav>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            Initializing search
-          </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-      
     
     
   </nav>
@@ -288,29 +282,23 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="What Is Clean Architecture?">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#the-problems-it-aims-to-solve" class="md-nav__link">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-problems-clean-architecture-solves" class="md-nav__link">
     <span class="md-ellipsis">
-      The Problems It Aims to Solve
+      Common Problems Clean Architecture Solves
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#what-makes-it-clean" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#what-makes-architecture-clean" class="md-nav__link">
     <span class="md-ellipsis">
-      What Makes It “Clean”?
+      What Makes Architecture “Clean”?
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -318,29 +306,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../02_design_principles/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Principles
-    
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -361,17 +326,15 @@
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" >
         
           
-          <label class="md-nav__link" for="__nav_1_3" id="__nav_1_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
             
   
   
   <span class="md-ellipsis">
-    SOLID
+    Design Principles
     
   </span>
   
@@ -379,12 +342,35 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_1_3">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_2">
             <span class="md-nav__icon md-icon"></span>
-            SOLID
+            Design Principles
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02_design_principles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Intro
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -455,6 +441,282 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06_interface_segregation_principle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Interface Segregation Principle
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07_dependency_inversion_principle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Dependency Inversion Principle
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_3" id="__nav_1_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Component Principles
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            Component Principles
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08_component_principles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Intro
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09_component_cohesion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Component Cohesion
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10_component_coupling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Component Coupling
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_4" id="__nav_1_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Architectural Patterns
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            Architectural Patterns
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11_architectural_patterns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Intro
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12_layered_architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Layered Architecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../13_onion_architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Onion Architecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -503,29 +765,23 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="What Is Clean Architecture?">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#the-problems-it-aims-to-solve" class="md-nav__link">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-problems-clean-architecture-solves" class="md-nav__link">
     <span class="md-ellipsis">
-      The Problems It Aims to Solve
+      Common Problems Clean Architecture Solves
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#what-makes-it-clean" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#what-makes-architecture-clean" class="md-nav__link">
     <span class="md-ellipsis">
-      What Makes It “Clean”?
+      What Makes Architecture “Clean”?
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -546,51 +802,72 @@
 
 
 <h1 id="clean-architecture">Clean Architecture</h1>
-<p>Whether you’re working in .NET, Java, Python, or even JavaScript — the principles you'll learn here are <strong>technology-agnostic</strong> and apply across languages and frameworks.</p>
+<p><strong>Clean Architecture</strong> is a set of design principles that help you build software that is robust, adaptable, and easy to maintain. These principles are <strong>technology-agnostic</strong>—they apply whether you use .NET, Java, Python, JavaScript, or any other language.</p>
 <h2 id="what-is-clean-architecture">What Is Clean Architecture?</h2>
-<p>Clean Architecture is a set of software design principles that help you <strong>organize your codebase</strong>. Popularized by <a href="http://www.cleancoder.com/products">Robert C. Martin (Uncle Bob)</a>, it emphasizes the separation of concerns by organizing code into distinct layers, with the core business logic at the center, isolated from external dependencies, in a way that:</p>
+<p>Clean Architecture structures your code so that <strong>business logic</strong> is at the center, insulated from external concerns like frameworks, databases, or user interfaces. Popularized by <a href="http://www.cleancoder.com/products">Robert C. Martin (Uncle Bob)</a>, this approach enforces <strong>separation of concerns</strong> by organizing code into layers.</p>
+<p><strong>Your goals:</strong></p>
 <ul>
-<li>Keeps business rules at the center of the application</li>
-<li>Makes your system easy to test and modify</li>
-<li>Decouples framework code (like ORM, HTTP servers) from business logic</li>
+<li>Keep business rules independent and central to your application.</li>
+<li>Make your system easy to test, modify, and extend as requirements evolve.</li>
+<li>Decouple framework and infrastructure code (databases, web servers, UI) from your core logic.</li>
 </ul>
-<p>Clean Architecture is about drawing clear <strong>boundaries</strong> between layers of your application, and ensuring that dependencies <strong>always point inward</strong> — toward your core logic. It was introduced as a <strong>response to these common pain points</strong>, aiming to provide a <strong>flexible, maintainable, and scalable</strong> structure for software systems.</p>
-<h3 id="the-problems-it-aims-to-solve">The Problems It Aims to Solve</h3>
-<ol>
+<p>By drawing clear boundaries, you reduce the risk that changes in one area will break another. This leads to code that is easier to understand, safer to refactor, and more resilient to change.</p>
+<h2 id="common-problems-clean-architecture-solves">Common Problems Clean Architecture Solves</h2>
+<p>Without a clear architectural approach, you often face these issues:</p>
+<ul>
 <li>
-<p><strong>Tight Coupling to Frameworks and Tools</strong><br />
-   Most applications start off relying heavily on frameworks (like Django, Spring, or ASP.NET). Over time, business logic becomes entangled with framework-specific code, making it hard to switch tools or upgrade.</p>
+<p><strong>Tight Coupling to Frameworks and Tools:</strong><br />
+  Business logic mixed with framework-specific code makes upgrades and technology changes risky and difficult.</p>
 </li>
 <li>
-<p><strong>Difficult Testing</strong><br />
-   When UI, database, and logic layers are all mixed together, writing meaningful, fast, and isolated tests becomes nearly impossible.</p>
+<p><strong>Difficult Testing:</strong><br />
+  Tangled UI, database, and business logic make fast, reliable, and isolated tests nearly impossible.</p>
 </li>
 <li>
-<p><strong>Poor Separation of Concerns</strong><br />
-   Without clear boundaries, changes in one part of the system ripple unpredictably through others. This slows down development and increases the risk of regressions.</p>
+<p><strong>Poor Separation of Concerns:</strong><br />
+  Changes in one part of the system can cause unexpected issues elsewhere, slowing development and increasing bugs.</p>
 </li>
 <li>
-<p><strong>Low Reusability and Portability</strong><br />
-   Code written with no clear architecture is hard to extract, reuse, or move into another context (e.g., a CLI tool, background job, or mobile app).</p>
+<p><strong>Low Reusability and Portability:</strong><br />
+  Poorly structured code is hard to reuse or adapt for other contexts, like CLI tools or mobile apps.</p>
 </li>
 <li>
-<p><strong>Software that Ages Poorly</strong><br />
-   Projects often start clean, but without structure, they gradually deteriorate as more features are added under pressure, without considering long-term maintainability.</p>
+<p><strong>Software That Ages Poorly:</strong><br />
+  Without a solid structure, projects become harder to maintain as new features are added, leading to technical debt.</p>
 </li>
-</ol>
-<h3 id="what-makes-it-clean">What Makes It “Clean”?</h3>
-<p>Clean Architecture is "clean" not because it's minimal or elegant, but because it <strong>clarifies dependencies</strong>, <strong>preserves intent</strong>, and <strong>protects core business logic</strong> from becoming polluted by technical concerns.</p>
-<p>At its core is the <strong>Dependency Rule</strong>:</p>
+</ul>
+<h2 id="what-makes-architecture-clean">What Makes Architecture “Clean”?</h2>
+<p>A clean architecture is not just about tidy code—it’s about creating a structure that:</p>
+<ul>
+<li>
+<p><strong>Clarifies dependencies:</strong><br />
+  Makes it obvious what depends on what.</p>
+</li>
+<li>
+<p><strong>Preserves intent:</strong><br />
+  Keeps business logic clear and isolated.</p>
+</li>
+<li>
+<p><strong>Protects core business logic:</strong><br />
+  Shields it from technical concerns and external changes.</p>
+</li>
+</ul>
+<p>At the heart of Clean Architecture is the <strong>Dependency Rule</strong>:</p>
 <blockquote>
-<p><strong>"Source code dependencies must always point inward — from the outer layers (UI, database, frameworks) to the inner layers (business rules)."</strong></p>
+<p><em>Source code dependencies must always point inward—from the outer layers (UI, database, frameworks) to the inner layers (business rules).</em></p>
 </blockquote>
-<p>This ensures that:</p>
+<p><strong>Following this rule ensures:</strong></p>
 <ul>
-<li>You can swap the database without rewriting your logic.</li>
-<li>You can test application use cases without booting a web server.</li>
-<li>You can grow and maintain the system without accruing technical debt at every turn.</li>
+<li>You can swap out databases or frameworks without rewriting core logic.</li>
+<li>You can test use cases without starting a web server or connecting to a database.</li>
+<li>You can grow and maintain your system without accumulating technical debt.</li>
 </ul>
-<p>Clean Architecture was created as a <strong>long-term solution</strong> to help software systems <strong>survive change</strong>, <strong>encourage good design</strong>, and allow developers to <strong>work with confidence</strong> rather than fear.</p>
+<p><strong>Investing in Clean Architecture pays off over time:</strong></p>
+<ul>
+<li>Your software adapts to change more easily.</li>
+<li>You encourage sound design habits.</li>
+<li>You work with confidence as your system evolves.</li>
+</ul>
 
 
 
@@ -639,10 +916,16 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="../../assets/mkdocs_puml/puml.js"></script>
+      
+        <script src="https://unpkg.com/@panzoom/panzoom@4.5.1/dist/panzoom.min.js"></script>
+      
+        <script src="../../assets/mkdocs_puml/interaction.js"></script>
       
     
   </body>

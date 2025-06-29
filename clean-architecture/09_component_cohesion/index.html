@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../04_open_closed_principle/">
+        <link rel="prev" href="../08_component_principles/">
       
       
-        <link rel="next" href="../06_interface_segregation_principle/">
+        <link rel="next" href="../10_component_coupling/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Liskov Substitution Principle - Workshops</title>
+        <title>Component Cohesion - Workshops</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#liskov-substitution-principle-lsp" class="md-skip">
+        <a href="#component-cohesion-principles" class="md-skip">
           Skip to content
         </a>
       
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Liskov Substitution Principle
+              Component Cohesion
             
           </span>
         </div>
@@ -248,20 +248,18 @@
                 
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" >
         
           
           <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
@@ -277,7 +275,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_1_2">
             <span class="md-nav__icon md-icon"></span>
             Design Principles
@@ -357,32 +355,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Liskov Substitution Principle
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../05_liskov_substitution_principle/" class="md-nav__link">
         
   
   
@@ -393,92 +369,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#what-is-the-liskov-substitution-principle" class="md-nav__link">
-    <span class="md-ellipsis">
-      What is the Liskov Substitution Principle?
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="What is the Liskov Substitution Principle?">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#why-lsp-matters" class="md-nav__link">
-    <span class="md-ellipsis">
-      Why LSP Matters
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example-lsp-violation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example: LSP Violation
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Example: LSP Violation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#refactoring-for-lsp" class="md-nav__link">
-    <span class="md-ellipsis">
-      Refactoring for LSP
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#best-practices-for-applying-lsp" class="md-nav__link">
-    <span class="md-ellipsis">
-      Best Practices for Applying LSP
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#takeaway" class="md-nav__link">
-    <span class="md-ellipsis">
-      Takeaway
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -542,18 +432,20 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3" checked>
         
           
           <label class="md-nav__link" for="__nav_1_3" id="__nav_1_3_label" tabindex="0">
@@ -569,7 +461,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_1_3">
             <span class="md-nav__icon md-icon"></span>
             Component Principles
@@ -603,10 +495,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../09_component_cohesion/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Component Cohesion
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -617,6 +531,86 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-component-cohesion" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is Component Cohesion?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What Is Component Cohesion?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-reuserelease-equivalence-principle-rep" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Reuse/Release Equivalence Principle (REP)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-common-closure-principle-ccp" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Common Closure Principle (CCP)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-common-reuse-principle-crp" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Common Reuse Principle (CRP)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices-for-component-cohesion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices for Component Cohesion
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#takeaway" class="md-nav__link">
+    <span class="md-ellipsis">
+      Takeaway
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -802,19 +796,37 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#what-is-the-liskov-substitution-principle" class="md-nav__link">
+  <a href="#what-is-component-cohesion" class="md-nav__link">
     <span class="md-ellipsis">
-      What is the Liskov Substitution Principle?
+      What Is Component Cohesion?
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="What is the Liskov Substitution Principle?">
+    <nav class="md-nav" aria-label="What Is Component Cohesion?">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#why-lsp-matters" class="md-nav__link">
+  <a href="#1-reuserelease-equivalence-principle-rep" class="md-nav__link">
     <span class="md-ellipsis">
-      Why LSP Matters
+      1. Reuse/Release Equivalence Principle (REP)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-common-closure-principle-ccp" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Common Closure Principle (CCP)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-common-reuse-principle-crp" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Common Reuse Principle (CRP)
     </span>
   </a>
   
@@ -826,33 +838,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#example-lsp-violation" class="md-nav__link">
+  <a href="#best-practices-for-component-cohesion" class="md-nav__link">
     <span class="md-ellipsis">
-      Example: LSP Violation
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Example: LSP Violation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#refactoring-for-lsp" class="md-nav__link">
-    <span class="md-ellipsis">
-      Refactoring for LSP
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#best-practices-for-applying-lsp" class="md-nav__link">
-    <span class="md-ellipsis">
-      Best Practices for Applying LSP
+      Best Practices for Component Cohesion
     </span>
   </a>
   
@@ -883,140 +871,49 @@
 
 
 
-<h1 id="liskov-substitution-principle-lsp">Liskov Substitution Principle (LSP)</h1>
-<h2 id="what-is-the-liskov-substitution-principle">What is the Liskov Substitution Principle?</h2>
-<p>The <strong>Liskov Substitution Principle (LSP)</strong> is the third of the five SOLID principles of object-oriented design. It states:</p>
+<h1 id="component-cohesion-principles">Component Cohesion Principles</h1>
+<h2 id="what-is-component-cohesion">What Is Component Cohesion?</h2>
+<p><strong>Component Cohesion</strong> is about how classes and modules are grouped into components or packages. Well-cohesive components are easier to maintain, reuse, and release.</p>
+<p>Robert C. Martin (Uncle Bob) introduced three primary principles for component-level architecture:</p>
+<hr />
+<h3 id="1-reuserelease-equivalence-principle-rep">1. <strong>Reuse/Release Equivalence Principle (REP)</strong></h3>
 <blockquote>
-<p><strong>Objects of a superclass should be replaceable with objects of its subclasses without affecting the correctness of the program.</strong><br />
-– Barbara Liskov</p>
+<p><em>“The granule of reuse is the granule of release.”</em></p>
 </blockquote>
-<p>LSP means that you should be able to use any subtype of an interface or base class <strong>without altering the expected behavior</strong> of the program. Subtypes must honor the contract and intent of their base types, ensuring consistent and predictable behavior.</p>
-<h3 id="why-lsp-matters">Why LSP Matters</h3>
-<p>When LSP is violated:</p>
 <ul>
-<li>Subtypes break expectations, causing bugs or unexpected behavior.</li>
-<li>Code that works with the base type may fail or behave incorrectly with certain subtypes.</li>
-<li>The abstraction becomes unreliable and hard to maintain.</li>
-</ul>
-<p>By following LSP, you ensure your abstractions are robust and your code is easier to extend and reason about.</p>
-<hr />
-<h2 id="example-lsp-violation">Example: LSP Violation</h2>
-<p>In this example, a subclass <code>UnregisteredVehicle</code> throws an exception when trying to register, violating the contract of <code>Vehicle</code>. If a method expects any <code>IVehicle</code> and calls <code>CreateRegistration()</code>, this will throw unexpectedly—a clear violation of LSP.</p>
-<pre><code class="language-csharp">public interface IVehicle
-{
-    string Make { get; }
-    string Model { get; }
-    decimal Mileage { get; }
-
-    double CalculateTax();
-    void CreateRegistration();
-    bool VerifyPeriodicTechnicalInspection();
-}
-
-public class UnregisteredVehicle : IVehicle
-{
-    public string Make =&gt; &quot;Prototype&quot;;
-    public string Model =&gt; &quot;Test Rig&quot;;
-    public bool IsRegistered =&gt; false;
-    public decimal Mileage =&gt; 0;
-
-    public double CalculateTax()
-    {
-        return 0;
-    }
-
-    public void CreateRegistration()
-    {
-        throw new NotSupportedException(&quot;This vehicle cannot be registered.&quot;);
-    }
-
-    public bool VerifyPeriodicTechnicalInspection()
-    {
-        return false;
-    }
-}
-</code></pre>
-<p>This breaks the expectation that all <code>IVehicle</code> objects can be registered.</p>
-<h3 id="refactoring-for-lsp">Refactoring for LSP</h3>
-<p>To comply with LSP, only types that support registration should expose registration behavior. Move registration to a separate interface, so unsupported operations are not part of the contract.</p>
-<pre><code class="language-csharp">public interface IVehicle
-{
-    string Make { get; }
-    string Model { get; }
-    decimal Mileage { get; }
-
-    double CalculateTax();
-    bool VerifyPeriodicTechnicalInspection();
-}
-
-public interface IRegistrableVehicle : IVehicle
-{
-    bool IsRegistered { get; }
-    void Register();
-}
-
-public class UnregisteredVehicle : IVehicle
-{
-    public string Make =&gt; &quot;Prototype&quot;;
-    public string Model =&gt; &quot;Test Rig&quot;;
-    public bool IsRegistered =&gt; false;
-    public decimal Mileage =&gt; 0;
-
-    public double CalculateTax()
-    {
-        return 0;
-    }
-
-    public bool VerifyPeriodicTechnicalInspection()
-    {
-        return false;
-    }
-}
-</code></pre>
-<details>
-<summary>Exercise: Complete the refactoring for the Register method</summary>
-
-<pre><code class="language-csharp">public interface IRegistractionService 
-{
-    bool Register(IVehicle vehicle);
-}
-
-public class SimpleRegistractionService : IRegistractionService
-{
-    public bool Register(IVehicle vehicle)
-    {
-        if (vehicle is IRegistrableVehicle registrable &amp;&amp; !registrable.IsRegistered)
-        {
-            registrable.Register();
-            return true;
-        }
-        return false;
-    }
-}
-</code></pre>
-
-</details>
-
-<p><strong>Key improvements:</strong></p>
-<ul>
-<li>Only vehicles that support registration implement the registration interface.</li>
-<li>The contract for <code>IVehicle</code> is clear and safe for all subtypes.</li>
-<li>Code that works with <code>IVehicle</code> does not risk unexpected exceptions.</li>
+<li>Components that are reused together should be released together.</li>
+<li>This ensures stability and avoids version mismatches.</li>
 </ul>
 <hr />
-<h2 id="best-practices-for-applying-lsp">Best Practices for Applying LSP</h2>
+<h3 id="2-common-closure-principle-ccp">2. <strong>Common Closure Principle (CCP)</strong></h3>
+<blockquote>
+<p><em>“Classes that change together should be packaged together.”</em></p>
+</blockquote>
 <ul>
-<li><strong>Design clear contracts:</strong> Only include methods and properties in base interfaces or classes that make sense for all subtypes.</li>
-<li><strong>Avoid unsupported operations:</strong> Don’t force subtypes to implement methods they can’t support—move those to separate interfaces.</li>
-<li><strong>Honor invariants:</strong> Subtypes should not weaken preconditions or strengthen postconditions of base type methods.</li>
-<li><strong>Test substitutability:</strong> Regularly verify that your subtypes can replace base types in real scenarios without breaking behavior.</li>
-<li><strong>Document expectations:</strong> Clearly state the intended use and constraints of your abstractions.</li>
+<li>Group classes that tend to change for the same reason into the same component.</li>
+<li>This minimizes the impact of changes and reduces the risk of breaking unrelated code.</li>
+</ul>
+<hr />
+<h3 id="3-common-reuse-principle-crp">3. <strong>Common Reuse Principle (CRP)</strong></h3>
+<blockquote>
+<p><em>“Don’t force users of a component to depend on things they don’t use.”</em></p>
+</blockquote>
+<ul>
+<li>Avoid unnecessary coupling by packaging only what’s commonly reused together.</li>
+<li>Otherwise, you violate the Interface Segregation Principle at the component level.</li>
+</ul>
+<hr />
+<h2 id="best-practices-for-component-cohesion">Best Practices for Component Cohesion</h2>
+<ul>
+<li>Release and version components as a unit.</li>
+<li>Group classes by their reasons to change, not just by technical similarity.</li>
+<li>Avoid “kitchen sink” components—keep them focused and relevant.</li>
+<li>Regularly review and refactor components as your system evolves.</li>
 </ul>
 <hr />
 <h2 id="takeaway">Takeaway</h2>
-<p>Subtypes must honor the intent of their base types.<br />
-If a method or property doesn’t make sense for all variants, don’t put it in the base interface.<br />
-This keeps your abstractions reliable and your codebase robust.</p>
+<p>Cohesive components are easier to maintain, test, and reuse.<br />
+Apply these principles to keep your architecture clean and your releases predictable.</p>
 
 
 

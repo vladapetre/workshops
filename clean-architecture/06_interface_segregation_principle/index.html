@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../04_open_closed_principle/">
+        <link rel="prev" href="../05_liskov_substitution_principle/">
       
       
-        <link rel="next" href="../06_interface_segregation_principle/">
+        <link rel="next" href="../07_dependency_inversion_principle/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Liskov Substitution Principle - Workshops</title>
+        <title>Interface Segregation Principle - Workshops</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#liskov-substitution-principle-lsp" class="md-skip">
+        <a href="#interface-segregation-principle-isp" class="md-skip">
           Skip to content
         </a>
       
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Liskov Substitution Principle
+              Interface Segregation Principle
             
           </span>
         </div>
@@ -357,6 +357,29 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../05_liskov_substitution_principle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Liskov Substitution Principle
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -374,7 +397,7 @@
   
   
   <span class="md-ellipsis">
-    Liskov Substitution Principle
+    Interface Segregation Principle
     
   </span>
   
@@ -387,7 +410,7 @@
   
   
   <span class="md-ellipsis">
-    Liskov Substitution Principle
+    Interface Segregation Principle
     
   </span>
   
@@ -410,19 +433,19 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#what-is-the-liskov-substitution-principle" class="md-nav__link">
+  <a href="#understanding-the-interface-segregation-principle" class="md-nav__link">
     <span class="md-ellipsis">
-      What is the Liskov Substitution Principle?
+      Understanding the Interface Segregation Principle
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="What is the Liskov Substitution Principle?">
+    <nav class="md-nav" aria-label="Understanding the Interface Segregation Principle">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#why-lsp-matters" class="md-nav__link">
+  <a href="#why-isp-matters" class="md-nav__link">
     <span class="md-ellipsis">
-      Why LSP Matters
+      Why ISP Matters
     </span>
   </a>
   
@@ -434,33 +457,36 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#example-lsp-violation" class="md-nav__link">
+  <a href="#example-isp-violation" class="md-nav__link">
     <span class="md-ellipsis">
-      Example: LSP Violation
+      Example: ISP Violation
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Example: LSP Violation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#refactoring-for-lsp" class="md-nav__link">
-    <span class="md-ellipsis">
-      Refactoring for LSP
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#best-practices-for-applying-lsp" class="md-nav__link">
+  <a href="#refactoring-for-isp" class="md-nav__link">
     <span class="md-ellipsis">
-      Best Practices for Applying LSP
+      Refactoring for ISP
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-benefits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Benefits
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices-for-applying-isp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices for Applying ISP
     </span>
   </a>
   
@@ -479,29 +505,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../06_interface_segregation_principle/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Interface Segregation Principle
-    
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -802,19 +805,19 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#what-is-the-liskov-substitution-principle" class="md-nav__link">
+  <a href="#understanding-the-interface-segregation-principle" class="md-nav__link">
     <span class="md-ellipsis">
-      What is the Liskov Substitution Principle?
+      Understanding the Interface Segregation Principle
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="What is the Liskov Substitution Principle?">
+    <nav class="md-nav" aria-label="Understanding the Interface Segregation Principle">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#why-lsp-matters" class="md-nav__link">
+  <a href="#why-isp-matters" class="md-nav__link">
     <span class="md-ellipsis">
-      Why LSP Matters
+      Why ISP Matters
     </span>
   </a>
   
@@ -826,33 +829,36 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#example-lsp-violation" class="md-nav__link">
+  <a href="#example-isp-violation" class="md-nav__link">
     <span class="md-ellipsis">
-      Example: LSP Violation
+      Example: ISP Violation
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Example: LSP Violation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#refactoring-for-lsp" class="md-nav__link">
-    <span class="md-ellipsis">
-      Refactoring for LSP
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#best-practices-for-applying-lsp" class="md-nav__link">
+  <a href="#refactoring-for-isp" class="md-nav__link">
     <span class="md-ellipsis">
-      Best Practices for Applying LSP
+      Refactoring for ISP
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-benefits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Benefits
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices-for-applying-isp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices for Applying ISP
     </span>
   </a>
   
@@ -883,140 +889,115 @@
 
 
 
-<h1 id="liskov-substitution-principle-lsp">Liskov Substitution Principle (LSP)</h1>
-<h2 id="what-is-the-liskov-substitution-principle">What is the Liskov Substitution Principle?</h2>
-<p>The <strong>Liskov Substitution Principle (LSP)</strong> is the third of the five SOLID principles of object-oriented design. It states:</p>
+<h1 id="interface-segregation-principle-isp">Interface Segregation Principle (ISP)</h1>
+<h2 id="understanding-the-interface-segregation-principle">Understanding the Interface Segregation Principle</h2>
+<p>The <strong>Interface Segregation Principle (ISP)</strong> is the fourth of the five SOLID principles of object-oriented design. It states:</p>
 <blockquote>
-<p><strong>Objects of a superclass should be replaceable with objects of its subclasses without affecting the correctness of the program.</strong><br />
-– Barbara Liskov</p>
+<p><strong>Clients should not be forced to depend upon interfaces that they do not use.</strong><br />
+– Robert C. Martin (Uncle Bob)</p>
 </blockquote>
-<p>LSP means that you should be able to use any subtype of an interface or base class <strong>without altering the expected behavior</strong> of the program. Subtypes must honor the contract and intent of their base types, ensuring consistent and predictable behavior.</p>
-<h3 id="why-lsp-matters">Why LSP Matters</h3>
-<p>When LSP is violated:</p>
+<p><strong>ISP</strong> encourages you to design <strong>small, focused interfaces</strong>. Classes should only implement the methods that are relevant to their role, not be forced to provide empty or meaningless implementations for methods they don’t need.</p>
+<h3 id="why-isp-matters">Why ISP Matters</h3>
+<p>Violating ISP leads to:</p>
 <ul>
-<li>Subtypes break expectations, causing bugs or unexpected behavior.</li>
-<li>Code that works with the base type may fail or behave incorrectly with certain subtypes.</li>
-<li>The abstraction becomes unreliable and hard to maintain.</li>
+<li>Classes forced to implement methods they don’t use.</li>
+<li>“Fat” interfaces that are hard to understand and maintain.</li>
+<li>Changes to an interface rippling through many unrelated classes.</li>
 </ul>
-<p>By following LSP, you ensure your abstractions are robust and your code is easier to extend and reason about.</p>
+<p>By following ISP, you:</p>
+<ul>
+<li>Keep your codebase flexible and focused.</li>
+<li>Make interfaces easier to understand and maintain.</li>
+<li>Reduce the risk of breaking unrelated code when interfaces change.</li>
+</ul>
 <hr />
-<h2 id="example-lsp-violation">Example: LSP Violation</h2>
-<p>In this example, a subclass <code>UnregisteredVehicle</code> throws an exception when trying to register, violating the contract of <code>Vehicle</code>. If a method expects any <code>IVehicle</code> and calls <code>CreateRegistration()</code>, this will throw unexpectedly—a clear violation of LSP.</p>
+<h2 id="example-isp-violation">Example: ISP Violation</h2>
+<p>Here’s a version of <code>IVehicle</code> that forces all implementers to support tax calculation, registration, and inspection—even if they don’t need all of them:</p>
 <pre><code class="language-csharp">public interface IVehicle
 {
     string Make { get; }
     string Model { get; }
+    bool IsRegistered { get; }
     decimal Mileage { get; }
 
     double CalculateTax();
     void CreateRegistration();
     bool VerifyPeriodicTechnicalInspection();
 }
-
-public class UnregisteredVehicle : IVehicle
-{
-    public string Make =&gt; &quot;Prototype&quot;;
-    public string Model =&gt; &quot;Test Rig&quot;;
-    public bool IsRegistered =&gt; false;
-    public decimal Mileage =&gt; 0;
-
-    public double CalculateTax()
-    {
-        return 0;
-    }
-
-    public void CreateRegistration()
-    {
-        throw new NotSupportedException(&quot;This vehicle cannot be registered.&quot;);
-    }
-
-    public bool VerifyPeriodicTechnicalInspection()
-    {
-        return false;
-    }
-}
 </code></pre>
-<p>This breaks the expectation that all <code>IVehicle</code> objects can be registered.</p>
-<h3 id="refactoring-for-lsp">Refactoring for LSP</h3>
-<p>To comply with LSP, only types that support registration should expose registration behavior. Move registration to a separate interface, so unsupported operations are not part of the contract.</p>
+<p><strong>Problems:</strong></p>
+<ul>
+<li>Vehicles that are exempt from tax still need to implement <code>CalculateTax()</code>.</li>
+<li>Concept or off-road vehicles might not be registerable.</li>
+<li>Test mocks or simple data models may not care about inspections.</li>
+</ul>
+<hr />
+<h2 id="refactoring-for-isp">Refactoring for ISP</h2>
+<p>Split <code>IVehicle</code> into smaller, role-based interfaces so classes only implement what they need:</p>
 <pre><code class="language-csharp">public interface IVehicle
 {
     string Make { get; }
     string Model { get; }
     decimal Mileage { get; }
-
-    double CalculateTax();
-    bool VerifyPeriodicTechnicalInspection();
 }
 
-public interface IRegistrableVehicle : IVehicle
+public interface IRegistrableVehicle
 {
     bool IsRegistered { get; }
-    void Register();
+    void CreateRegistration();
 }
 
-public class UnregisteredVehicle : IVehicle
+public interface ITaxableVehicle
 {
-    public string Make =&gt; &quot;Prototype&quot;;
-    public string Model =&gt; &quot;Test Rig&quot;;
-    public bool IsRegistered =&gt; false;
-    public decimal Mileage =&gt; 0;
-
-    public double CalculateTax()
-    {
-        return 0;
-    }
-
-    public bool VerifyPeriodicTechnicalInspection()
-    {
-        return false;
-    }
+    double CalculateTax();
 }
 </code></pre>
 <details>
-<summary>Exercise: Complete the refactoring for the Register method</summary>
+<summary>Exercise: Refactor the inspection logic for ISP</summary>
 
-<pre><code class="language-csharp">public interface IRegistractionService 
+
+<pre><code class="language-csharp">public interface IInspectableVehicle
 {
-    bool Register(IVehicle vehicle);
+    bool VerifyPeriodicTechnicalInspection();
 }
 
-public class SimpleRegistractionService : IRegistractionService
+public class RoadVehicle : IVehicle, IRegistrableVehicle, ITaxableVehicle, IInspectableVehicle
 {
-    public bool Register(IVehicle vehicle)
-    {
-        if (vehicle is IRegistrableVehicle registrable &amp;&amp; !registrable.IsRegistered)
-        {
-            registrable.Register();
-            return true;
-        }
-        return false;
-    }
+    // All properties and methods implemented
+}
+
+public class PrototypeVehicle : IVehicle
+{
+    public string Make =&gt; &quot;Prototype&quot;;
+    public string Model =&gt; &quot;X-Concept&quot;;
+    public decimal Mileage =&gt; 0;
+
+    // No tax, registration, or inspection — not needed
 }
 </code></pre>
 
 </details>
 
-<p><strong>Key improvements:</strong></p>
+<hr />
+<h2 id="key-benefits">Key Benefits</h2>
 <ul>
-<li>Only vehicles that support registration implement the registration interface.</li>
-<li>The contract for <code>IVehicle</code> is clear and safe for all subtypes.</li>
-<li>Code that works with <code>IVehicle</code> does not risk unexpected exceptions.</li>
+<li><strong>Focused interfaces:</strong> Each class only implements what it actually needs.</li>
+<li><strong>No more empty methods:</strong> Avoid meaningless or placeholder implementations.</li>
+<li><strong>Easier maintenance:</strong> Interfaces are smaller, clearer, and less likely to change for unrelated reasons.</li>
+<li><strong>Greater flexibility:</strong> You can extend or modify behavior without impacting unrelated classes.</li>
 </ul>
 <hr />
-<h2 id="best-practices-for-applying-lsp">Best Practices for Applying LSP</h2>
+<h2 id="best-practices-for-applying-isp">Best Practices for Applying ISP</h2>
 <ul>
-<li><strong>Design clear contracts:</strong> Only include methods and properties in base interfaces or classes that make sense for all subtypes.</li>
-<li><strong>Avoid unsupported operations:</strong> Don’t force subtypes to implement methods they can’t support—move those to separate interfaces.</li>
-<li><strong>Honor invariants:</strong> Subtypes should not weaken preconditions or strengthen postconditions of base type methods.</li>
-<li><strong>Test substitutability:</strong> Regularly verify that your subtypes can replace base types in real scenarios without breaking behavior.</li>
-<li><strong>Document expectations:</strong> Clearly state the intended use and constraints of your abstractions.</li>
+<li>Split large interfaces into smaller, role-based contracts.</li>
+<li>Avoid “fat” interfaces that try to cover every possible use case.</li>
+<li>Group related methods together, but don’t force unrelated responsibilities into a single interface.</li>
+<li>Regularly review interfaces as your system evolves—refactor when they start to grow too large.</li>
 </ul>
 <hr />
 <h2 id="takeaway">Takeaway</h2>
-<p>Subtypes must honor the intent of their base types.<br />
-If a method or property doesn’t make sense for all variants, don’t put it in the base interface.<br />
-This keeps your abstractions reliable and your codebase robust.</p>
+<p>Design interfaces that are <strong>small, focused, and role-specific</strong>.<br />
+This keeps your codebase clean, flexible, and easy to maintain as your system grows.</p>
 
 
 
