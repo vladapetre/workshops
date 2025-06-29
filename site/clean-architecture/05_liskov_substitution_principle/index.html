@@ -12,6 +12,8 @@
         <link rel="prev" href="../04_open_closed_principle/">
       
       
+        <link rel="next" href="../06_interface_segregation_principle/">
+      
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
@@ -23,6 +25,9 @@
     
     
       <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -41,6 +46,12 @@
       
     
     
+      <link rel="stylesheet" href="../../css/style.css">
+    
+      <link rel="stylesheet" href="../../assets/mkdocs_puml/puml.css">
+    
+      <link rel="stylesheet" href="../../assets/mkdocs_puml/interaction.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -51,7 +62,14 @@
   </head>
   
   
-    <body dir="ltr">
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -60,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#liskov-substituton-principle-lsp" class="md-skip">
+        <a href="#liskov-substitution-principle-lsp" class="md-skip">
           Skip to content
         </a>
       
@@ -102,6 +120,24 @@
         </div>
       </div>
     </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="blue"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    
+  
+</form>
+      
     
     
       <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
@@ -252,29 +288,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../02_design_principles/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Principles
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -288,15 +301,15 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_1_3" id="__nav_1_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
             
   
   
   <span class="md-ellipsis">
-    SOLID
+    Design Principles
     
   </span>
   
@@ -304,12 +317,35 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_1_3">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1_2">
             <span class="md-nav__icon md-icon"></span>
-            SOLID
+            Design Principles
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02_design_principles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Intro
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -414,9 +450,57 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
+  <a href="#what-is-the-liskov-substitution-principle" class="md-nav__link">
     <span class="md-ellipsis">
-      Example
+      What is the Liskov Substitution Principle?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What is the Liskov Substitution Principle?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-lsp-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why LSP Matters
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-lsp-violation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: LSP Violation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Example: LSP Violation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#refactoring-for-lsp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Refactoring for LSP
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices-for-applying-lsp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices for Applying LSP
     </span>
   </a>
   
@@ -435,6 +519,282 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06_interface_segregation_principle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Interface Segregation Principle
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07_dependency_inversion_principle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Dependency Inversion Principle
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_3" id="__nav_1_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Component Principles
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            Component Principles
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08_component_principles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Intro
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09_component_cohesion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Component Cohesion
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10_component_coupling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Component Coupling
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_4" id="__nav_1_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Architectural Patterns
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            Architectural Patterns
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11_architectural_patterns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Intro
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12_layered_architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Layered Architecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../13_onion_architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Onion Architecture
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -482,9 +842,57 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
+  <a href="#what-is-the-liskov-substitution-principle" class="md-nav__link">
     <span class="md-ellipsis">
-      Example
+      What is the Liskov Substitution Principle?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What is the Liskov Substitution Principle?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-lsp-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why LSP Matters
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-lsp-violation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: LSP Violation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Example: LSP Violation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#refactoring-for-lsp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Refactoring for LSP
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices-for-applying-lsp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices for Applying LSP
     </span>
   </a>
   
@@ -515,17 +923,26 @@
 
 
 
-<h1 id="liskov-substituton-principle-lsp">Liskov Substituton Principle (LSP)</h1>
+<h1 id="liskov-substitution-principle-lsp">Liskov Substitution Principle (LSP)</h1>
+<h2 id="what-is-the-liskov-substitution-principle">What is the Liskov Substitution Principle?</h2>
+<p>The <strong>Liskov Substitution Principle (LSP)</strong> is the third of the five SOLID principles of object-oriented design. It states:</p>
 <blockquote>
-<p>Objects of a superclass should be replaceable with objects of its subclasses without affecting the correctness of the program.
+<p><strong>Objects of a superclass should be replaceable with objects of its subclasses without affecting the correctness of the program.</strong><br />
 – Barbara Liskov</p>
 </blockquote>
-<p>In practice, this means we should be able to <strong>use any subtype</strong> of an interface or base class <strong>without altering the expected behavior</strong> of the program. This is achieved by designing abstractions that ensure <strong>consistent and predictable behavior</strong> across all implementations.</p>
-<h3 id="example">Example</h3>
-<p>Let’s say we create a subclass <code>UnregisteredVehicle</code> that <strong>throws an exception</strong> when trying to register, violating the contract of <code>Vehicle</code>.
-If a method expects any Vehicle and calls CreateRegistration(), this will throw unexpectedly. That violates the Liskov Substitution Principle.</p>
-<pre><code class="language-csharp">
-public interface IVehicle
+<p>LSP means that you should be able to use any subtype of an interface or base class <strong>without altering the expected behavior</strong> of the program. Subtypes must honor the contract and intent of their base types, ensuring consistent and predictable behavior.</p>
+<h3 id="why-lsp-matters">Why LSP Matters</h3>
+<p>When LSP is violated:</p>
+<ul>
+<li>Subtypes break expectations, causing bugs or unexpected behavior.</li>
+<li>Code that works with the base type may fail or behave incorrectly with certain subtypes.</li>
+<li>The abstraction becomes unreliable and hard to maintain.</li>
+</ul>
+<p>By following LSP, you ensure your abstractions are robust and your code is easier to extend and reason about.</p>
+<hr />
+<h2 id="example-lsp-violation">Example: LSP Violation</h2>
+<p>In this example, a subclass <code>UnregisteredVehicle</code> throws an exception when trying to register, violating the contract of <code>Vehicle</code>. If a method expects any <code>IVehicle</code> and calls <code>CreateRegistration()</code>, this will throw unexpectedly—a clear violation of LSP.</p>
+<pre><code class="language-csharp">public interface IVehicle
 {
     string Make { get; }
     string Model { get; }
@@ -535,7 +952,6 @@ public interface IVehicle
     void CreateRegistration();
     bool VerifyPeriodicTechnicalInspection();
 }
-
 
 public class UnregisteredVehicle : IVehicle
 {
@@ -560,13 +976,10 @@ public class UnregisteredVehicle : IVehicle
     }
 }
 </code></pre>
-<p>To comply with LSP:</p>
-<ul>
-<li>Subtypes should behave according to expectations set by the base type.</li>
-<li>If an operation is not supported, it shouldn’t be part of the contract.</li>
-</ul>
-<pre><code class="language-csharp">
-public interface IVehicle
+<p>This breaks the expectation that all <code>IVehicle</code> objects can be registered.</p>
+<h3 id="refactoring-for-lsp">Refactoring for LSP</h3>
+<p>To comply with LSP, only types that support registration should expose registration behavior. Move registration to a separate interface, so unsupported operations are not part of the contract.</p>
+<pre><code class="language-csharp">public interface IVehicle
 {
     string Make { get; }
     string Model { get; }
@@ -599,17 +1012,14 @@ public class UnregisteredVehicle : IVehicle
         return false;
     }
 }
-
 </code></pre>
 <details>
 <summary>Exercise: Complete the refactoring for the Register method</summary>
 
-<pre><code class="language-csharp">
-public interface IRegistractionService 
+<pre><code class="language-csharp">public interface IRegistractionService 
 {
     bool Register(IVehicle vehicle);
 }
-
 
 public class SimpleRegistractionService : IRegistractionService
 {
@@ -618,15 +1028,35 @@ public class SimpleRegistractionService : IRegistractionService
         if (vehicle is IRegistrableVehicle registrable &amp;&amp; !registrable.IsRegistered)
         {
             registrable.Register();
+            return true;
         }
+        return false;
     }
 }
 </code></pre>
 
 </details>
 
+<p><strong>Key improvements:</strong></p>
+<ul>
+<li>Only vehicles that support registration implement the registration interface.</li>
+<li>The contract for <code>IVehicle</code> is clear and safe for all subtypes.</li>
+<li>Code that works with <code>IVehicle</code> does not risk unexpected exceptions.</li>
+</ul>
+<hr />
+<h2 id="best-practices-for-applying-lsp">Best Practices for Applying LSP</h2>
+<ul>
+<li><strong>Design clear contracts:</strong> Only include methods and properties in base interfaces or classes that make sense for all subtypes.</li>
+<li><strong>Avoid unsupported operations:</strong> Don’t force subtypes to implement methods they can’t support—move those to separate interfaces.</li>
+<li><strong>Honor invariants:</strong> Subtypes should not weaken preconditions or strengthen postconditions of base type methods.</li>
+<li><strong>Test substitutability:</strong> Regularly verify that your subtypes can replace base types in real scenarios without breaking behavior.</li>
+<li><strong>Document expectations:</strong> Clearly state the intended use and constraints of your abstractions.</li>
+</ul>
+<hr />
 <h2 id="takeaway">Takeaway</h2>
-<p>Subtypes must honor the intent of their base types. If a method or property doesn’t make sense for all variants, don’t put it in the base interface.</p>
+<p>Subtypes must honor the intent of their base types.<br />
+If a method or property doesn’t make sense for all variants, don’t put it in the base interface.<br />
+This keeps your abstractions reliable and your codebase robust.</p>
 
 
 
@@ -650,6 +1080,46 @@ public class SimpleRegistractionService : IRegistractionService
       </main>
       
         <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../04_open_closed_principle/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Open Closed Principle">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Open Closed Principle
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../06_interface_segregation_principle/" class="md-footer__link md-footer__link--next" aria-label="Next: Interface Segregation Principle">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Interface Segregation Principle
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -675,10 +1145,16 @@ public class SimpleRegistractionService : IRegistractionService
     
     
       
-      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.footer", "navigation.instant"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="../../assets/mkdocs_puml/puml.js"></script>
+      
+        <script src="https://unpkg.com/@panzoom/panzoom@4.5.1/dist/panzoom.min.js"></script>
+      
+        <script src="../../assets/mkdocs_puml/interaction.js"></script>
       
     
   </body>

@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../01_introduction/">
+        <link rel="prev" href="../09_component_cohesion/">
       
       
-        <link rel="next" href="../03_single_responsability_principle/">
+        <link rel="next" href="../11_architectural_patterns/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Intro - Workshops</title>
+        <title>Component Coupling - Workshops</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#understanding-the-core-principles-of-clean-architecture" class="md-skip">
+        <a href="#component-coupling-in-clean-architecture" class="md-skip">
           Skip to content
         </a>
       
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Intro
+              Component Coupling
             
           </span>
         </div>
@@ -288,20 +288,18 @@
                 
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" >
         
           
           <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
@@ -317,7 +315,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_1_2">
             <span class="md-nav__icon md-icon"></span>
             Design Principles
@@ -328,32 +326,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Intro
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../02_design_principles/" class="md-nav__link">
         
   
   
@@ -364,104 +340,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#key-principles-of-clean-architecture" class="md-nav__link">
-    <span class="md-ellipsis">
-      Key Principles of Clean Architecture
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Key Principles of Clean Architecture">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-layered-structure" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. Layered Structure
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-the-dependency-rule" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. The Dependency Rule
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-independence-from-frameworks-and-tools" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Independence from Frameworks and Tools
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-testability" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. Testability
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5-separation-of-concerns" class="md-nav__link">
-    <span class="md-ellipsis">
-      5. Separation of Concerns
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#6-explicit-boundaries" class="md-nav__link">
-    <span class="md-ellipsis">
-      6. Explicit Boundaries
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#summary-clean-architecture-and-solid" class="md-nav__link">
-    <span class="md-ellipsis">
-      Summary: Clean Architecture and SOLID
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -594,18 +472,20 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3" checked>
         
           
           <label class="md-nav__link" for="__nav_1_3" id="__nav_1_3_label" tabindex="0">
@@ -621,7 +501,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_1_3">
             <span class="md-nav__icon md-icon"></span>
             Component Principles
@@ -678,10 +558,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../10_component_coupling/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Component Coupling
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -692,6 +594,104 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-component-coupling" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is Component Coupling?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-three-principles-of-component-coupling" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Three Principles of Component Coupling
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Three Principles of Component Coupling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-acyclic-dependencies-principle-adp" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Acyclic Dependencies Principle (ADP)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-stable-dependencies-principle-sdp" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Stable Dependencies Principle (SDP)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-stable-abstractions-principle-sap" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Stable Abstractions Principle (SAP)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices-for-component-coupling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices for Component Coupling
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#takeaway" class="md-nav__link">
+    <span class="md-ellipsis">
+      Takeaway
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -854,64 +854,46 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#key-principles-of-clean-architecture" class="md-nav__link">
+  <a href="#what-is-component-coupling" class="md-nav__link">
     <span class="md-ellipsis">
-      Key Principles of Clean Architecture
+      What Is Component Coupling?
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Key Principles of Clean Architecture">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-three-principles-of-component-coupling" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Three Principles of Component Coupling
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Three Principles of Component Coupling">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-layered-structure" class="md-nav__link">
+  <a href="#1-acyclic-dependencies-principle-adp" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Layered Structure
+      1. Acyclic Dependencies Principle (ADP)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-the-dependency-rule" class="md-nav__link">
+  <a href="#2-stable-dependencies-principle-sdp" class="md-nav__link">
     <span class="md-ellipsis">
-      2. The Dependency Rule
+      2. Stable Dependencies Principle (SDP)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#3-independence-from-frameworks-and-tools" class="md-nav__link">
+  <a href="#3-stable-abstractions-principle-sap" class="md-nav__link">
     <span class="md-ellipsis">
-      3. Independence from Frameworks and Tools
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-testability" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. Testability
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5-separation-of-concerns" class="md-nav__link">
-    <span class="md-ellipsis">
-      5. Separation of Concerns
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#6-explicit-boundaries" class="md-nav__link">
-    <span class="md-ellipsis">
-      6. Explicit Boundaries
+      3. Stable Abstractions Principle (SAP)
     </span>
   </a>
   
@@ -923,9 +905,27 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#summary-clean-architecture-and-solid" class="md-nav__link">
+  <a href="#best-practices-for-component-coupling" class="md-nav__link">
     <span class="md-ellipsis">
-      Summary: Clean Architecture and SOLID
+      Best Practices for Component Coupling
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#takeaway" class="md-nav__link">
+    <span class="md-ellipsis">
+      Takeaway
     </span>
   </a>
   
@@ -947,107 +947,97 @@
 
 
 
-<h1 id="understanding-the-core-principles-of-clean-architecture">Understanding the Core Principles of Clean Architecture</h1>
-<p><strong>Clean Architecture</strong> helps you build <strong>flexible, maintainable, and scalable software</strong> by organizing code into <strong>well-defined layers</strong> and enforcing <strong>clear boundaries</strong>. The goal is to keep your <strong>core business logic independent</strong> from frameworks, databases, and external tools.</p>
-<p>At its core, Clean Architecture relies on proven software principles—especially those from <strong>SOLID</strong>—with a strong emphasis on the <strong>Dependency Inversion Principle (DIP)</strong> and <strong>Separation of Concerns</strong>. These principles support long-term maintainability and adaptability.</p>
-<h2 id="key-principles-of-clean-architecture">Key Principles of Clean Architecture</h2>
-<h3 id="1-layered-structure">1. Layered Structure</h3>
-<p>Clean Architecture organizes your system into <strong>concentric layers</strong>, each with a specific responsibility:</p>
+<h1 id="component-coupling-in-clean-architecture">Component Coupling in Clean Architecture</h1>
+<h2 id="what-is-component-coupling">What Is Component Coupling?</h2>
+<p>After defining components in your architecture, the next challenge is to <strong>manage how they depend on each other</strong>. Component Coupling principles ensure that:</p>
 <ul>
-<li><strong>Entities:</strong> Enterprise-wide business rules; the most abstract and reusable parts.</li>
-<li><strong>Use Cases:</strong> Application-specific business rules; orchestrate interactions between entities and the outside world.</li>
-<li><strong>Interface Adapters:</strong> Controllers, presenters, and gateways that convert data from external formats (like JSON or database rows) into a form usable by your application.</li>
-<li><strong>Frameworks &amp; Drivers:</strong> External agents such as web servers, databases, and UI frameworks.</li>
+<li>Dependencies between components are <strong>stable</strong>, <strong>flexible</strong>, and <strong>testable</strong></li>
+<li>Changes in one component do <strong>not ripple through</strong> the entire codebase</li>
+<li>Higher-level components stay <strong>decoupled from implementation details</strong></li>
 </ul>
-<p>This structure enforces <strong>Separation of Concerns</strong> by isolating responsibilities into clear layers.</p>
-<h3 id="2-the-dependency-rule">2. The Dependency Rule</h3>
+<hr />
+<h2 id="the-three-principles-of-component-coupling">The Three Principles of Component Coupling</h2>
+<p>Robert C. Martin introduced three key principles for <strong>managing dependencies between components</strong>:</p>
+<hr />
+<h3 id="1-acyclic-dependencies-principle-adp">1. <strong>Acyclic Dependencies Principle (ADP)</strong></h3>
 <blockquote>
-<p><em>Dependencies must point inward—toward higher-level, more abstract layers.</em></p>
+<p><em>“The dependency graph of components must have no cycles.”</em></p>
 </blockquote>
 <ul>
-<li>Inner layers (<strong>entities</strong>, <strong>use cases</strong>) <strong>must not depend</strong> on outer layers (like the database or web).</li>
-<li>Outer layers depend on <strong>abstractions</strong> defined in the inner layers.</li>
+<li>Cycles between components make builds fragile and deployment unpredictable.</li>
+<li>Ensure components depend <strong>in one direction only</strong>.</li>
+<li>Use <strong>dependency inversion</strong> or <strong>interfaces</strong> to break circularity.</li>
+<li>Apply tools or build systems that <strong>enforce acyclic graphs</strong>.</li>
 </ul>
-<p>This is the essence of the <strong>Dependency Inversion Principle (DIP)</strong>:</p>
+<p>✅ Example: UI → Application → Domain ← Infrastructure<br />
+⛔ Avoid: UI → Application → Domain → Infrastructure → UI</p>
+<hr />
+<h3 id="2-stable-dependencies-principle-sdp">2. <strong>Stable Dependencies Principle (SDP)</strong></h3>
+<blockquote>
+<p><em>“Depend in the direction of stability.”</em></p>
+</blockquote>
 <ul>
-<li>High-level modules should not depend on low-level modules. Both should depend on abstractions.</li>
+<li>A <strong>stable component</strong> is one that many others depend on but rarely changes.</li>
+<li>An <strong>unstable component</strong> changes frequently and should not be depended upon by stable ones.</li>
+<li>Domain models and interfaces tend to be <strong>stable</strong>.</li>
+<li>UIs and adapters are <strong>unstable</strong> and should depend on core logic.</li>
+<li>Use <strong>interfaces</strong> to invert dependencies when necessary.</li>
 </ul>
-<p><strong>Benefits:</strong></p>
+<hr />
+<h3 id="3-stable-abstractions-principle-sap">3. <strong>Stable Abstractions Principle (SAP)</strong></h3>
+<blockquote>
+<p><em>“A component should be as abstract as it is stable.”</em></p>
+</blockquote>
 <ul>
-<li>Protects business rules from changes in infrastructure or technology.</li>
-<li>Makes it easy to swap out databases, UIs, APIs, and other tools.</li>
+<li>If a component is very stable (i.e., many depend on it), it should expose <strong>abstract interfaces</strong> rather than concrete implementations.</li>
+<li>This ensures flexibility and allows changes without affecting dependent components.</li>
+<li><strong>Abstractions are easier to extend</strong> without modifying the stable core.</li>
 </ul>
-<h3 id="3-independence-from-frameworks-and-tools">3. Independence from Frameworks and Tools</h3>
-<p>Frameworks are <strong>implementation details</strong>, not architectural building blocks. Your application should work <strong>without being tightly coupled</strong> to any specific ORM, HTTP layer, or library.</p>
+<p><strong>Rule of thumb:</strong>  </p>
+<blockquote>
+<p><strong>Stable = Abstract</strong><br />
+<strong>Unstable = Concrete</strong></p>
+</blockquote>
+<hr />
+<h2 id="best-practices-for-component-coupling">Best Practices for Component Coupling</h2>
 <ul>
-<li>Depend on <strong>interfaces</strong>, not concrete implementations.</li>
-<li>Keep the system <strong>open to extension</strong> and <strong>closed to modification</strong> (reflecting the <strong>Open/Closed Principle (OCP)</strong>).</li>
+<li>Keep the dependency graph acyclic—no circular dependencies.</li>
+<li>Depend on stable, abstract components, not on unstable, concrete ones.</li>
+<li>Use interfaces to invert dependencies and decouple components.</li>
+<li>Regularly review your component structure as the system evolves.</li>
 </ul>
-<h3 id="4-testability">4. Testability</h3>
-<p>Strict boundaries and abstractions make inner layers easy to test in isolation:</p>
-<ul>
-<li>Unit test use cases without spinning up a database.</li>
-<li>Mock I/O layers using interfaces defined in the domain.</li>
-</ul>
-<p>This supports the <strong>Single Responsibility Principle (SRP)</strong> and <strong>DIP</strong>.</p>
-<h3 id="5-separation-of-concerns">5. Separation of Concerns</h3>
-<p>Clean Architecture is fundamentally about <strong>Separation of Concerns</strong>:</p>
-<ul>
-<li>Business logic is kept separate from UI, database, and frameworks.</li>
-<li>Each layer has a single, clear responsibility.</li>
-</ul>
-<p><strong>Benefits:</strong></p>
-<ul>
-<li>Reduces complexity.</li>
-<li>Makes the codebase easier to reason about.</li>
-<li>Lowers the risk of unintended side effects.</li>
-</ul>
-<h3 id="6-explicit-boundaries">6. Explicit Boundaries</h3>
-<p>Boundaries are implemented through <strong>interfaces</strong> or <strong>DTOs</strong>, defining <strong>clear contracts</strong> between layers:</p>
-<ul>
-<li>The UI only needs to know how to call a use case, not how it’s implemented.</li>
-<li>The database adapter implements a gateway interface defined in the application layer.</li>
-</ul>
-<p>This supports the <strong>Interface Segregation Principle (ISP)</strong> and encourages strong <strong>encapsulation</strong>.</p>
-<h2 id="summary-clean-architecture-and-solid">Summary: Clean Architecture and SOLID</h2>
-<p>Clean Architecture is a practical application of <strong>SOLID principles</strong> and <strong>Separation of Concerns</strong> at the architectural level.</p>
+<hr />
+<h2 id="summary">Summary</h2>
 <table>
 <thead>
 <tr>
-<th>Clean Architecture Feature</th>
-<th>Related SOLID Principle</th>
-<th>Benefit</th>
+<th>Principle</th>
+<th>Focus</th>
+<th>Goal</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Dependency Rule</td>
-<td>Dependency Inversion Principle (DIP)</td>
-<td>Decouples logic from frameworks</td>
+<td><strong>ADP</strong></td>
+<td>Graph structure</td>
+<td>Avoid cycles</td>
 </tr>
 <tr>
-<td>Layered Structure</td>
-<td>Single Responsibility Principle (SRP)</td>
-<td>Clear roles and responsibilities</td>
+<td><strong>SDP</strong></td>
+<td>Dependency direction</td>
+<td>Depend on stable components</td>
 </tr>
 <tr>
-<td>Use of Interfaces/Ports</td>
-<td>Interface Segregation Principle (ISP)</td>
-<td>Modular and replaceable components</td>
-</tr>
-<tr>
-<td>Isolation of Business Logic</td>
-<td>Open/Closed Principle (OCP)</td>
-<td>Easy to extend, hard to break</td>
-</tr>
-<tr>
-<td>Strict boundaries between layers</td>
-<td>Separation of Concerns</td>
-<td>Easier maintenance and comprehension</td>
+<td><strong>SAP</strong></td>
+<td>Design maturity</td>
+<td>Stable = abstract, not rigid</td>
 </tr>
 </tbody>
 </table>
-<p>By grounding your architecture in these principles, you ensure your systems are <strong>adaptable, robust, and built to last</strong>—no matter what tools or technologies you use.</p>
+<hr />
+<h2 id="takeaway">Takeaway</h2>
+<p>Component Coupling principles guide the <strong>relationships between modules</strong>—keeping systems loosely coupled, testable, and scalable.<br />
+Combine them with cohesion principles (REP, CCP, CRP) for a strong Clean Architecture foundation.</p>
 
 
 
@@ -1077,7 +1067,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../01_introduction/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Introduction">
+          <a href="../09_component_cohesion/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Component Cohesion">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1087,20 +1077,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Introduction
+                Component Cohesion
               </div>
             </div>
           </a>
         
         
           
-          <a href="../03_single_responsability_principle/" class="md-footer__link md-footer__link--next" aria-label="Next: Single Responsability Principle">
+          <a href="../11_architectural_patterns/" class="md-footer__link md-footer__link--next" aria-label="Next: Intro">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Single Responsability Principle
+                Intro
               </div>
             </div>
             <div class="md-footer__button md-icon">

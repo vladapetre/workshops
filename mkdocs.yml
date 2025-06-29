@@ -25,6 +25,10 @@ nav:
 
 theme:
   name: material
+  features:
+  - navigation.footer
+  - navigation.instant
+
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
@@ -39,21 +43,22 @@ extra_css:
   - css/style.css
 
 plugins:
-- plantuml:
-    puml_url: https://www.plantuml.com/plantuml/
-    puml_keyword: puml
-    local_file_inclusion: true
-    request_timeout: 300
-    verify_ssl: true
-    verbose: true
-    theme:
-      enabled: true
-      light: nord/day
-      dark: nord/night
-    cache:
-      backend: local
-      local:
-        path: "~/.cache/mkdocs_puml"
-        join_project_name: true
-    interaction:
-      enabled: true
+  - search
+  - plantuml:
+      puml_url: https://www.plantuml.com/plantuml/
+      puml_keyword: puml
+      local_file_inclusion: true
+      request_timeout: 300
+      verify_ssl: true
+      verbose: true
+      theme:
+        enabled: true
+        light: nord/day
+        dark: nord/night
+      cache:
+        backend: local
+        local:
+          path: "~/.cache/mkdocs_puml"
+          join_project_name: true
+      interaction:
+        enabled: true

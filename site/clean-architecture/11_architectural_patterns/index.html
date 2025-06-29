@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../01_introduction/">
+        <link rel="prev" href="../10_component_coupling/">
       
       
-        <link rel="next" href="../03_single_responsability_principle/">
+        <link rel="next" href="../12_layered_architecture/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#understanding-the-core-principles-of-clean-architecture" class="md-skip">
+        <a href="#architectural-patterns-in-clean-architecture" class="md-skip">
           Skip to content
         </a>
       
@@ -288,20 +288,18 @@
                 
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" >
         
           
           <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
@@ -317,7 +315,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_1_2">
             <span class="md-nav__icon md-icon"></span>
             Design Principles
@@ -328,32 +326,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Intro
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../02_design_principles/" class="md-nav__link">
         
   
   
@@ -364,104 +340,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#key-principles-of-clean-architecture" class="md-nav__link">
-    <span class="md-ellipsis">
-      Key Principles of Clean Architecture
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Key Principles of Clean Architecture">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-layered-structure" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. Layered Structure
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-the-dependency-rule" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. The Dependency Rule
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-independence-from-frameworks-and-tools" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Independence from Frameworks and Tools
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-testability" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. Testability
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5-separation-of-concerns" class="md-nav__link">
-    <span class="md-ellipsis">
-      5. Separation of Concerns
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#6-explicit-boundaries" class="md-nav__link">
-    <span class="md-ellipsis">
-      6. Explicit Boundaries
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#summary-clean-architecture-and-solid" class="md-nav__link">
-    <span class="md-ellipsis">
-      Summary: Clean Architecture and SOLID
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -709,18 +587,20 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_4" checked>
         
           
           <label class="md-nav__link" for="__nav_1_4" id="__nav_1_4_label" tabindex="0">
@@ -736,7 +616,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_1_4">
             <span class="md-nav__icon md-icon"></span>
             Architectural Patterns
@@ -747,10 +627,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../11_architectural_patterns/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Intro
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -761,6 +663,122 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-are-architectural-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Are Architectural Patterns?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-architectural-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Architectural Patterns
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Architectural Patterns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-layered-architecture-n-tier" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Layered Architecture (N-Tier)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-onion-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Onion Architecture
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-hexagonal-architecture-ports-and-adapters" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Hexagonal Architecture (Ports and Adapters)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-clean-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Clean Architecture
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-microkernel-architecture-plugin-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Microkernel Architecture (Plugin Architecture)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-microservices-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Microservices Architecture
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#choosing-the-right-pattern" class="md-nav__link">
+    <span class="md-ellipsis">
+      Choosing the Right Pattern
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#takeaway" class="md-nav__link">
+    <span class="md-ellipsis">
+      Takeaway
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -854,64 +872,73 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#key-principles-of-clean-architecture" class="md-nav__link">
+  <a href="#what-are-architectural-patterns" class="md-nav__link">
     <span class="md-ellipsis">
-      Key Principles of Clean Architecture
+      What Are Architectural Patterns?
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Key Principles of Clean Architecture">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-architectural-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Architectural Patterns
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Architectural Patterns">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-layered-structure" class="md-nav__link">
+  <a href="#1-layered-architecture-n-tier" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Layered Structure
+      1. Layered Architecture (N-Tier)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-the-dependency-rule" class="md-nav__link">
+  <a href="#2-onion-architecture" class="md-nav__link">
     <span class="md-ellipsis">
-      2. The Dependency Rule
+      2. Onion Architecture
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#3-independence-from-frameworks-and-tools" class="md-nav__link">
+  <a href="#3-hexagonal-architecture-ports-and-adapters" class="md-nav__link">
     <span class="md-ellipsis">
-      3. Independence from Frameworks and Tools
+      3. Hexagonal Architecture (Ports and Adapters)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#4-testability" class="md-nav__link">
+  <a href="#4-clean-architecture" class="md-nav__link">
     <span class="md-ellipsis">
-      4. Testability
+      4. Clean Architecture
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#5-separation-of-concerns" class="md-nav__link">
+  <a href="#5-microkernel-architecture-plugin-architecture" class="md-nav__link">
     <span class="md-ellipsis">
-      5. Separation of Concerns
+      5. Microkernel Architecture (Plugin Architecture)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#6-explicit-boundaries" class="md-nav__link">
+  <a href="#6-microservices-architecture" class="md-nav__link">
     <span class="md-ellipsis">
-      6. Explicit Boundaries
+      6. Microservices Architecture
     </span>
   </a>
   
@@ -923,9 +950,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#summary-clean-architecture-and-solid" class="md-nav__link">
+  <a href="#choosing-the-right-pattern" class="md-nav__link">
     <span class="md-ellipsis">
-      Summary: Clean Architecture and SOLID
+      Choosing the Right Pattern
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#takeaway" class="md-nav__link">
+    <span class="md-ellipsis">
+      Takeaway
     </span>
   </a>
   
@@ -947,107 +983,85 @@
 
 
 
-<h1 id="understanding-the-core-principles-of-clean-architecture">Understanding the Core Principles of Clean Architecture</h1>
-<p><strong>Clean Architecture</strong> helps you build <strong>flexible, maintainable, and scalable software</strong> by organizing code into <strong>well-defined layers</strong> and enforcing <strong>clear boundaries</strong>. The goal is to keep your <strong>core business logic independent</strong> from frameworks, databases, and external tools.</p>
-<p>At its core, Clean Architecture relies on proven software principles—especially those from <strong>SOLID</strong>—with a strong emphasis on the <strong>Dependency Inversion Principle (DIP)</strong> and <strong>Separation of Concerns</strong>. These principles support long-term maintainability and adaptability.</p>
-<h2 id="key-principles-of-clean-architecture">Key Principles of Clean Architecture</h2>
-<h3 id="1-layered-structure">1. Layered Structure</h3>
-<p>Clean Architecture organizes your system into <strong>concentric layers</strong>, each with a specific responsibility:</p>
+<h1 id="architectural-patterns-in-clean-architecture">Architectural Patterns in Clean Architecture</h1>
+<h2 id="what-are-architectural-patterns">What Are Architectural Patterns?</h2>
+<p><strong>Architectural patterns</strong> are proven, high-level strategies for organizing software systems. They provide reusable solutions to common structural challenges and help you manage complexity as your application grows. In the context of <strong>Clean Architecture</strong>, these patterns guide how you separate concerns, enforce boundaries, and structure dependencies—ensuring your core business logic remains independent and adaptable.</p>
+<p>Applying the right architectural pattern is crucial for:</p>
 <ul>
-<li><strong>Entities:</strong> Enterprise-wide business rules; the most abstract and reusable parts.</li>
-<li><strong>Use Cases:</strong> Application-specific business rules; orchestrate interactions between entities and the outside world.</li>
-<li><strong>Interface Adapters:</strong> Controllers, presenters, and gateways that convert data from external formats (like JSON or database rows) into a form usable by your application.</li>
-<li><strong>Frameworks &amp; Drivers:</strong> External agents such as web servers, databases, and UI frameworks.</li>
+<li>Achieving clear separation of concerns</li>
+<li>Supporting testability and maintainability</li>
+<li>Enabling flexibility and scalability</li>
+<li>Reducing the risk of tight coupling between system parts</li>
 </ul>
-<p>This structure enforces <strong>Separation of Concerns</strong> by isolating responsibilities into clear layers.</p>
-<h3 id="2-the-dependency-rule">2. The Dependency Rule</h3>
-<blockquote>
-<p><em>Dependencies must point inward—toward higher-level, more abstract layers.</em></p>
-</blockquote>
+<hr />
+<h2 id="common-architectural-patterns">Common Architectural Patterns</h2>
+<p>Below are several widely used architectural patterns, each with its own strengths and ideal use cases:</p>
+<h3 id="1-layered-architecture-n-tier">1. <strong>Layered Architecture (N-Tier)</strong></h3>
 <ul>
-<li>Inner layers (<strong>entities</strong>, <strong>use cases</strong>) <strong>must not depend</strong> on outer layers (like the database or web).</li>
-<li>Outer layers depend on <strong>abstractions</strong> defined in the inner layers.</li>
+<li><strong>Definition:</strong> Organizes code into horizontal layers (e.g., Presentation, Application, Domain, Infrastructure), each with a specific responsibility.</li>
+<li><strong>Strengths:</strong></li>
+<li>Clear separation of concerns</li>
+<li>Easy to understand and implement</li>
+<li>Supports independent development and testing of layers</li>
+<li><strong>Typical Use:</strong> Traditional enterprise applications, web apps, and systems where responsibilities are naturally separated.</li>
 </ul>
-<p>This is the essence of the <strong>Dependency Inversion Principle (DIP)</strong>:</p>
+<h3 id="2-onion-architecture">2. <strong>Onion Architecture</strong></h3>
 <ul>
-<li>High-level modules should not depend on low-level modules. Both should depend on abstractions.</li>
+<li><strong>Definition:</strong> Structures the system in concentric circles, with the innermost circle being the domain model and outer circles handling infrastructure and external concerns.</li>
+<li><strong>Strengths:</strong></li>
+<li>Enforces strict dependency direction toward the core</li>
+<li>Keeps business logic isolated and protected</li>
+<li>Flexible to change in external layers</li>
+<li><strong>Typical Use:</strong> Domain-driven design projects, complex business applications.</li>
 </ul>
-<p><strong>Benefits:</strong></p>
+<h3 id="3-hexagonal-architecture-ports-and-adapters">3. <strong>Hexagonal Architecture (Ports and Adapters)</strong></h3>
 <ul>
-<li>Protects business rules from changes in infrastructure or technology.</li>
-<li>Makes it easy to swap out databases, UIs, APIs, and other tools.</li>
+<li><strong>Definition:</strong> Centers the application core and connects it to the outside world through ports (interfaces) and adapters (implementations).</li>
+<li><strong>Strengths:</strong></li>
+<li>Decouples business logic from external systems (UI, database, APIs)</li>
+<li>Makes it easy to swap out technologies or frameworks</li>
+<li>Enhances testability by isolating the core</li>
+<li><strong>Typical Use:</strong> Applications needing strong independence from frameworks or infrastructure.</li>
 </ul>
-<h3 id="3-independence-from-frameworks-and-tools">3. Independence from Frameworks and Tools</h3>
-<p>Frameworks are <strong>implementation details</strong>, not architectural building blocks. Your application should work <strong>without being tightly coupled</strong> to any specific ORM, HTTP layer, or library.</p>
+<h3 id="4-clean-architecture">4. <strong>Clean Architecture</strong></h3>
 <ul>
-<li>Depend on <strong>interfaces</strong>, not concrete implementations.</li>
-<li>Keep the system <strong>open to extension</strong> and <strong>closed to modification</strong> (reflecting the <strong>Open/Closed Principle (OCP)</strong>).</li>
+<li><strong>Definition:</strong> Combines ideas from layered, hexagonal, and onion architectures. Places business rules at the center, surrounded by layers for use cases, interfaces, and frameworks.</li>
+<li><strong>Strengths:</strong></li>
+<li>Maximizes independence of business logic</li>
+<li>Supports testability, flexibility, and maintainability</li>
+<li>Adapts well to evolving requirements and technologies</li>
+<li><strong>Typical Use:</strong> Systems where long-term adaptability and testability are priorities.</li>
 </ul>
-<h3 id="4-testability">4. Testability</h3>
-<p>Strict boundaries and abstractions make inner layers easy to test in isolation:</p>
+<h3 id="5-microkernel-architecture-plugin-architecture">5. <strong>Microkernel Architecture (Plugin Architecture)</strong></h3>
 <ul>
-<li>Unit test use cases without spinning up a database.</li>
-<li>Mock I/O layers using interfaces defined in the domain.</li>
+<li><strong>Definition:</strong> Core system provides minimal functionality, with additional features added via plugins.</li>
+<li><strong>Strengths:</strong></li>
+<li>Highly extensible and customizable</li>
+<li>Core remains stable while plugins evolve independently</li>
+<li><strong>Typical Use:</strong> IDEs, extensible platforms, systems requiring frequent feature additions.</li>
 </ul>
-<p>This supports the <strong>Single Responsibility Principle (SRP)</strong> and <strong>DIP</strong>.</p>
-<h3 id="5-separation-of-concerns">5. Separation of Concerns</h3>
-<p>Clean Architecture is fundamentally about <strong>Separation of Concerns</strong>:</p>
+<h3 id="6-microservices-architecture">6. <strong>Microservices Architecture</strong></h3>
 <ul>
-<li>Business logic is kept separate from UI, database, and frameworks.</li>
-<li>Each layer has a single, clear responsibility.</li>
+<li><strong>Definition:</strong> Decomposes the application into small, independently deployable services, each responsible for a specific business capability.</li>
+<li><strong>Strengths:</strong></li>
+<li>Enables independent scaling, deployment, and development</li>
+<li>Isolates failures and reduces system-wide risk</li>
+<li>Supports technology diversity across services</li>
+<li><strong>Typical Use:</strong> Large-scale, distributed systems, organizations needing rapid delivery and scaling.</li>
 </ul>
-<p><strong>Benefits:</strong></p>
+<hr />
+<h2 id="choosing-the-right-pattern">Choosing the Right Pattern</h2>
+<p>When selecting an architectural pattern:</p>
 <ul>
-<li>Reduces complexity.</li>
-<li>Makes the codebase easier to reason about.</li>
-<li>Lowers the risk of unintended side effects.</li>
+<li><strong>Align with your business needs:</strong> Consider complexity, team expertise, and future growth.</li>
+<li><strong>Prioritize separation of concerns:</strong> Ensure your core logic is insulated from external changes.</li>
+<li><strong>Balance flexibility and simplicity:</strong> Don’t over-engineer—choose the simplest pattern that meets your requirements.</li>
 </ul>
-<h3 id="6-explicit-boundaries">6. Explicit Boundaries</h3>
-<p>Boundaries are implemented through <strong>interfaces</strong> or <strong>DTOs</strong>, defining <strong>clear contracts</strong> between layers:</p>
-<ul>
-<li>The UI only needs to know how to call a use case, not how it’s implemented.</li>
-<li>The database adapter implements a gateway interface defined in the application layer.</li>
-</ul>
-<p>This supports the <strong>Interface Segregation Principle (ISP)</strong> and encourages strong <strong>encapsulation</strong>.</p>
-<h2 id="summary-clean-architecture-and-solid">Summary: Clean Architecture and SOLID</h2>
-<p>Clean Architecture is a practical application of <strong>SOLID principles</strong> and <strong>Separation of Concerns</strong> at the architectural level.</p>
-<table>
-<thead>
-<tr>
-<th>Clean Architecture Feature</th>
-<th>Related SOLID Principle</th>
-<th>Benefit</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Dependency Rule</td>
-<td>Dependency Inversion Principle (DIP)</td>
-<td>Decouples logic from frameworks</td>
-</tr>
-<tr>
-<td>Layered Structure</td>
-<td>Single Responsibility Principle (SRP)</td>
-<td>Clear roles and responsibilities</td>
-</tr>
-<tr>
-<td>Use of Interfaces/Ports</td>
-<td>Interface Segregation Principle (ISP)</td>
-<td>Modular and replaceable components</td>
-</tr>
-<tr>
-<td>Isolation of Business Logic</td>
-<td>Open/Closed Principle (OCP)</td>
-<td>Easy to extend, hard to break</td>
-</tr>
-<tr>
-<td>Strict boundaries between layers</td>
-<td>Separation of Concerns</td>
-<td>Easier maintenance and comprehension</td>
-</tr>
-</tbody>
-</table>
-<p>By grounding your architecture in these principles, you ensure your systems are <strong>adaptable, robust, and built to last</strong>—no matter what tools or technologies you use.</p>
+<hr />
+<h2 id="takeaway">Takeaway</h2>
+<p>Architectural patterns are foundational to Clean Architecture.<br />
+They help you structure your system for clarity, adaptability, and long-term success.<br />
+Choose the pattern that best fits your context, and always keep your business logic at the center of your design.</p>
 
 
 
@@ -1077,7 +1091,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../01_introduction/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Introduction">
+          <a href="../10_component_coupling/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Component Coupling">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1087,20 +1101,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Introduction
+                Component Coupling
               </div>
             </div>
           </a>
         
         
           
-          <a href="../03_single_responsability_principle/" class="md-footer__link md-footer__link--next" aria-label="Next: Single Responsability Principle">
+          <a href="../12_layered_architecture/" class="md-footer__link md-footer__link--next" aria-label="Next: Layered Architecture">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Single Responsability Principle
+                Layered Architecture
               </div>
             </div>
             <div class="md-footer__button md-icon">

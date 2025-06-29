@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../01_introduction/">
+        <link rel="prev" href="../06_interface_segregation_principle/">
       
       
-        <link rel="next" href="../03_single_responsability_principle/">
+        <link rel="next" href="../08_component_principles/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Intro - Workshops</title>
+        <title>Dependency Inversion Principle - Workshops</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#understanding-the-core-principles-of-clean-architecture" class="md-skip">
+        <a href="#dependency-inversion-principle-dip" class="md-skip">
           Skip to content
         </a>
       
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Intro
+              Dependency Inversion Principle
             
           </span>
         </div>
@@ -328,32 +328,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Intro
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../02_design_principles/" class="md-nav__link">
         
   
   
@@ -364,104 +342,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#key-principles-of-clean-architecture" class="md-nav__link">
-    <span class="md-ellipsis">
-      Key Principles of Clean Architecture
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Key Principles of Clean Architecture">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-layered-structure" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. Layered Structure
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-the-dependency-rule" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. The Dependency Rule
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-independence-from-frameworks-and-tools" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Independence from Frameworks and Tools
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-testability" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. Testability
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5-separation-of-concerns" class="md-nav__link">
-    <span class="md-ellipsis">
-      5. Separation of Concerns
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#6-explicit-boundaries" class="md-nav__link">
-    <span class="md-ellipsis">
-      6. Explicit Boundaries
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#summary-clean-architecture-and-solid" class="md-nav__link">
-    <span class="md-ellipsis">
-      Summary: Clean Architecture and SOLID
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -563,10 +443,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../07_dependency_inversion_principle/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Dependency Inversion Principle
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -577,6 +479,95 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#understanding-the-dependency-inversion-principle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understanding the Dependency Inversion Principle
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Understanding the Dependency Inversion Principle">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-dip-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why DIP Matters
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-dip-violation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: DIP Violation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#refactoring-for-dip" class="md-nav__link">
+    <span class="md-ellipsis">
+      Refactoring for DIP
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-benefits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Benefits
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices-for-applying-dip" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices for Applying DIP
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#takeaway" class="md-nav__link">
+    <span class="md-ellipsis">
+      Takeaway
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -854,64 +845,19 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#key-principles-of-clean-architecture" class="md-nav__link">
+  <a href="#understanding-the-dependency-inversion-principle" class="md-nav__link">
     <span class="md-ellipsis">
-      Key Principles of Clean Architecture
+      Understanding the Dependency Inversion Principle
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Key Principles of Clean Architecture">
+    <nav class="md-nav" aria-label="Understanding the Dependency Inversion Principle">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-layered-structure" class="md-nav__link">
+  <a href="#why-dip-matters" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Layered Structure
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-the-dependency-rule" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. The Dependency Rule
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-independence-from-frameworks-and-tools" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Independence from Frameworks and Tools
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-testability" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. Testability
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5-separation-of-concerns" class="md-nav__link">
-    <span class="md-ellipsis">
-      5. Separation of Concerns
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#6-explicit-boundaries" class="md-nav__link">
-    <span class="md-ellipsis">
-      6. Explicit Boundaries
+      Why DIP Matters
     </span>
   </a>
   
@@ -923,9 +869,45 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#summary-clean-architecture-and-solid" class="md-nav__link">
+  <a href="#example-dip-violation" class="md-nav__link">
     <span class="md-ellipsis">
-      Summary: Clean Architecture and SOLID
+      Example: DIP Violation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#refactoring-for-dip" class="md-nav__link">
+    <span class="md-ellipsis">
+      Refactoring for DIP
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-benefits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Benefits
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices-for-applying-dip" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices for Applying DIP
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#takeaway" class="md-nav__link">
+    <span class="md-ellipsis">
+      Takeaway
     </span>
   </a>
   
@@ -947,107 +929,101 @@
 
 
 
-<h1 id="understanding-the-core-principles-of-clean-architecture">Understanding the Core Principles of Clean Architecture</h1>
-<p><strong>Clean Architecture</strong> helps you build <strong>flexible, maintainable, and scalable software</strong> by organizing code into <strong>well-defined layers</strong> and enforcing <strong>clear boundaries</strong>. The goal is to keep your <strong>core business logic independent</strong> from frameworks, databases, and external tools.</p>
-<p>At its core, Clean Architecture relies on proven software principles—especially those from <strong>SOLID</strong>—with a strong emphasis on the <strong>Dependency Inversion Principle (DIP)</strong> and <strong>Separation of Concerns</strong>. These principles support long-term maintainability and adaptability.</p>
-<h2 id="key-principles-of-clean-architecture">Key Principles of Clean Architecture</h2>
-<h3 id="1-layered-structure">1. Layered Structure</h3>
-<p>Clean Architecture organizes your system into <strong>concentric layers</strong>, each with a specific responsibility:</p>
-<ul>
-<li><strong>Entities:</strong> Enterprise-wide business rules; the most abstract and reusable parts.</li>
-<li><strong>Use Cases:</strong> Application-specific business rules; orchestrate interactions between entities and the outside world.</li>
-<li><strong>Interface Adapters:</strong> Controllers, presenters, and gateways that convert data from external formats (like JSON or database rows) into a form usable by your application.</li>
-<li><strong>Frameworks &amp; Drivers:</strong> External agents such as web servers, databases, and UI frameworks.</li>
-</ul>
-<p>This structure enforces <strong>Separation of Concerns</strong> by isolating responsibilities into clear layers.</p>
-<h3 id="2-the-dependency-rule">2. The Dependency Rule</h3>
+<h1 id="dependency-inversion-principle-dip">Dependency Inversion Principle (DIP)</h1>
+<h2 id="understanding-the-dependency-inversion-principle">Understanding the Dependency Inversion Principle</h2>
+<p>The <strong>Dependency Inversion Principle (DIP)</strong> is the fifth of the five SOLID principles of object-oriented design. It states:</p>
 <blockquote>
-<p><em>Dependencies must point inward—toward higher-level, more abstract layers.</em></p>
+<p><strong>High-level modules should not depend on low-level modules. Both should depend on abstractions.</strong><br />
+<strong>Abstractions should not depend on details. Details should depend on abstractions.</strong></p>
 </blockquote>
+<p><strong>DIP</strong> means your core logic (high-level modules) should depend on <strong>interfaces or abstractions</strong>, not on concrete implementations (low-level modules). This decouples your business logic from infrastructure and details, making your codebase more flexible, testable, and maintainable.</p>
+<h3 id="why-dip-matters">Why DIP Matters</h3>
+<p>When DIP is violated:</p>
 <ul>
-<li>Inner layers (<strong>entities</strong>, <strong>use cases</strong>) <strong>must not depend</strong> on outer layers (like the database or web).</li>
-<li>Outer layers depend on <strong>abstractions</strong> defined in the inner layers.</li>
+<li>High-level code is tightly coupled to low-level details.</li>
+<li>Changing infrastructure or implementation details requires changes in core logic.</li>
+<li>Testing and extending the system becomes difficult.</li>
 </ul>
-<p>This is the essence of the <strong>Dependency Inversion Principle (DIP)</strong>:</p>
+<p>By following DIP, you:</p>
 <ul>
-<li>High-level modules should not depend on low-level modules. Both should depend on abstractions.</li>
+<li>Enable clean architecture boundaries.</li>
+<li>Make your code easier to adapt and test.</li>
+<li>Reduce the risk of breaking core logic when details change.</li>
 </ul>
-<p><strong>Benefits:</strong></p>
+<hr />
+<h2 id="example-dip-violation">Example: DIP Violation</h2>
+<p>Suppose your application logic directly instantiates concrete classes:</p>
+<pre><code class="language-csharp">public class VehicleInspectionProcessor
+{
+    public bool ProcessInspection(IVehicle vehicle)
+    {
+        var service = new SimpleInspectionService(); // ⚠ tightly coupled to a concrete class
+        return service.Verify(vehicle);
+    }
+}
+</code></pre>
+<p><strong>Problems:</strong></p>
 <ul>
-<li>Protects business rules from changes in infrastructure or technology.</li>
-<li>Makes it easy to swap out databases, UIs, APIs, and other tools.</li>
+<li>The processor is tightly bound to a specific implementation.</li>
+<li>Hard to swap out the inspection logic or test the processor in isolation.</li>
 </ul>
-<h3 id="3-independence-from-frameworks-and-tools">3. Independence from Frameworks and Tools</h3>
-<p>Frameworks are <strong>implementation details</strong>, not architectural building blocks. Your application should work <strong>without being tightly coupled</strong> to any specific ORM, HTTP layer, or library.</p>
+<hr />
+<h2 id="refactoring-for-dip">Refactoring for DIP</h2>
+<p>Refactor the processor to depend on an abstraction (<code>IInspectionService</code>) and inject the dependency:</p>
+<pre><code class="language-csharp">public interface IInspectionService
+{
+    bool Verify(IVehicle vehicle);
+}
+
+public class SimpleInspectionService : IInspectionService
+{
+    public bool Verify(IVehicle vehicle)
+    {
+        return vehicle.Mileage &lt; 100000;
+    }
+}
+</code></pre>
+<details>
+<summary>Exercise: Refactor the VehicleInspectionProcessor for DIP</summary>
+
+
+<pre><code class="language-csharp">public class VehicleInspectionProcessor
+{
+    private readonly IInspectionService _inspectionService;
+
+    public VehicleInspectionProcessor(IInspectionService inspectionService)
+    {
+        _inspectionService = inspectionService;
+    }
+
+    public bool ProcessInspection(IVehicle vehicle)
+    {
+        return _inspectionService.Verify(vehicle);
+    }
+}
+</code></pre>
+
+</details>
+
+<hr />
+<h2 id="key-benefits">Key Benefits</h2>
 <ul>
-<li>Depend on <strong>interfaces</strong>, not concrete implementations.</li>
-<li>Keep the system <strong>open to extension</strong> and <strong>closed to modification</strong> (reflecting the <strong>Open/Closed Principle (OCP)</strong>).</li>
+<li><strong>Decoupled design:</strong> High-level modules depend on abstractions, not concrete implementations.</li>
+<li><strong>Easier testing:</strong> Dependencies are injected, making the code easier to test and extend.</li>
+<li><strong>Flexible architecture:</strong> Infrastructure and business logic are separated.</li>
 </ul>
-<h3 id="4-testability">4. Testability</h3>
-<p>Strict boundaries and abstractions make inner layers easy to test in isolation:</p>
+<hr />
+<h2 id="best-practices-for-applying-dip">Best Practices for Applying DIP</h2>
 <ul>
-<li>Unit test use cases without spinning up a database.</li>
-<li>Mock I/O layers using interfaces defined in the domain.</li>
+<li>Depend on <strong>interfaces</strong> or <strong>abstract classes</strong>, not concrete types.</li>
+<li>Use <strong>dependency injection</strong> to provide implementations at runtime.</li>
+<li>Keep abstractions in core layers; implement details in outer layers.</li>
+<li>Avoid new-ing up dependencies inside your business logic.</li>
 </ul>
-<p>This supports the <strong>Single Responsibility Principle (SRP)</strong> and <strong>DIP</strong>.</p>
-<h3 id="5-separation-of-concerns">5. Separation of Concerns</h3>
-<p>Clean Architecture is fundamentally about <strong>Separation of Concerns</strong>:</p>
-<ul>
-<li>Business logic is kept separate from UI, database, and frameworks.</li>
-<li>Each layer has a single, clear responsibility.</li>
-</ul>
-<p><strong>Benefits:</strong></p>
-<ul>
-<li>Reduces complexity.</li>
-<li>Makes the codebase easier to reason about.</li>
-<li>Lowers the risk of unintended side effects.</li>
-</ul>
-<h3 id="6-explicit-boundaries">6. Explicit Boundaries</h3>
-<p>Boundaries are implemented through <strong>interfaces</strong> or <strong>DTOs</strong>, defining <strong>clear contracts</strong> between layers:</p>
-<ul>
-<li>The UI only needs to know how to call a use case, not how it’s implemented.</li>
-<li>The database adapter implements a gateway interface defined in the application layer.</li>
-</ul>
-<p>This supports the <strong>Interface Segregation Principle (ISP)</strong> and encourages strong <strong>encapsulation</strong>.</p>
-<h2 id="summary-clean-architecture-and-solid">Summary: Clean Architecture and SOLID</h2>
-<p>Clean Architecture is a practical application of <strong>SOLID principles</strong> and <strong>Separation of Concerns</strong> at the architectural level.</p>
-<table>
-<thead>
-<tr>
-<th>Clean Architecture Feature</th>
-<th>Related SOLID Principle</th>
-<th>Benefit</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Dependency Rule</td>
-<td>Dependency Inversion Principle (DIP)</td>
-<td>Decouples logic from frameworks</td>
-</tr>
-<tr>
-<td>Layered Structure</td>
-<td>Single Responsibility Principle (SRP)</td>
-<td>Clear roles and responsibilities</td>
-</tr>
-<tr>
-<td>Use of Interfaces/Ports</td>
-<td>Interface Segregation Principle (ISP)</td>
-<td>Modular and replaceable components</td>
-</tr>
-<tr>
-<td>Isolation of Business Logic</td>
-<td>Open/Closed Principle (OCP)</td>
-<td>Easy to extend, hard to break</td>
-</tr>
-<tr>
-<td>Strict boundaries between layers</td>
-<td>Separation of Concerns</td>
-<td>Easier maintenance and comprehension</td>
-</tr>
-</tbody>
-</table>
-<p>By grounding your architecture in these principles, you ensure your systems are <strong>adaptable, robust, and built to last</strong>—no matter what tools or technologies you use.</p>
+<hr />
+<h2 id="takeaway">Takeaway</h2>
+<p>DIP encourages designing your system around <strong>interfaces</strong> and <strong>injection</strong>, not <strong>instantiation</strong>.<br />
+This decouples your core logic from infrastructure and allows for clean architecture boundaries.</p>
 
 
 
@@ -1077,7 +1053,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../01_introduction/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Introduction">
+          <a href="../06_interface_segregation_principle/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Interface Segregation Principle">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1087,20 +1063,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Introduction
+                Interface Segregation Principle
               </div>
             </div>
           </a>
         
         
           
-          <a href="../03_single_responsability_principle/" class="md-footer__link md-footer__link--next" aria-label="Next: Single Responsability Principle">
+          <a href="../08_component_principles/" class="md-footer__link md-footer__link--next" aria-label="Next: Intro">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Single Responsability Principle
+                Intro
               </div>
             </div>
             <div class="md-footer__button md-icon">
