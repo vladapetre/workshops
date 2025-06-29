@@ -3,6 +3,8 @@
 Welcome to the Workshops documentation hub!  
 This resource is designed for software developers and engineers seeking practical, hands-on guidance for building better systems.
 
+https://www.developertoarchitect.com/resources.html
+
 ---
 
 ## Available Workshops

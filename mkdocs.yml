@@ -23,6 +23,7 @@ nav:
       #   - Hexagonal Architecture: clean-architecture/16_hexagonal_architecture.md
       #   - Microservices: clean-architecture/17_microservices.md
       #   - Event-Driven Architecture: clean-architecture/18_event_driven_architecture.md 
+      - Resources: clean-architecture/00_resources.md
 
 theme:
   logo: assets/logo.png

@@ -110,3 +110,19 @@ package "Infrastructure Layer\n(Frameworks & Drivers)" {
 
 Layered Architecture provides a clear, time-tested way to organize your codebase.  
 It’s easy to understand and works well for many business applications, but be mindful of its limitations as your system grows in complexity or requires more flexibility.
+
+<!-- | Architecture characteristic | Star rating        |
+|----------------------------|--------------------|
+| Partitioning type          | Technical          |
+| Number of quanta           | 1                  |
+| Deployability              | ⭐                 |
+| Elasticity                 | ⭐                 |
+| Evolutionary               | ⭐                 |
+| Fault tolerance            | ⭐                 |
+| Modularity                 | ⭐                 |
+| Overall cost               | ⭐⭐⭐⭐⭐             |
+| Performance                | ⭐⭐                |
+| Reliability                | ⭐⭐⭐              |
+| Scalability                | ⭐                 |
+| Simplicity                 | ⭐⭐⭐⭐             |
+| Testability                | ⭐                 | -->
