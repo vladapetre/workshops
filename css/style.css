@@ -31,3 +31,41 @@ h1, h2, h3, h4, h5, h6 {
     margin-left: 0.2rem !important; /* Reduce the left margin. Adjust as needed. */
     padding-left: 0.2rem !important; /* Reduce the left padding. Adjust as needed. */
 }
+
+/* Make tables full width and try to make columns equal */
+.md-typeset table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Ensure tbody and thead also take full width */
+.md-typeset table thead,
+.md-typeset table tbody {
+    width: 100%;
+    display: table; /* Crucial: Treat them as table parts to inherit layout */
+    table-layout: fixed; /* Inherit or ensure fixed layout for internal rows */
+}
+
+/* Ensure table cells have appropriate padding and word-wrapping */
+.md-typeset table th,
+.md-typeset table td {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    padding: 0.8em 0.8em; /* Increase vertical padding (first value). Adjust as needed. */
+    vertical-align: top;
+    line-height: 1.6;
+}
+
+/* Override potential overflow settings from Material theme wrappers */
+.md-content .md-typeset__scrollwrap {
+    overflow-x: visible !important;
+    width: 100% !important;
+}
+
+.md-content .md-typeset__table {
+    overflow-x: visible !important;
+    width: 100% !important;
+}
