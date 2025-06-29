@@ -2,6 +2,7 @@ site_name: Workshops
 
 nav:
   - Clean Architecture: 
+      - clean-architecture/index.md
       - Introduction: clean-architecture/01_introduction.md
       - Design Principles:
         - Intro: clean-architecture/02_design_principles.md
@@ -24,10 +25,16 @@ nav:
       #   - Event-Driven Architecture: clean-architecture/18_event_driven_architecture.md 
 
 theme:
+  logo: assets/logo.png
+  favicon: assets/favicon.png
   name: material
   features:
   - navigation.footer
   - navigation.instant
+  - navigation.tabs
+  - navigation.path
+  - navigation.indexes
+  - navigation.top
 
   palette:
     - media: "(prefers-color-scheme: light)"

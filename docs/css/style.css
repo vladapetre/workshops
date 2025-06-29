@@ -25,3 +25,9 @@ h1, h2, h3, h4, h5, h6 {
     margin-left: 2em;    /* Existing: Add 2 'em' units of left margin for indentation */
     margin-bottom: 1.5em; /* NEW: Add 1.5 'em' units of space below the blockquote */
 }
+
+/* Move the MkDocs site title closer to the logo */
+.md-header__title {
+    margin-left: 0.2rem !important; /* Reduce the left margin. Adjust as needed. */
+    padding-left: 0.2rem !important; /* Reduce the left padding. Adjust as needed. */
+}
