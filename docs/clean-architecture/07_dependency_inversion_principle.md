@@ -1,55 +1,47 @@
 # Dependency Inversion Principle (DIP)
 
-## Understanding the Dependency Inversion Principle
+> "High-level modules should not depend on low-level modules. Both should depend on abstractions."  
+> "Abstractions should not depend on details. Details should depend on abstractions."
 
-The **Dependency Inversion Principle (DIP)** is the fifth of the five SOLID principles of object-oriented design. It states:
+## Overview
 
-> **High-level modules should not depend on low-level modules. Both should depend on abstractions.**  
-> **Abstractions should not depend on details. Details should depend on abstractions.**
+The **Dependency Inversion Principle (DIP)** is the fifth of the five SOLID principles.  
+It means your core logic (high-level modules) should depend on **interfaces or abstractions**, not on concrete implementations (low-level modules).
 
-**DIP** means your core logic (high-level modules) should depend on **interfaces or abstractions**, not on concrete implementations (low-level modules). This decouples your business logic from infrastructure and details, making your codebase more flexible, testable, and maintainable.
+### What It Means
 
-### Why DIP Matters
+DIP encourages you to design your system so that business logic is decoupled from infrastructure and details.  
+High-level modules depend on abstractions, and details are injected as dependencies.
 
-When DIP is violated:
+### Why It Matters
 
-- High-level code is tightly coupled to low-level details.
-- Changing infrastructure or implementation details requires changes in core logic.
-- Testing and extending the system becomes difficult.
+Applying DIP leads to:
 
-By following DIP, you:
-
-- Enable clean architecture boundaries.
-- Make your code easier to adapt and test.
-- Reduce the risk of breaking core logic when details change.
+- **Decoupled design:** High-level modules depend on abstractions, not concrete implementations.
+- **Easier testing:** Dependencies are injected, making the code easier to test and extend.
+- **Flexible architecture:** Infrastructure and business logic are separated.
 
 ---
 
-## Example: DIP Violation
+### Code Example: Violation vs. Resolution
 
-Suppose your application logic directly instantiates concrete classes:
+**Violation Example:**  
+Application logic directly instantiates concrete classes.
 
 ```csharp
 public class VehicleInspectionProcessor
 {
     public bool ProcessInspection(IVehicle vehicle)
     {
-        var service = new SimpleInspectionService(); // ⚠ tightly coupled to a concrete class
+        var service = new SimpleInspectionService(); // tightly coupled to a concrete class
         return service.Verify(vehicle);
     }
 }
 ```
+*Problem: The processor is tightly bound to a specific implementation.*
 
-**Problems:**
-
-- The processor is tightly bound to a specific implementation.
-- Hard to swap out the inspection logic or test the processor in isolation.
-
----
-
-## Refactoring for DIP
-
-Refactor the processor to depend on an abstraction (`IInspectionService`) and inject the dependency:
+**Corrected Implementation:**  
+Depend on an abstraction and inject the dependency.
 
 ```csharp
 public interface IInspectionService
@@ -64,12 +56,7 @@ public class SimpleInspectionService : IInspectionService
         return vehicle.Mileage < 100000;
     }
 }
-```
 
-<details>
-<summary>Exercise: Refactor the VehicleInspectionProcessor for DIP</summary>
-
-```csharp
 public class VehicleInspectionProcessor
 {
     private readonly IInspectionService _inspectionService;
@@ -85,28 +72,34 @@ public class VehicleInspectionProcessor
     }
 }
 ```
-</details>
+*Now, the processor is decoupled from the implementation and easy to test.*
+
+**Key Improvements:**
+
+- High-level modules depend on abstractions, not concrete types.
+- Dependencies are injected, supporting testability and flexibility.
+- Infrastructure and business logic are separated.
 
 ---
 
-## Key Benefits
+## Common Pitfalls
 
-- **Decoupled design:** High-level modules depend on abstractions, not concrete implementations.
-- **Easier testing:** Dependencies are injected, making the code easier to test and extend.
-- **Flexible architecture:** Infrastructure and business logic are separated.
+- Depending directly on concrete implementations in business logic
+- Instantiating dependencies inside core modules
+- Not using dependency injection or inversion
 
 ---
 
-## Best Practices for Applying DIP
+## Key Takeaways
 
 - Depend on **interfaces** or **abstract classes**, not concrete types.
-- Use **dependency injection** to provide implementations at runtime.
+- Use dependency injection to provide implementations at runtime.
 - Keep abstractions in core layers; implement details in outer layers.
-- Avoid new-ing up dependencies inside your business logic.
 
 ---
 
-## Takeaway
+## Related Concepts / Further Reading
 
-DIP encourages designing your system around **interfaces** and **injection**, not **instantiation**.  
-This decouples your core logic from infrastructure and allows for clean architecture boundaries.
+- [SOLID Principles](https://en.wikipedia.org/wiki/SOLID)
+- [Dependency Inversion Principle (Wikipedia)](https://en.wikipedia.org/wiki/Dependency_inversion_principle)
+- [The Clean Architecture (Uncle Bob's Blog)](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)

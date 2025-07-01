@@ -1,151 +1,166 @@
 # Liskov Substitution Principle (LSP)
 
-## What is the Liskov Substitution Principle?
+> "Objects of a superclass should be replaceable with objects of a subclass without affecting the correctness of the program." — Barbara Liskov
 
-The **Liskov Substitution Principle (LSP)** is the third of the five SOLID principles of object-oriented design. It states:
+## Overview
 
-> **Objects of a superclass should be replaceable with objects of its subclasses without affecting the correctness of the program.**  
-> – Barbara Liskov
+The *Liskov Substitution Principle (LSP)* ensures that subclasses can stand in for their base classes without altering the desirable properties of a program—correctness, task completion, and expected behavior. LSP is a core SOLID principle that enables safe polymorphism and reliable inheritance.
 
-LSP means that you should be able to use any subtype of an interface or base class **without altering the expected behavior** of the program. Subtypes must honor the contract and intent of their base types, ensuring consistent and predictable behavior.
+### What It Means
 
-### Why LSP Matters
+LSP means that derived classes must be fully substitutable for their base classes. This requires that subclasses honor the contracts, invariants, and expectations established by the base class, including method behavior, preconditions, and postconditions. Violating LSP leads to unexpected behavior, bugs, and fragile code.
 
-When LSP is violated:
+### Why It Matters
 
-- Subtypes break expectations, causing bugs or unexpected behavior.
-- Code that works with the base type may fail or behave incorrectly with certain subtypes.
-- The abstraction becomes unreliable and hard to maintain.
-
-By following LSP, you ensure your abstractions are robust and your code is easier to extend and reason about.
+Adhering to LSP allows for robust polymorphic code, enabling developers to extend systems safely by introducing new subclasses. It ensures that code using base types can work seamlessly with any derived type, supporting maintainability, scalability, and correctness.
 
 ---
 
-## Example: LSP Violation
+## Code Example: Violation vs. Resolution
 
-In this example, a subclass `UnregisteredVehicle` throws an exception when trying to register, violating the contract of `Vehicle`. If a method expects any `IVehicle` and calls `CreateRegistration()`, this will throw unexpectedly—a clear violation of LSP.
+### **Violation Example:**  
 
 ```csharp
-public interface IVehicle
+public interface IVehicle 
 {
-    string Make { get; }
-    string Model { get; }
-    decimal Mileage { get; }
+    public string Make { get; set; }
+    public string Model { get; set; }
+    public bool IsRegistered { get; set; }
+    public decimal Mileage { get; set; }
+    public decimal FuelLevel { get; set; }
+    public decimal BatteryLevel { get; set; }
 
-    double CalculateTax();
-    void CreateRegistration();
-    bool VerifyPeriodicTechnicalInspection();
+    void FillUp(decimal amount);
+    void ChargeUp(decimal amount);
 }
 
-public class UnregisteredVehicle : IVehicle
+public class ClassicVehicle : IVehicle 
 {
-    public string Make => "Prototype";
-    public string Model => "Test Rig";
-    public bool IsRegistered => false;
-    public decimal Mileage => 0;
+    public string Make { get; set; }
+    public string Model { get; set; }
+    public bool IsRegistered { get; set; }
+    public decimal Mileage { get; set; }
+    public decimal FuelLevel { get; set; }
+    public decimal BatteryLevel { get; set; }
 
-    public double CalculateTax()
-    {
-        return 0;
-    }
+    void FillUp(decimal amount) => FuelLevel += amount;
+    void ChargeUp(decimal amount) => throw new InvalidOperationException();
+}
 
-    public void CreateRegistration()
-    {
-        throw new NotSupportedException("This vehicle cannot be registered.");
-    }
+public class ElectricVehicle : IVehicle 
+{
+    public string Make { get; set; }
+    public string Model { get; set; }
+    public bool IsRegistered { get; set; }
+    public decimal Mileage { get; set; }
+    public decimal FuelLevel { get; set; }
+    public decimal BatteryLevel { get; set; }
 
-    public bool VerifyPeriodicTechnicalInspection()
-    {
-        return false;
-    }
+    void FillUp(decimal amount) => throw new InvalidOperationException();
+    void ChargeUp(decimal amount) => BatteryLevel += amount;
+}
+
+public class HybridVehicle : IVehicle 
+{
+    public string Make { get; set; }
+    public string Model { get; set; }
+    public bool IsRegistered { get; set; }
+    public decimal Mileage { get; set; }
+    public decimal FuelLevel { get; set; }
+    public decimal BatteryLevel { get; set; }
+
+    void FillUp(decimal amount) => FuelLevel += amount;
+    void ChargeUp(decimal amount) => BatteryLevel += amount;
 }
 ```
 
-This breaks the expectation that all `IVehicle` objects can be registered.
+*Problem: Substituting `ClassicVehicle` or `ElectricVehicle` for `IVehicle` may cause runtime exceptions if the wrong method is called. This violates LSP, as not all implementations support all operations safely.*
 
-### Refactoring for LSP
-
-To comply with LSP, only types that support registration should expose registration behavior. Move registration to a separate interface, so unsupported operations are not part of the contract.
+### **Corrected Implementation**
 
 ```csharp
-public interface IVehicle
+public interface IVehicle 
 {
-    string Make { get; }
-    string Model { get; }
-    decimal Mileage { get; }
-
-    double CalculateTax();
-    bool VerifyPeriodicTechnicalInspection();
+    public string Make { get; set; }
+    public string Model { get; set; }
+    public bool IsRegistered { get; set; }
+    public decimal Mileage { get; set; }
+    public decimal BatteryLevel { get; set; }
 }
 
-public interface IRegistrableVehicle : IVehicle
+public interface IClassicVehicle : IVehicle
 {
-    bool IsRegistered { get; }
-    void Register();
+    public decimal FuelLevel { get; set; }
+    void ChargeUp(decimal amount);
 }
 
-public class UnregisteredVehicle : IVehicle
+public interface IElectricVehicle : IVehicle
 {
-    public string Make => "Prototype";
-    public string Model => "Test Rig";
-    public bool IsRegistered => false;
-    public decimal Mileage => 0;
+    public decimal BatteryLevel { get; set; }
+    void FillUp(decimal amount);
+}
 
-    public double CalculateTax()
-    {
-        return 0;
-    }
+public interface IHybridVehicle : IClassicVehicle, IElectricVehicle
+{
 
-    public bool VerifyPeriodicTechnicalInspection()
-    {
-        return false;
-    }
+}
+
+public class ClassicVehicle : IClassicVehicle
+{
+    public string Make { get; set; }
+    public string Model { get; set; }
+    public bool IsRegistered { get; set; }
+    public decimal Mileage { get; set; }
+    public decimal FuelLevel { get; set; }
+
+    void FillUp(decimal amount) => FuelLevel += amount;
+}
+
+public class ElectricVehicle : IElectricVehicle 
+{
+    public string Make { get; set; }
+    public string Model { get; set; }
+    public bool IsRegistered { get; set; }
+    public decimal Mileage { get; set; }
+    public decimal BatteryLevel { get; set; }
+
+    void ChargeUp(decimal amount) => BatteryLevel += amount;
+}
+
+public class HybridVehicle : IHybridVehicle 
+{
+    public string Make { get; set; }
+    public string Model { get; set; }
+    public bool IsRegistered { get; set; }
+    public decimal Mileage { get; set; }
+    public decimal FuelLevel { get; set; }
+    public decimal BatteryLevel { get; set; }
+
+    void FillUp(decimal amount) => FuelLevel += amount;
+    void ChargeUp(decimal amount) => BatteryLevel += amount;
 }
 ```
 
-<details>
-<summary>Exercise: Complete the refactoring for the Register method</summary>
-```csharp
-public interface IRegistractionService 
-{
-    bool Register(IVehicle vehicle);
-}
+*Now, each vehicle type only exposes operations it supports. Substitution is safe, and LSP is satisfied.*
 
-public class SimpleRegistractionService : IRegistractionService
-{
-    public bool Register(IVehicle vehicle)
-    {
-        if (vehicle is IRegistrableVehicle registrable && !registrable.IsRegistered)
-        {
-            registrable.Register();
-            return true;
-        }
-        return false;
-    }
-}
-```
-</details>
+### Key Improvements
 
-**Key improvements:**
+- **Safe substitution:** No runtime exceptions from unsupported operations.
+- **Clear contracts:** Each interface defines only valid operations for its type.
+- **Extensible design:** New vehicle types can implement relevant interfaces without risk.
+- **Improved robustness:** Client code can rely on interface contracts.
 
-- Only vehicles that support registration implement the registration interface.
-- The contract for `IVehicle` is clear and safe for all subtypes.
-- Code that works with `IVehicle` does not risk unexpected exceptions.
+### Common Pitfalls
+
+- **Forcing all implementations to support all operations,** leading to exceptions or undefined behavior.
+- **Ignoring interface segregation,** resulting in bloated interfaces and LSP violations.
+- **Breaking contracts** by changing method behavior or allowed inputs/outputs in subclasses.
 
 ---
 
-## Best Practices for Applying LSP
+## Key Takeaways
 
-- **Design clear contracts:** Only include methods and properties in base interfaces or classes that make sense for all subtypes.
-- **Avoid unsupported operations:** Don’t force subtypes to implement methods they can’t support—move those to separate interfaces.
-- **Honor invariants:** Subtypes should not weaken preconditions or strengthen postconditions of base type methods.
-- **Test substitutability:** Regularly verify that your subtypes can replace base types in real scenarios without breaking behavior.
-- **Document expectations:** Clearly state the intended use and constraints of your abstractions.
-
----
-
-## Takeaway
-
-Subtypes must honor the intent of their base types.  
-If a method or property doesn’t make sense for all variants, don’t put it in the base interface.  
-This keeps your abstractions reliable and your codebase robust.
+- Subclasses or implementations must be **fully substitutable** for their base types.
+- Avoid exposing operations that are not universally supported.
+- LSP enables **robust polymorphism** and **safe code extension**.
+- Use interface segregation to maintain clear, safe contracts.

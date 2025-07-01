@@ -1,32 +1,75 @@
-# Introduction to Component Principles in Clean Architecture
+# Component Principles in Clean Architecture
 
-## What Are Component Principles?
+> "The granule of reuse is the granule of release." — Robert C. Martin
 
-In Clean Architecture, after decomposing your application into meaningful **components** or **modules** (such as core, services, adapters, infrastructure), you need guiding principles to manage the **relationships between these components**.
+## Overview
 
-While **SOLID** focuses on **class-level and object-level design**, **Component Principles** guide **package-level architecture** and ensure that components remain:
+**Component Principles** guide how you organize and manage the relationships between modules or packages in your system.  
+While SOLID focuses on class-level design, component principles ensure your architecture remains **modular, reusable, and maintainable** at a higher level.
 
-- **Reusable**
-- **Maintainable**
-- **Flexible**
-- **Independent**
+### What It Means
+
+Component principles help you:
+
+- Define clear boundaries between modules
+- Avoid tangled dependencies and circular references
+- Enable independent development, testing, and deployment of components
+
+### Why It Matters
+
+Applying component principles leads to:
+
+- **Scalability:** Your architecture can grow without becoming fragile.
+- **Maintainability:** Components are easier to update and refactor.
+- **Reusability:** Well-defined modules can be reused across projects.
 
 ---
 
-## Why Component Principles Matter
+### Code Example: Violation vs. Resolution
 
-As projects grow, codebases naturally fragment into multiple layers, domains, and technical concerns. Without structure, this leads to:
+**Violation Example:**  
+Circular dependencies between components.
 
-- Circular dependencies between packages
-- Painful refactoring
-- Fragile build processes
-- Poor modularization and tight coupling
+```plaintext
+Component A --> Component B --> Component C --> Component A
+// Problem: Cycles make builds fragile and refactoring risky.
+```
 
-**Component principles** help ensure that each module is:
+**Corrected Implementation:**  
+Acyclic, well-defined dependencies.
 
-- Well-defined
-- Independently deployable
-- Respectful of architectural boundaries
+```plaintext
+Component A --> Component B --> Component C
+// No cycles; dependencies flow in one direction.
+```
 
-Applying these principles keeps your architecture scalable and your codebase manageable as your system evolves.
+**Key Improvements:**
+
+- Eliminates circular dependencies
+- Components can be released and versioned independently
+- Refactoring is safer and more predictable
+
+---
+
+## Common Pitfalls
+
+- Creating circular dependencies between modules
+- Grouping unrelated classes into "kitchen sink" components
+- Failing to review and refactor component boundaries as the system evolves
+
+---
+
+## Key Takeaways
+
+- Use component principles to keep your architecture modular and scalable.
+- Define clear, acyclic dependencies between components.
+- Regularly review and refactor to maintain strong boundaries.
+
+---
+
+## Related Concepts / Further Reading
+
+- [Component Cohesion Principles](09_component_cohesion.md)
+- [Component Coupling Principles](10_component_coupling.md)
+- [The Clean Architecture (Uncle Bob's Blog)](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)
 

@@ -1,177 +1,114 @@
-# Open Closed Principle (OCP)
+# Open-Closed Principle (OCP)
 
-## Understanding the Open Closed Principle
+> "Software entities (classes, modules, functions, etc.) should be open for extension, but closed for modification." — Bertrand Meyer
 
-The **Open Closed Principle (OCP)** is the second of the five SOLID principles of object-oriented design. It guides you to design software that is:
+## Overview
 
-> **Open for extension, but closed for modification.**  
-> – Bertrand Meyer
+The *Open-Closed Principle (OCP)* asserts that software components should be **open for extension** but **closed for modification**. This means you can add new functionality by extending existing code, without altering the code that is already working and tested. OCP is a cornerstone of the SOLID principles, promoting **stability** and **flexibility** in evolving systems.
 
-In practice, this means you should be able to introduce new behaviors or features to your codebase **without changing existing, tested code**. You achieve this by relying on **abstraction**—using interfaces, inheritance, or composition—so you can extend functionality by adding new classes, not by editing old ones.
+### What It Means
 
-### Why OCP Matters
+OCP encourages designing modules so their behavior can be extended—typically through inheritance, interfaces, or composition—without changing their source code. This reduces the risk of introducing bugs into stable code and supports the safe addition of new features.
 
-Ignoring OCP leads to:
+### Why It Matters
 
-- Frequent changes to existing classes when adding new features.
-- Tightly coupled business logic that is hard to maintain and test.
-- Increased risk of introducing bugs into previously stable code.
-
-By following OCP, you:
-
-- Make your codebase easier to extend and maintain.
-- Reduce the risk of breaking existing functionality.
-- Encourage modular, flexible design.
+Adhering to OCP allows teams to **introduce new requirements** and **adapt to change** without destabilizing existing functionality. It protects core logic, supports parallel development, and enables safer, incremental evolution of the codebase.
 
 ---
 
-## Example: OCP Violation
+## Code Example: Violation vs. Resolution
 
-Consider this `Vehicle` class. It tries to handle tax calculation and inspection logic directly:
+### **Violation Example:**  
 
 ```csharp
-public class Vehicle
+public interface IVehicle 
 {
-    public string Make { get; private set; }
-    public string Model { get; private set; }
-    public bool IsRegistered { get; private set; }
-    public decimal Mileage { get; private set; }
+    public string Make { get; set; }
+    public string Model { get; set; }
+    public bool IsRegistered { get; set; }
+    public decimal Mileage { get; set; }
+}
 
-    public Vehicle(string make, string model, decimal mileage)
-    {
-        Make = make;
-        Model = model;
-        Mileage = mileage;
-    }
+public interface IVehicleTaxService 
+{
+    decimal CalculateTax(IVehicle vehicle);
+}
 
-    public double CalculateTax()
+public class SimpleVehicleTaxService : IVehicleTaxService
+{
+    public decimal CalculateTax(IVehicle vehicle)
     {
-        if (Make == "Tesla")
-            return 50; // EV discount
-        else if (Mileage < 50000)
-            return 150;
-        else
-            return 250;
-    }
+        if(vehicle.Make == "Tesla")
+        {
+            return 20;
+        }
 
-    public void CreateRegistration()
-    {
-        IsRegistered = true;
-    }
-
-    public bool VerifyPeriodicTechnicalInspection()
-    {
-        if (Make == "Tesla")
-            return Mileage < 150000; // EV can have more mileage before requiring inspection
-        return Mileage < 100000;
+        return vehicle.Mileage > 10000 ? 100 : 50;
     }
 }
 ```
+*Problem: If you need to add new tax rules (e.g., based on vehicle type, registration status, or other policies), you would have to modify `SimpleVehicleTaxService`, violating OCP.*
 
-**Problems:**
-
-- Every new tax or inspection rule forces you to modify this class.
-- Business rules are mixed together, making the code fragile and hard to test.
-- The class is not closed for modification.
-
----
-
-## Refactoring for OCP
-
-To follow OCP, move tax and inspection logic into separate classes that implement interfaces. This way, you can add new rules by creating new classes, not by changing existing ones.
+### **Corrected Implementation:**  
 
 ```csharp
-public class Vehicle
+public interface IVehicle 
 {
-    public string Make { get; private set; }
-    public string Model { get; private set; }
-    public bool IsRegistered { get; private set; }
-    public decimal Mileage { get; private set; }
+    public string Make { get; set; }
+    public string Model { get; set; }
+    public bool IsRegistered { get; set; }
+    public decimal Mileage { get; set; }
+}
 
-    public Vehicle(string make, string model, decimal mileage)
-    {
-        Make = make;
-        Model = model;
-        Mileage = mileage;
-    }
+public interface IVehicleTaxService 
+{
+    decimal CalculateTax(IVehicle vehicle);
+}
 
-    public void CreateRegistration()
+public class SimpleVehicleTaxService : IVehicleTaxService
+{
+    public decimal CalculateTax(IVehicle vehicle)
     {
-        IsRegistered = true;
+        return vehicle.Mileage > 10000 ? 100 : 50;
     }
 }
 
-public interface ITaxCalculator
+public class ElectricVehicleTaxService : IVehicleTaxService
 {
-    double CalculateTax(Vehicle vehicle);
-}
-
-public class StandardTaxCalculator : ITaxCalculator
-{
-    public double CalculateTax(Vehicle vehicle)
+    public decimal CalculateTax(IVehicle vehicle)
     {
-        return vehicle.Mileage < 50000 ? 150 : 250;
+        return 20;
     }
 }
 
-public class ElectricVehicleTaxCalculator : ITaxCalculator
+public class VehicleTaxCalculator 
 {
-    public double CalculateTax(Vehicle vehicle)
+    public decimal CalculateTax(IVehicleTaxService taxService, IVehicle vehicle)
     {
-        return 50; // Flat rate for EVs
-    }
+        return taxService.CalculateTax(vehicle);
+    }    
 }
 ```
 
-<details>
-<summary>Exercise: Refactor the inspection logic using OCP</summary>
+*Now, to add a new tax rule, simply implement a new `IVehicleTaxService` without modifying existing code. The system is open for extension, closed for modification.*
 
-```csharp
-public interface IInspectionService 
-{
-    bool Verify(Vehicle vehicle);
-}
+### Key Improvements
 
-public class SimpleInspectionService : IInspectionService
-{
-    public bool Verify(Vehicle vehicle)
-    {
-        return vehicle.Mileage < 100000;
-    }
-}
+- **Extensible design:** Add new tax strategies by creating new classes, not changing existing ones.
+- **Reduced risk:** Stable code remains untouched, minimizing regression.
+- **Flexible architecture:** Easily adapt to new requirements or policies.
+- **Clear separation:** Each tax rule is encapsulated in its own class.
 
-public class ElectricVehicleInspectionService: IInspectionService
-{
-    public bool Verify(Vehicle vehicle)
-    {
-        // EVs have longer inspection cycles
-        return vehicle.Mileage < 150000;
-    }
-}
-```
-</details>
+### Common Pitfalls
+
+- **Modifying existing classes** for every new requirement, risking bugs.
+- **Rigid designs** that do not leverage abstraction or interfaces.
+- **Premature abstraction**, adding unnecessary complexity before it’s needed.
 
 ---
 
-## Key Benefits
+## Key Takeaways
 
-- **Separation of concerns:** Each class has a single responsibility.
-- **Easy to extend:** Add new tax or inspection rules by creating new classes.
-- **Stable core:** The `Vehicle` class remains unchanged as requirements evolve.
-- **Testable:** Isolated business rules are easier to test.
-
----
-
-## Best Practices for Applying OCP
-
-- Use **interfaces** or **abstract classes** to define extension points.
-- Favor **composition** over inheritance for flexibility.
-- Avoid putting business rules directly into core domain classes.
-- Write unit tests for each extension to ensure correctness.
-
----
-
-## Takeaway
-
-Design your code so you can add new features by extending, not rewriting, existing classes.  
-This approach keeps your codebase flexible, robust, and ready for change.
+- Code should be **open for extension, closed for modification**.
+- Use **interfaces and composition** to enable new behavior without changing existing code.
+- OCP supports **safe evolution**, **maintainability**, and **robustness** in software design.

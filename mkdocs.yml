@@ -4,17 +4,18 @@ nav:
   - Clean Architecture: 
       - clean-architecture/index.md
       - Introduction: clean-architecture/01_introduction.md
-      - Design Principles:
-        - Intro: clean-architecture/02_design_principles.md
-        - Single Responsability Principle: clean-architecture/03_single_responsability_principle.md
-        - Open Closed Principle: clean-architecture/04_open_closed_principle.md
-        - Liskov Substitution Principle: clean-architecture/05_liskov_substitution_principle.md
-        - Interface Segregation Principle: clean-architecture/06_interface_segregation_principle.md
-        - Dependency Inversion Principle: clean-architecture/07_dependency_inversion_principle.md
-      - Component Principles:
-        - Intro: clean-architecture/08_component_principles.md
-        - Component Cohesion: clean-architecture/09_component_cohesion.md
-        - Component Coupling: clean-architecture/10_component_coupling.md
+      - Principles:
+        - Design Principles:
+          - Intro: clean-architecture/02_design_principles.md
+          - Single Responsability Principle: clean-architecture/03_single_responsability_principle.md
+          - Open Closed Principle: clean-architecture/04_open_closed_principle.md
+          - Liskov Substitution Principle: clean-architecture/05_liskov_substitution_principle.md
+          - Interface Segregation Principle: clean-architecture/06_interface_segregation_principle.md
+          - Dependency Inversion Principle: clean-architecture/07_dependency_inversion_principle.md
+        - Component Principles:
+          - Intro: clean-architecture/08_component_principles.md
+          - Component Cohesion: clean-architecture/09_component_cohesion.md
+          - Component Coupling: clean-architecture/10_component_coupling.md
       - Architectural Patterns:
         - Intro: clean-architecture/11_architectural_patterns.md
         - Layered Architecture: clean-architecture/12_layered_architecture.md
@@ -24,6 +25,7 @@ nav:
       #   - Microservices: clean-architecture/17_microservices.md
       #   - Event-Driven Architecture: clean-architecture/18_event_driven_architecture.md 
       - Resources: clean-architecture/00_resources.md
+      - Template: clean-architecture/template.md
 
 theme:
   logo: assets/logo.png

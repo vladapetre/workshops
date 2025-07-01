@@ -1,33 +1,31 @@
 # Interface Segregation Principle (ISP)
 
-## Understanding the Interface Segregation Principle
+> "Clients should not be forced to depend upon interfaces that they do not use." — Robert C. Martin (Uncle Bob)
 
-The **Interface Segregation Principle (ISP)** is the fourth of the five SOLID principles of object-oriented design. It states:
+## Overview
 
-> **Clients should not be forced to depend upon interfaces that they do not use.**  
-> – Robert C. Martin (Uncle Bob)
+The **Interface Segregation Principle (ISP)** is the fourth of the five SOLID principles.  
+It encourages you to design **small, focused interfaces** so classes only implement the methods relevant to their role.
 
-**ISP** encourages you to design **small, focused interfaces**. Classes should only implement the methods that are relevant to their role, not be forced to provide empty or meaningless implementations for methods they don’t need.
+### What It Means
 
-### Why ISP Matters
+ISP means splitting large interfaces into smaller, role-based contracts.  
+Classes should not be forced to provide empty or meaningless implementations for methods they don’t need.
 
-Violating ISP leads to:
+### Why It Matters
 
-- Classes forced to implement methods they don’t use.
-- “Fat” interfaces that are hard to understand and maintain.
-- Changes to an interface rippling through many unrelated classes.
+Applying ISP leads to:
 
-By following ISP, you:
-
-- Keep your codebase flexible and focused.
-- Make interfaces easier to understand and maintain.
-- Reduce the risk of breaking unrelated code when interfaces change.
+- **Focused interfaces:** Each class only implements what it actually needs.
+- **Easier maintenance:** Interfaces are smaller, clearer, and less likely to change for unrelated reasons.
+- **Greater flexibility:** You can extend or modify behavior without impacting unrelated classes.
 
 ---
 
-## Example: ISP Violation
+### Code Example: Violation vs. Resolution
 
-Here’s a version of `IVehicle` that forces all implementers to support tax calculation, registration, and inspection—even if they don’t need all of them:
+**Violation Example:**  
+A "fat" interface forces all implementers to support unrelated methods.
 
 ```csharp
 public interface IVehicle
@@ -42,18 +40,10 @@ public interface IVehicle
     bool VerifyPeriodicTechnicalInspection();
 }
 ```
+*Problem: Vehicles that are exempt from tax or registration still need to implement these methods.*
 
-**Problems:**
-
-- Vehicles that are exempt from tax still need to implement `CalculateTax()`.
-- Concept or off-road vehicles might not be registerable.
-- Test mocks or simple data models may not care about inspections.
-
----
-
-## Refactoring for ISP
-
-Split `IVehicle` into smaller, role-based interfaces so classes only implement what they need:
+**Corrected Implementation:**  
+Split into smaller, role-based interfaces.
 
 ```csharp
 public interface IVehicle
@@ -74,53 +64,33 @@ public interface ITaxableVehicle
     double CalculateTax();
 }
 ```
+*Now, classes only implement what they actually need.*
 
-<details>
-<summary>Exercise: Refactor the inspection logic for ISP</summary>
+**Key Improvements:**
 
-```csharp
-public interface IInspectableVehicle
-{
-    bool VerifyPeriodicTechnicalInspection();
-}
-
-public class RoadVehicle : IVehicle, IRegistrableVehicle, ITaxableVehicle, IInspectableVehicle
-{
-    // All properties and methods implemented
-}
-
-public class PrototypeVehicle : IVehicle
-{
-    public string Make => "Prototype";
-    public string Model => "X-Concept";
-    public decimal Mileage => 0;
-
-    // No tax, registration, or inspection — not needed
-}
-```
-</details>
+- No more empty or meaningless methods.
+- Interfaces are easier to understand and maintain.
+- Unrelated changes do not ripple through the codebase.
 
 ---
 
-## Key Benefits
+## Common Pitfalls
 
-- **Focused interfaces:** Each class only implements what it actually needs.
-- **No more empty methods:** Avoid meaningless or placeholder implementations.
-- **Easier maintenance:** Interfaces are smaller, clearer, and less likely to change for unrelated reasons.
-- **Greater flexibility:** You can extend or modify behavior without impacting unrelated classes.
-
----
-
-## Best Practices for Applying ISP
-
-- Split large interfaces into smaller, role-based contracts.
-- Avoid “fat” interfaces that try to cover every possible use case.
-- Group related methods together, but don’t force unrelated responsibilities into a single interface.
-- Regularly review interfaces as your system evolves—refactor when they start to grow too large.
+- Creating "fat" interfaces that try to cover every possible use case
+- Grouping unrelated responsibilities into a single interface
+- Failing to refactor interfaces as the system evolves
 
 ---
 
-## Takeaway
+## Key Takeaways
 
-Design interfaces that are **small, focused, and role-specific**.  
-This keeps your codebase clean, flexible, and easy to maintain as your system grows.
+- Design interfaces that are **small, focused, and role-specific**.
+- This keeps your codebase clean, flexible, and easy to maintain as your system grows.
+
+---
+
+## Related Concepts / Further Reading
+
+- [Dependency Inversion Principle (DIP)](07_dependency_inversion_principle.md)
+- [SOLID Principles](https://en.wikipedia.org/wiki/SOLID)
+- [Interface Segregation Principle (Wikipedia)](https://en.wikipedia.org/wiki/Interface_segregation_principle)

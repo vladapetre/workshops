@@ -1,47 +1,75 @@
 # Component Cohesion Principles
 
-## What Is Component Cohesion?
+> "Classes that change together should be packaged together." — Robert C. Martin
 
-**Component Cohesion** is about how classes and modules are grouped into components or packages. Well-cohesive components are easier to maintain, reuse, and release.
+## Overview
 
-Robert C. Martin (Uncle Bob) introduced three primary principles for component-level architecture:
+**Component Cohesion** is about how you group classes and modules into components or packages.  
+Well-cohesive components are easier to maintain, reuse, and release.
 
----
+### What It Means
 
-### 1. **Reuse/Release Equivalence Principle (REP)**
-> *“The granule of reuse is the granule of release.”*
+Cohesion principles help you:
 
-- Components that are reused together should be released together.
-- This ensures stability and avoids version mismatches.
+- Group related classes by their reasons to change or be reused
+- Release and version components as a unit
+- Avoid unnecessary coupling between unrelated code
 
----
+### Why It Matters
 
-### 2. **Common Closure Principle (CCP)**
-> *“Classes that change together should be packaged together.”*
+Applying cohesion principles leads to:
 
-- Group classes that tend to change for the same reason into the same component.
-- This minimizes the impact of changes and reduces the risk of breaking unrelated code.
-
----
-
-### 3. **Common Reuse Principle (CRP)**
-> *“Don’t force users of a component to depend on things they don’t use.”*
-
-- Avoid unnecessary coupling by packaging only what’s commonly reused together.
-- Otherwise, you violate the Interface Segregation Principle at the component level.
+- **Stable releases:** Components that are reused together are released together.
+- **Focused modules:** Each component has a clear, unified purpose.
+- **Reduced risk:** Changes in one area don't break unrelated code.
 
 ---
 
-## Best Practices for Component Cohesion
+### Code Example: Violation vs. Resolution
 
+**Violation Example:**  
+A component contains unrelated classes that change for different reasons.
+
+```plaintext
+Component X: [OrderService, UserService, EmailSender]
+// Problem: Changes in one class force unnecessary releases of others.
+```
+
+**Corrected Implementation:**  
+Group classes by their reasons to change.
+
+```plaintext
+OrderComponent: [OrderService]
+UserComponent: [UserService]
+EmailComponent: [EmailSender]
+// Each component is focused and released independently.
+```
+
+**Key Improvements:**
+
+- Components are easier to maintain and release
+- Reduces unnecessary dependencies and version mismatches
+- Supports focused, modular development
+
+---
+
+## Common Pitfalls
+
+- Grouping classes by technical similarity instead of reasons to change
+- Creating "kitchen sink" components with unrelated responsibilities
+- Not refactoring components as the system evolves
+
+---
+
+## Key Takeaways
+
+- Group classes that change together into the same component.
 - Release and version components as a unit.
-- Group classes by their reasons to change, not just by technical similarity.
-- Avoid “kitchen sink” components—keep them focused and relevant.
-- Regularly review and refactor components as your system evolves.
+- Keep components focused and relevant to their purpose.
 
 ---
 
-## Takeaway
+## Related Concepts / Further Reading
 
-Cohesive components are easier to maintain, test, and reuse.  
-Apply these principles to keep your architecture clean and your releases predictable.
+- [Component Coupling Principles](10_component_coupling.md)
+- [The Clean Architecture (Uncle Bob's Blog)](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)
