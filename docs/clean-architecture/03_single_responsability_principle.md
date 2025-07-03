@@ -73,7 +73,7 @@ public interface IVehicleRegistrationService
 
 These enhancements lead to cleaner, more robust, and adaptable software.
 
-### Common Pitfalls
+### **Common Pitfalls**
 
 - **Misinterpreting “one responsibility”** as one function, causing excessive fragmentation.  
 - **Applying SRP at the wrong abstraction level**, leading to trivial or disconnected classes.  

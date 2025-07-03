@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../../assets/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
     
     
       
@@ -361,14 +361,6 @@
       
         
       
-        
-      
-        
-      
-        
-      
-        
-      
     
     
     
@@ -388,7 +380,7 @@
   
   
   <span class="md-ellipsis">
-    Design Principles
+    Principles
     
   </span>
   
@@ -398,6 +390,63 @@
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            Principles
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1_3_1" id="__nav_1_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Design Principles
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_3_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1_3_1">
             <span class="md-nav__icon md-icon"></span>
             Design Principles
           </label>
@@ -552,19 +601,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#understanding-the-interface-segregation-principle" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
-      Understanding the Interface Segregation Principle
+      Overview
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Understanding the Interface Segregation Principle">
+    <nav class="md-nav" aria-label="Overview">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#why-isp-matters" class="md-nav__link">
+  <a href="#what-it-means" class="md-nav__link">
     <span class="md-ellipsis">
-      Why ISP Matters
+      What It Means
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-it-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why It Matters
     </span>
   </a>
   
@@ -576,45 +634,60 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#example-isp-violation" class="md-nav__link">
+  <a href="#code-example-violation-vs-resolution" class="md-nav__link">
     <span class="md-ellipsis">
-      Example: ISP Violation
+      Code Example: Violation vs. Resolution
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Code Example: Violation vs. Resolution">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#violation-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Violation Example:
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#refactoring-for-isp" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#corrected-implementation" class="md-nav__link">
     <span class="md-ellipsis">
-      Refactoring for ISP
+      Corrected Implementation:
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#key-benefits" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#key-improvements" class="md-nav__link">
     <span class="md-ellipsis">
-      Key Benefits
+      Key Improvements:
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#best-practices-for-applying-isp" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#common-pitfalls" class="md-nav__link">
     <span class="md-ellipsis">
-      Best Practices for Applying ISP
+      Common Pitfalls
     </span>
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#takeaway" class="md-nav__link">
+  <a href="#key-takeaways" class="md-nav__link">
     <span class="md-ellipsis">
-      Takeaway
+      Key Takeaways
     </span>
   </a>
   
@@ -686,10 +759,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3_2" >
         
           
-          <label class="md-nav__link" for="__nav_1_4" id="__nav_1_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_1_3_2" id="__nav_1_3_2_label" tabindex="0">
             
   
   
@@ -702,8 +775,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_1_4">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_3_2">
             <span class="md-nav__icon md-icon"></span>
             Component Principles
           </label>
@@ -786,6 +859,14 @@
 
               
             
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
               
                 
   
@@ -812,10 +893,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_4" >
         
           
-          <label class="md-nav__link" for="__nav_1_5" id="__nav_1_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_1_4" id="__nav_1_4_label" tabindex="0">
             
   
   
@@ -828,8 +909,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_1_5">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_4">
             <span class="md-nav__icon md-icon"></span>
             Architectural Patterns
           </label>
@@ -935,6 +1016,29 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../template/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Template
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -969,19 +1073,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#understanding-the-interface-segregation-principle" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
-      Understanding the Interface Segregation Principle
+      Overview
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Understanding the Interface Segregation Principle">
+    <nav class="md-nav" aria-label="Overview">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#why-isp-matters" class="md-nav__link">
+  <a href="#what-it-means" class="md-nav__link">
     <span class="md-ellipsis">
-      Why ISP Matters
+      What It Means
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-it-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why It Matters
     </span>
   </a>
   
@@ -993,45 +1106,60 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#example-isp-violation" class="md-nav__link">
+  <a href="#code-example-violation-vs-resolution" class="md-nav__link">
     <span class="md-ellipsis">
-      Example: ISP Violation
+      Code Example: Violation vs. Resolution
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Code Example: Violation vs. Resolution">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#violation-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Violation Example:
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#refactoring-for-isp" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#corrected-implementation" class="md-nav__link">
     <span class="md-ellipsis">
-      Refactoring for ISP
+      Corrected Implementation:
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#key-benefits" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#key-improvements" class="md-nav__link">
     <span class="md-ellipsis">
-      Key Benefits
+      Key Improvements:
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#best-practices-for-applying-isp" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#common-pitfalls" class="md-nav__link">
     <span class="md-ellipsis">
-      Best Practices for Applying ISP
+      Common Pitfalls
     </span>
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#takeaway" class="md-nav__link">
+  <a href="#key-takeaways" class="md-nav__link">
     <span class="md-ellipsis">
-      Takeaway
+      Key Takeaways
     </span>
   </a>
   
@@ -1054,114 +1182,154 @@
 
 
 <h1 id="interface-segregation-principle-isp">Interface Segregation Principle (ISP)</h1>
-<h2 id="understanding-the-interface-segregation-principle">Understanding the Interface Segregation Principle</h2>
-<p>The <strong>Interface Segregation Principle (ISP)</strong> is the fourth of the five SOLID principles of object-oriented design. It states:</p>
 <blockquote>
-<p><strong>Clients should not be forced to depend upon interfaces that they do not use.</strong><br />
-– Robert C. Martin (Uncle Bob)</p>
+<p>"Clients should not be forced to depend on interfaces they do not use." — Robert C. Martin (Uncle Bob)</p>
 </blockquote>
-<p><strong>ISP</strong> encourages you to design <strong>small, focused interfaces</strong>. Classes should only implement the methods that are relevant to their role, not be forced to provide empty or meaningless implementations for methods they don’t need.</p>
-<h3 id="why-isp-matters">Why ISP Matters</h3>
-<p>Violating ISP leads to:</p>
-<ul>
-<li>Classes forced to implement methods they don’t use.</li>
-<li>“Fat” interfaces that are hard to understand and maintain.</li>
-<li>Changes to an interface rippling through many unrelated classes.</li>
-</ul>
-<p>By following ISP, you:</p>
-<ul>
-<li>Keep your codebase flexible and focused.</li>
-<li>Make interfaces easier to understand and maintain.</li>
-<li>Reduce the risk of breaking unrelated code when interfaces change.</li>
-</ul>
+<h2 id="overview">Overview</h2>
+<p>The <em>Interface Segregation Principle (ISP)</em> states that interfaces should be <strong>specific and focused</strong>, ensuring that clients only need to know about the methods that are relevant to them. ISP is a core SOLID principle that promotes <strong>modular</strong>, <strong>cohesive</strong>, and <strong>maintainable</strong> code.</p>
+<h3 id="what-it-means">What It Means</h3>
+<p>ISP means that instead of having one large, general-purpose interface, you should create several smaller, role-specific interfaces. This prevents clients from being burdened with methods they do not need, reducing unnecessary dependencies and making the system easier to evolve.</p>
+<h3 id="why-it-matters">Why It Matters</h3>
+<p>Following ISP leads to <strong>cleaner abstractions</strong>, <strong>improved flexibility</strong>, and <strong>better testability</strong>. It reduces the impact of changes, minimizes the risk of breaking unrelated functionality, and enables more granular, focused implementations.</p>
 <hr />
-<h2 id="example-isp-violation">Example: ISP Violation</h2>
-<p>Here’s a version of <code>IVehicle</code> that forces all implementers to support tax calculation, registration, and inspection—even if they don’t need all of them:</p>
-<pre><code class="language-csharp">public interface IVehicle
+<h2 id="code-example-violation-vs-resolution">Code Example: Violation vs. Resolution</h2>
+<h3 id="violation-example"><strong>Violation Example:</strong></h3>
+<pre><code class="language-csharp">public interface IVehicle 
 {
-    string Make { get; }
-    string Model { get; }
-    bool IsRegistered { get; }
-    decimal Mileage { get; }
+    public string Make { get; set; }
+    public string Model { get; set; }
+    public bool IsRegistered { get; set; }
+    public decimal Mileage { get; set; }
+    public decimal FuelLevel { get; set; }
+    public decimal BatteryLevel { get; set; }
 
-    double CalculateTax();
-    void CreateRegistration();
-    bool VerifyPeriodicTechnicalInspection();
+    void FillUp(decimal amount);
+    void ChargeUp(decimal amount);
+}
+
+public class ClassicVehicle : IVehicle 
+{
+    public string Make { get; set; }
+    public string Model { get; set; }
+    public bool IsRegistered { get; set; }
+    public decimal Mileage { get; set; }
+    public decimal FuelLevel { get; set; }
+    public decimal BatteryLevel { get; set; }
+
+    void FillUp(decimal amount) =&gt; FuelLevel += amount;
+    void ChargeUp(decimal amount) =&gt; throw new InvalidOperationException();
+}
+
+public class ElectricVehicle : IVehicle 
+{
+    public string Make { get; set; }
+    public string Model { get; set; }
+    public bool IsRegistered { get; set; }
+    public decimal Mileage { get; set; }
+    public decimal FuelLevel { get; set; }
+    public decimal BatteryLevel { get; set; }
+
+    void FillUp(decimal amount) =&gt; throw new InvalidOperationException();
+    void ChargeUp(decimal amount) =&gt; BatteryLevel += amount;
+}
+
+public class HybridVehicle : IVehicle 
+{
+    public string Make { get; set; }
+    public string Model { get; set; }
+    public bool IsRegistered { get; set; }
+    public decimal Mileage { get; set; }
+
+    public decimal FuelLevel { get; set; }
+    void FillUp(decimal amount) =&gt; FuelLevel += amount;
+
+    public decimal BatteryLevel { get; set; }
+    void ChargeUp(decimal amount) =&gt; BatteryLevel += amount;
 }
 </code></pre>
-<p><strong>Problems:</strong></p>
-<ul>
-<li>Vehicles that are exempt from tax still need to implement <code>CalculateTax()</code>.</li>
-<li>Concept or off-road vehicles might not be registerable.</li>
-<li>Test mocks or simple data models may not care about inspections.</li>
-</ul>
-<hr />
-<h2 id="refactoring-for-isp">Refactoring for ISP</h2>
-<p>Split <code>IVehicle</code> into smaller, role-based interfaces so classes only implement what they need:</p>
-<pre><code class="language-csharp">public interface IVehicle
+<p><em>Problem: All vehicle types must implement both <code>FillUp</code> and <code>ChargeUp</code>, even if they do not support one or the other. For example, <code>ElectricVehicle</code> must provide a meaningless or exception-throwing implementation for <code>FillUp</code>. This violates ISP by forcing clients to depend on irrelevant methods.</em></p>
+<h3 id="corrected-implementation"><strong>Corrected Implementation:</strong></h3>
+<pre><code class="language-csharp">public interface IVehicle 
 {
-    string Make { get; }
-    string Model { get; }
-    decimal Mileage { get; }
+    public string Make { get; set; }
+    public string Model { get; set; }
+    public bool IsRegistered { get; set; }
+    public decimal Mileage { get; set; }
 }
 
-public interface IRegistrableVehicle
+public interface IClassicVehicle : IVehicle
 {
-    bool IsRegistered { get; }
-    void CreateRegistration();
+    public decimal FuelLevel { get; set; }
+    void ChargeUp(decimal amount);
 }
 
-public interface ITaxableVehicle
+public interface IElectricVehicle : IVehicle
 {
-    double CalculateTax();
+    public decimal BatteryLevel { get; set; }
+    void FillUp(decimal amount);
+}
+
+public class ClassicVehicle : IClassicVehicle
+{
+    public string Make { get; set; }
+    public string Model { get; set; }
+    public bool IsRegistered { get; set; }
+    public decimal Mileage { get; set; }
+
+    public decimal FuelLevel { get; set; }
+    void FillUp(decimal amount) =&gt; FuelLevel += amount;
+}
+
+public class ElectricVehicle : IElectricVehicle 
+{
+    public string Make { get; set; }
+    public string Model { get; set; }
+    public bool IsRegistered { get; set; }
+    public decimal Mileage { get; set; }
+
+    public decimal BatteryLevel { get; set; }
+    void ChargeUp(decimal amount) =&gt; BatteryLevel += amount;
+}
+
+public class HybridVehicle : IClassicVehicle, IElectricVehicle 
+{
+    public string Make { get; set; }
+    public string Model { get; set; }
+    public bool IsRegistered { get; set; }
+    public decimal Mileage { get; set; }
+
+    public decimal FuelLevel { get; set; }
+    void FillUp(decimal amount) =&gt; FuelLevel += amount;
+
+    public decimal BatteryLevel { get; set; }
+    void ChargeUp(decimal amount) =&gt; BatteryLevel += amount;
 }
 </code></pre>
-<details>
-<summary>Exercise: Refactor the inspection logic for ISP</summary>
-
-
-<pre><code class="language-csharp">public interface IInspectableVehicle
-{
-    bool VerifyPeriodicTechnicalInspection();
-}
-
-public class RoadVehicle : IVehicle, IRegistrableVehicle, ITaxableVehicle, IInspectableVehicle
-{
-    // All properties and methods implemented
-}
-
-public class PrototypeVehicle : IVehicle
-{
-    public string Make =&gt; &quot;Prototype&quot;;
-    public string Model =&gt; &quot;X-Concept&quot;;
-    public decimal Mileage =&gt; 0;
-
-    // No tax, registration, or inspection — not needed
-}
-</code></pre>
-
-</details>
-
-<hr />
-<h2 id="key-benefits">Key Benefits</h2>
+<p><em>Now, each vehicle type implements only the interfaces relevant to its capabilities. <code>ClassicVehicle</code> implements <code>IFuelVehicle</code>, <code>ElectricVehicle</code> implements <code>IElectricVehicle</code>, and <code>HybridVehicle</code> can implement both if needed. Clients are never forced to depend on unused methods.</em></p>
+<h3 id="key-improvements"><strong>Key Improvements:</strong></h3>
 <ul>
-<li><strong>Focused interfaces:</strong> Each class only implements what it actually needs.</li>
-<li><strong>No more empty methods:</strong> Avoid meaningless or placeholder implementations.</li>
-<li><strong>Easier maintenance:</strong> Interfaces are smaller, clearer, and less likely to change for unrelated reasons.</li>
-<li><strong>Greater flexibility:</strong> You can extend or modify behavior without impacting unrelated classes.</li>
+<li><strong>Focused interfaces</strong>: Each interface contains only relevant operations.</li>
+<li><strong>No unnecessary dependencies</strong>: Clients and implementations are not burdened with irrelevant methods.</li>
+<li><strong>Easier maintenance and testing</strong>: Changes to one interface do not affect unrelated types.</li>
+<li><strong>Greater flexibility</strong>: New vehicle types can implement only the interfaces they need.</li>
+<li><strong>Clearer intent</strong>: Interface names and members clearly express their purpose.</li>
 </ul>
-<hr />
-<h2 id="best-practices-for-applying-isp">Best Practices for Applying ISP</h2>
+<p>These improvements lead to a more modular, maintainable, and adaptable codebase.</p>
+<h3 id="common-pitfalls"><strong>Common Pitfalls</strong></h3>
 <ul>
-<li>Split large interfaces into smaller, role-based contracts.</li>
-<li>Avoid “fat” interfaces that try to cover every possible use case.</li>
-<li>Group related methods together, but don’t force unrelated responsibilities into a single interface.</li>
-<li>Regularly review interfaces as your system evolves—refactor when they start to grow too large.</li>
+<li><strong>Fat interfaces</strong>: Large interfaces that group unrelated methods, forcing clients to implement or depend on unused functionality.</li>
+<li><strong>Unnecessary coupling</strong>: Changes to an interface ripple to all implementers, even those that do not use the changed members.</li>
+<li><strong>Exception-throwing stubs</strong>: Implementations that throw exceptions for unsupported methods, indicating a design flaw.</li>
+<li><strong>Ignoring client needs</strong>: Designing interfaces from the implementer's perspective rather than the client's.</li>
 </ul>
-<hr />
-<h2 id="takeaway">Takeaway</h2>
-<p>Design interfaces that are <strong>small, focused, and role-specific</strong>.<br />
-This keeps your codebase clean, flexible, and easy to maintain as your system grows.</p>
+<h2 id="key-takeaways">Key Takeaways</h2>
+<ul>
+<li>Interfaces should be <strong>small, focused, and role-specific</strong>.</li>
+<li>Avoid forcing clients to depend on methods they do not use.</li>
+<li>ISP improves <strong>modularity</strong>, <strong>testability</strong>, and <strong>clarity</strong>.</li>
+<li>Split large interfaces into <strong>cohesive, meaningful contracts</strong>.</li>
+<li>ISP enables <strong>flexible</strong> and <strong>robust</strong> system evolution.</li>
+</ul>
 
 
 
@@ -1259,7 +1427,7 @@ This keeps your codebase clean, flexible, and easy to maintain as your system gr
       <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.footer", "navigation.instant", "navigation.tabs", "navigation.path", "navigation.indexes", "navigation.top"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
       
         <script src="../../assets/mkdocs_puml/puml.js"></script>
       

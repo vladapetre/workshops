@@ -1,96 +1,162 @@
 # Interface Segregation Principle (ISP)
 
-> "Clients should not be forced to depend upon interfaces that they do not use." — Robert C. Martin (Uncle Bob)
+> "Clients should not be forced to depend on interfaces they do not use." — Robert C. Martin (Uncle Bob)
 
 ## Overview
 
-The **Interface Segregation Principle (ISP)** is the fourth of the five SOLID principles.  
-It encourages you to design **small, focused interfaces** so classes only implement the methods relevant to their role.
+The *Interface Segregation Principle (ISP)* states that interfaces should be **specific and focused**, ensuring that clients only need to know about the methods that are relevant to them. ISP is a core SOLID principle that promotes **modular**, **cohesive**, and **maintainable** code.
 
 ### What It Means
 
-ISP means splitting large interfaces into smaller, role-based contracts.  
-Classes should not be forced to provide empty or meaningless implementations for methods they don’t need.
+ISP means that instead of having one large, general-purpose interface, you should create several smaller, role-specific interfaces. This prevents clients from being burdened with methods they do not need, reducing unnecessary dependencies and making the system easier to evolve.
 
 ### Why It Matters
 
-Applying ISP leads to:
-
-- **Focused interfaces:** Each class only implements what it actually needs.
-- **Easier maintenance:** Interfaces are smaller, clearer, and less likely to change for unrelated reasons.
-- **Greater flexibility:** You can extend or modify behavior without impacting unrelated classes.
+Following ISP leads to **cleaner abstractions**, **improved flexibility**, and **better testability**. It reduces the impact of changes, minimizes the risk of breaking unrelated functionality, and enables more granular, focused implementations.
 
 ---
 
-### Code Example: Violation vs. Resolution
+## Code Example: Violation vs. Resolution
 
-**Violation Example:**  
-A "fat" interface forces all implementers to support unrelated methods.
-
+### **Violation Example:**  
 ```csharp
-public interface IVehicle
+public interface IVehicle 
 {
-    string Make { get; }
-    string Model { get; }
-    bool IsRegistered { get; }
-    decimal Mileage { get; }
+    public string Make { get; set; }
+    public string Model { get; set; }
+    public bool IsRegistered { get; set; }
+    public decimal Mileage { get; set; }
+    public decimal FuelLevel { get; set; }
+    public decimal BatteryLevel { get; set; }
 
-    double CalculateTax();
-    void CreateRegistration();
-    bool VerifyPeriodicTechnicalInspection();
+    void FillUp(decimal amount);
+    void ChargeUp(decimal amount);
+}
+
+public class ClassicVehicle : IVehicle 
+{
+    public string Make { get; set; }
+    public string Model { get; set; }
+    public bool IsRegistered { get; set; }
+    public decimal Mileage { get; set; }
+    public decimal FuelLevel { get; set; }
+    public decimal BatteryLevel { get; set; }
+
+    void FillUp(decimal amount) => FuelLevel += amount;
+    void ChargeUp(decimal amount) => throw new InvalidOperationException();
+}
+
+public class ElectricVehicle : IVehicle 
+{
+    public string Make { get; set; }
+    public string Model { get; set; }
+    public bool IsRegistered { get; set; }
+    public decimal Mileage { get; set; }
+    public decimal FuelLevel { get; set; }
+    public decimal BatteryLevel { get; set; }
+
+    void FillUp(decimal amount) => throw new InvalidOperationException();
+    void ChargeUp(decimal amount) => BatteryLevel += amount;
+}
+
+public class HybridVehicle : IVehicle 
+{
+    public string Make { get; set; }
+    public string Model { get; set; }
+    public bool IsRegistered { get; set; }
+    public decimal Mileage { get; set; }
+
+    public decimal FuelLevel { get; set; }
+    void FillUp(decimal amount) => FuelLevel += amount;
+
+    public decimal BatteryLevel { get; set; }
+    void ChargeUp(decimal amount) => BatteryLevel += amount;
 }
 ```
-*Problem: Vehicles that are exempt from tax or registration still need to implement these methods.*
+*Problem: All vehicle types must implement both `FillUp` and `ChargeUp`, even if they do not support one or the other. For example, `ElectricVehicle` must provide a meaningless or exception-throwing implementation for `FillUp`. This violates ISP by forcing clients to depend on irrelevant methods.*
 
-**Corrected Implementation:**  
-Split into smaller, role-based interfaces.
+### **Corrected Implementation:**  
 
 ```csharp
-public interface IVehicle
+public interface IVehicle 
 {
-    string Make { get; }
-    string Model { get; }
-    decimal Mileage { get; }
+    public string Make { get; set; }
+    public string Model { get; set; }
+    public bool IsRegistered { get; set; }
+    public decimal Mileage { get; set; }
 }
 
-public interface IRegistrableVehicle
+public interface IClassicVehicle : IVehicle
 {
-    bool IsRegistered { get; }
-    void CreateRegistration();
+    public decimal FuelLevel { get; set; }
+    void ChargeUp(decimal amount);
 }
 
-public interface ITaxableVehicle
+public interface IElectricVehicle : IVehicle
 {
-    double CalculateTax();
+    public decimal BatteryLevel { get; set; }
+    void FillUp(decimal amount);
+}
+
+public class ClassicVehicle : IClassicVehicle
+{
+    public string Make { get; set; }
+    public string Model { get; set; }
+    public bool IsRegistered { get; set; }
+    public decimal Mileage { get; set; }
+
+    public decimal FuelLevel { get; set; }
+    void FillUp(decimal amount) => FuelLevel += amount;
+}
+
+public class ElectricVehicle : IElectricVehicle 
+{
+    public string Make { get; set; }
+    public string Model { get; set; }
+    public bool IsRegistered { get; set; }
+    public decimal Mileage { get; set; }
+
+    public decimal BatteryLevel { get; set; }
+    void ChargeUp(decimal amount) => BatteryLevel += amount;
+}
+
+public class HybridVehicle : IClassicVehicle, IElectricVehicle 
+{
+    public string Make { get; set; }
+    public string Model { get; set; }
+    public bool IsRegistered { get; set; }
+    public decimal Mileage { get; set; }
+
+    public decimal FuelLevel { get; set; }
+    void FillUp(decimal amount) => FuelLevel += amount;
+
+    public decimal BatteryLevel { get; set; }
+    void ChargeUp(decimal amount) => BatteryLevel += amount;
 }
 ```
-*Now, classes only implement what they actually need.*
+*Now, each vehicle type implements only the interfaces relevant to its capabilities. `ClassicVehicle` implements `IFuelVehicle`, `ElectricVehicle` implements `IElectricVehicle`, and `HybridVehicle` can implement both if needed. Clients are never forced to depend on unused methods.*
 
-**Key Improvements:**
+### **Key Improvements:**
 
-- No more empty or meaningless methods.
-- Interfaces are easier to understand and maintain.
-- Unrelated changes do not ripple through the codebase.
+- **Focused interfaces**: Each interface contains only relevant operations.
+- **No unnecessary dependencies**: Clients and implementations are not burdened with irrelevant methods.
+- **Easier maintenance and testing**: Changes to one interface do not affect unrelated types.
+- **Greater flexibility**: New vehicle types can implement only the interfaces they need.
+- **Clearer intent**: Interface names and members clearly express their purpose.
 
----
+These improvements lead to a more modular, maintainable, and adaptable codebase.
 
-## Common Pitfalls
+### **Common Pitfalls**
 
-- Creating "fat" interfaces that try to cover every possible use case
-- Grouping unrelated responsibilities into a single interface
-- Failing to refactor interfaces as the system evolves
-
----
+- **Fat interfaces**: Large interfaces that group unrelated methods, forcing clients to implement or depend on unused functionality.
+- **Unnecessary coupling**: Changes to an interface ripple to all implementers, even those that do not use the changed members.
+- **Exception-throwing stubs**: Implementations that throw exceptions for unsupported methods, indicating a design flaw.
+- **Ignoring client needs**: Designing interfaces from the implementer's perspective rather than the client's.
 
 ## Key Takeaways
 
-- Design interfaces that are **small, focused, and role-specific**.
-- This keeps your codebase clean, flexible, and easy to maintain as your system grows.
-
----
-
-## Related Concepts / Further Reading
-
-- [Dependency Inversion Principle (DIP)](07_dependency_inversion_principle.md)
-- [SOLID Principles](https://en.wikipedia.org/wiki/SOLID)
-- [Interface Segregation Principle (Wikipedia)](https://en.wikipedia.org/wiki/Interface_segregation_principle)
+- Interfaces should be **small, focused, and role-specific**.
+- Avoid forcing clients to depend on methods they do not use.
+- ISP improves **modularity**, **testability**, and **clarity**.
+- Split large interfaces into **cohesive, meaningful contracts**.
+- ISP enables **flexible** and **robust** system evolution.

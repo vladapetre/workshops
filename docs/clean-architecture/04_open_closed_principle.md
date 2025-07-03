@@ -92,14 +92,14 @@ public class VehicleTaxCalculator
 
 *Now, to add a new tax rule, simply implement a new `IVehicleTaxService` without modifying existing code. The system is open for extension, closed for modification.*
 
-### Key Improvements
+### **Key Improvements**
 
 - **Extensible design:** Add new tax strategies by creating new classes, not changing existing ones.
 - **Reduced risk:** Stable code remains untouched, minimizing regression.
 - **Flexible architecture:** Easily adapt to new requirements or policies.
 - **Clear separation:** Each tax rule is encapsulated in its own class.
 
-### Common Pitfalls
+### **Common Pitfalls**
 
 - **Modifying existing classes** for every new requirement, risking bugs.
 - **Rigid designs** that do not leverage abstraction or interfaces.

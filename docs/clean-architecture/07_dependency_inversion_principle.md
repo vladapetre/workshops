@@ -1,105 +1,133 @@
 # Dependency Inversion Principle (DIP)
 
-> "High-level modules should not depend on low-level modules. Both should depend on abstractions."  
-> "Abstractions should not depend on details. Details should depend on abstractions."
+> "High-level modules should not depend on low-level modules. Both should depend on abstractions. Abstractions should not depend on details. Details should depend on abstractions." — Robert C. Martin (Uncle Bob)
 
 ## Overview
 
-The **Dependency Inversion Principle (DIP)** is the fifth of the five SOLID principles.  
-It means your core logic (high-level modules) should depend on **interfaces or abstractions**, not on concrete implementations (low-level modules).
+The *Dependency Inversion Principle (DIP)* dictates that both high-level and low-level modules should depend on abstractions, not on concrete implementations. DIP is a cornerstone of SOLID that enables **flexible**, **decoupled**, and **testable** software design.
 
 ### What It Means
 
-DIP encourages you to design your system so that business logic is decoupled from infrastructure and details.  
-High-level modules depend on abstractions, and details are injected as dependencies.
+DIP encourages you to program to interfaces or abstract types, not to concrete classes. High-level modules (business logic) should define contracts (interfaces), and low-level modules (implementations) should fulfill those contracts. This reduces coupling and makes it easier to substitute implementations.
 
 ### Why It Matters
 
-Applying DIP leads to:
-
-- **Decoupled design:** High-level modules depend on abstractions, not concrete implementations.
-- **Easier testing:** Dependencies are injected, making the code easier to test and extend.
-- **Flexible architecture:** Infrastructure and business logic are separated.
+Following DIP allows you to change, replace, or mock dependencies without modifying core logic. It supports **unit testing**, **maintainability**, and **extensibility**, making your system robust to change.
 
 ---
 
-### Code Example: Violation vs. Resolution
+## Code Example: Violation vs. Resolution
 
-**Violation Example:**  
-Application logic directly instantiates concrete classes.
+### **Violation Example:**
 
 ```csharp
-public class VehicleInspectionProcessor
+public interface IVehicle 
 {
-    public bool ProcessInspection(IVehicle vehicle)
+    public string Make { get; set; }
+    public string Model { get; set; }
+    public bool IsRegistered { get; set; }
+    public decimal Mileage { get; set; }
+}
+
+public interface IVehicleTaxService 
+{
+    decimal CalculateTax(IVehicle vehicle);
+}
+
+public interface IVehicleRegistrationService 
+{
+    void CreateRegistration(IVehicle vehicle);
+}
+
+public class SimpleVehicleTaxService 
+{
+    public decimal CalculateTax(IVehicle vehicle)
     {
-        var service = new SimpleInspectionService(); // tightly coupled to a concrete class
-        return service.Verify(vehicle);
+        return vehicle.Mileage > 10000 ? 100 : 50;
+    }
+}
+
+public class SimpleVehicleRegistrationService 
+{
+    private readonly IVehicleTaxService _vehicleTaxService = new SimpleVehicleTaxService();
+
+    public void CreateRegistration(IVehicle vehicle)
+    {
+        if(_vehicleTaxService.CalculateTax(vehicle) < 100)
+        {
+            vehicle.IsRegistered = true;
+        }
     }
 }
 ```
-*Problem: The processor is tightly bound to a specific implementation.*
+*Problem: `SimpleVehicleRegistrationService` directly instantiates and depends on the concrete `SimpleVehicleTaxService`. This tight coupling makes it difficult to substitute, extend, or test the tax service logic. The high-level registration service should not depend on low-level implementation details.*
 
-**Corrected Implementation:**  
-Depend on an abstraction and inject the dependency.
+### **Corrected Implementation:**  
 
 ```csharp
-public interface IInspectionService
+public interface IVehicle 
 {
-    bool Verify(IVehicle vehicle);
+    public string Make { get; set; }
+    public string Model { get; set; }
+    public bool IsRegistered { get; set; }
+    public decimal Mileage { get; set; }
 }
 
-public class SimpleInspectionService : IInspectionService
+public interface IVehicleTaxService 
 {
-    public bool Verify(IVehicle vehicle)
+    decimal CalculateTax(IVehicle vehicle);
+}
+
+public interface IVehicleRegistrationService 
+{
+    void CreateRegistration(IVehicle vehicle);
+}
+
+public class SimpleVehicleTaxService 
+{
+    public decimal CalculateTax(IVehicle vehicle)
     {
-        return vehicle.Mileage < 100000;
+        return vehicle.Mileage > 10000 ? 100 : 50;
     }
 }
 
-public class VehicleInspectionProcessor
+public class SimpleVehicleRegistrationService 
 {
-    private readonly IInspectionService _inspectionService;
+    private readonly IVehicleTaxService _vehicleTaxService;
 
-    public VehicleInspectionProcessor(IInspectionService inspectionService)
-    {
-        _inspectionService = inspectionService;
-    }
+    public SimpleVehicleRegistrationService(IVehicleTaxService vehicleTaxService) => (_vehicleTaxService) = vehicleTaxService;
 
-    public bool ProcessInspection(IVehicle vehicle)
+    public void CreateRegistration(IVehicle vehicle)
     {
-        return _inspectionService.Verify(vehicle);
+        if(_vehicleTaxService.CalculateTax(vehicle) < 100)
+        {
+            vehicle.IsRegistered = true;
+        }
     }
 }
 ```
-*Now, the processor is decoupled from the implementation and easy to test.*
+*Now, `SimpleVehicleRegistrationService` depends only on the abstraction `IVehicleTaxService`. Any implementation (real, mock, or alternative strategy) can be injected, supporting DIP.*
 
-**Key Improvements:**
+### **Key Improvements**
 
-- High-level modules depend on abstractions, not concrete types.
-- Dependencies are injected, supporting testability and flexibility.
-- Infrastructure and business logic are separated.
+- **Decouples business logic from implementation details**
+- **Enables easy substitution and unit testing**
+- **Supports extensibility and maintainability**
+- **Promotes interface-driven, flexible design**
 
----
+### **Common Pitfalls**
 
-## Common Pitfalls
-
-- Depending directly on concrete implementations in business logic
-- Instantiating dependencies inside core modules
-- Not using dependency injection or inversion
+- **Directly instantiating dependencies** in high-level modules
+- **Tightly coupling business logic to infrastructure or frameworks**
+- **Failing to define abstractions for core dependencies**
+- **Overusing dependency injection without meaningful abstractions**
 
 ---
 
 ## Key Takeaways
 
-- Depend on **interfaces** or **abstract classes**, not concrete types.
-- Use dependency injection to provide implementations at runtime.
-- Keep abstractions in core layers; implement details in outer layers.
-
----
-
-## Related Concepts / Further Reading
-
-- [SOLID Principles](https://en.wikipedia.org/wiki/SOLID)
-- [Dependency Inversion Principle (Wikipedia)](https://en.wikipedia.org/wiki/Dependency_inversion_principle)
-- [The Clean Architecture (Uncle Bob's Blog)](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)
+- High-level modules should depend on **abstractions**, not concretions.
+- Both business logic and implementations should rely on interfaces.
+- DIP enables **flexible, testable, and maintainable** architectures.
+- Use dependency injection to supply implementations at runtime.
+- DIP is essential for **robust, decoupled, and adaptable** software systems.

@@ -27,11 +27,9 @@ public interface IVehicle
     public string Model { get; set; }
     public bool IsRegistered { get; set; }
     public decimal Mileage { get; set; }
+    
     public decimal FuelLevel { get; set; }
-    public decimal BatteryLevel { get; set; }
-
     void FillUp(decimal amount);
-    void ChargeUp(decimal amount);
 }
 
 public class ClassicVehicle : IVehicle 
@@ -40,11 +38,9 @@ public class ClassicVehicle : IVehicle
     public string Model { get; set; }
     public bool IsRegistered { get; set; }
     public decimal Mileage { get; set; }
-    public decimal FuelLevel { get; set; }
-    public decimal BatteryLevel { get; set; }
 
+    public decimal FuelLevel { get; set; }
     void FillUp(decimal amount) => FuelLevel += amount;
-    void ChargeUp(decimal amount) => throw new InvalidOperationException();
 }
 
 public class ElectricVehicle : IVehicle 
@@ -53,28 +49,16 @@ public class ElectricVehicle : IVehicle
     public string Model { get; set; }
     public bool IsRegistered { get; set; }
     public decimal Mileage { get; set; }
-    public decimal FuelLevel { get; set; }
-    public decimal BatteryLevel { get; set; }
 
+    public decimal FuelLevel { get; set; }
     void FillUp(decimal amount) => throw new InvalidOperationException();
-    void ChargeUp(decimal amount) => BatteryLevel += amount;
-}
 
-public class HybridVehicle : IVehicle 
-{
-    public string Make { get; set; }
-    public string Model { get; set; }
-    public bool IsRegistered { get; set; }
-    public decimal Mileage { get; set; }
-    public decimal FuelLevel { get; set; }
     public decimal BatteryLevel { get; set; }
-
-    void FillUp(decimal amount) => FuelLevel += amount;
     void ChargeUp(decimal amount) => BatteryLevel += amount;
 }
 ```
 
-*Problem: Substituting `ClassicVehicle` or `ElectricVehicle` for `IVehicle` may cause runtime exceptions if the wrong method is called. This violates LSP, as not all implementations support all operations safely.*
+*Problem: Substituting `ElectricVehicle` for `IVehicle` may cause runtime exceptions if the wrong method is called. This violates LSP, as not all implementations support all operations safely.*
 
 ### **Corrected Implementation**
 
@@ -85,7 +69,6 @@ public interface IVehicle
     public string Model { get; set; }
     public bool IsRegistered { get; set; }
     public decimal Mileage { get; set; }
-    public decimal BatteryLevel { get; set; }
 }
 
 public interface IClassicVehicle : IVehicle
@@ -100,19 +83,14 @@ public interface IElectricVehicle : IVehicle
     void FillUp(decimal amount);
 }
 
-public interface IHybridVehicle : IClassicVehicle, IElectricVehicle
-{
-
-}
-
 public class ClassicVehicle : IClassicVehicle
 {
     public string Make { get; set; }
     public string Model { get; set; }
     public bool IsRegistered { get; set; }
     public decimal Mileage { get; set; }
-    public decimal FuelLevel { get; set; }
 
+    public decimal FuelLevel { get; set; }
     void FillUp(decimal amount) => FuelLevel += amount;
 }
 
@@ -122,35 +100,22 @@ public class ElectricVehicle : IElectricVehicle
     public string Model { get; set; }
     public bool IsRegistered { get; set; }
     public decimal Mileage { get; set; }
+
     public decimal BatteryLevel { get; set; }
-
-    void ChargeUp(decimal amount) => BatteryLevel += amount;
-}
-
-public class HybridVehicle : IHybridVehicle 
-{
-    public string Make { get; set; }
-    public string Model { get; set; }
-    public bool IsRegistered { get; set; }
-    public decimal Mileage { get; set; }
-    public decimal FuelLevel { get; set; }
-    public decimal BatteryLevel { get; set; }
-
-    void FillUp(decimal amount) => FuelLevel += amount;
     void ChargeUp(decimal amount) => BatteryLevel += amount;
 }
 ```
 
 *Now, each vehicle type only exposes operations it supports. Substitution is safe, and LSP is satisfied.*
 
-### Key Improvements
+### **Key Improvements**
 
 - **Safe substitution:** No runtime exceptions from unsupported operations.
 - **Clear contracts:** Each interface defines only valid operations for its type.
 - **Extensible design:** New vehicle types can implement relevant interfaces without risk.
 - **Improved robustness:** Client code can rely on interface contracts.
 
-### Common Pitfalls
+### **Common Pitfalls**
 
 - **Forcing all implementations to support all operations,** leading to exceptions or undefined behavior.
 - **Ignoring interface segregation,** resulting in bloated interfaces and LSP violations.
