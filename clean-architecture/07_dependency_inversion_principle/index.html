@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../../assets/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
     
     
       
@@ -361,14 +361,6 @@
       
         
       
-        
-      
-        
-      
-        
-      
-        
-      
     
     
     
@@ -388,7 +380,7 @@
   
   
   <span class="md-ellipsis">
-    Design Principles
+    Principles
     
   </span>
   
@@ -398,6 +390,63 @@
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            Principles
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1_3_1" id="__nav_1_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Design Principles
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_3_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1_3_1">
             <span class="md-nav__icon md-icon"></span>
             Design Principles
           </label>
@@ -575,19 +624,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#understanding-the-dependency-inversion-principle" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
-      Understanding the Dependency Inversion Principle
+      Overview
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Understanding the Dependency Inversion Principle">
+    <nav class="md-nav" aria-label="Overview">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#why-dip-matters" class="md-nav__link">
+  <a href="#what-it-means" class="md-nav__link">
     <span class="md-ellipsis">
-      Why DIP Matters
+      What It Means
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-it-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why It Matters
     </span>
   </a>
   
@@ -599,45 +657,60 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#example-dip-violation" class="md-nav__link">
+  <a href="#code-example-violation-vs-resolution" class="md-nav__link">
     <span class="md-ellipsis">
-      Example: DIP Violation
+      Code Example: Violation vs. Resolution
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Code Example: Violation vs. Resolution">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#violation-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Violation Example:
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#refactoring-for-dip" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#corrected-implementation" class="md-nav__link">
     <span class="md-ellipsis">
-      Refactoring for DIP
+      Corrected Implementation:
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#key-benefits" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#key-improvements" class="md-nav__link">
     <span class="md-ellipsis">
-      Key Benefits
+      Key Improvements
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#best-practices-for-applying-dip" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#common-pitfalls" class="md-nav__link">
     <span class="md-ellipsis">
-      Best Practices for Applying DIP
+      Common Pitfalls
     </span>
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#takeaway" class="md-nav__link">
+  <a href="#key-takeaways" class="md-nav__link">
     <span class="md-ellipsis">
-      Takeaway
+      Key Takeaways
     </span>
   </a>
   
@@ -686,10 +759,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3_2" >
         
           
-          <label class="md-nav__link" for="__nav_1_4" id="__nav_1_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_1_3_2" id="__nav_1_3_2_label" tabindex="0">
             
   
   
@@ -702,8 +775,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_1_4">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_3_2">
             <span class="md-nav__icon md-icon"></span>
             Component Principles
           </label>
@@ -786,6 +859,14 @@
 
               
             
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
               
                 
   
@@ -812,10 +893,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_4" >
         
           
-          <label class="md-nav__link" for="__nav_1_5" id="__nav_1_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_1_4" id="__nav_1_4_label" tabindex="0">
             
   
   
@@ -828,8 +909,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_1_5">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_4">
             <span class="md-nav__icon md-icon"></span>
             Architectural Patterns
           </label>
@@ -935,6 +1016,29 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../template/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Template
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -969,19 +1073,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#understanding-the-dependency-inversion-principle" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
-      Understanding the Dependency Inversion Principle
+      Overview
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Understanding the Dependency Inversion Principle">
+    <nav class="md-nav" aria-label="Overview">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#why-dip-matters" class="md-nav__link">
+  <a href="#what-it-means" class="md-nav__link">
     <span class="md-ellipsis">
-      Why DIP Matters
+      What It Means
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-it-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why It Matters
     </span>
   </a>
   
@@ -993,45 +1106,60 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#example-dip-violation" class="md-nav__link">
+  <a href="#code-example-violation-vs-resolution" class="md-nav__link">
     <span class="md-ellipsis">
-      Example: DIP Violation
+      Code Example: Violation vs. Resolution
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Code Example: Violation vs. Resolution">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#violation-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Violation Example:
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#refactoring-for-dip" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#corrected-implementation" class="md-nav__link">
     <span class="md-ellipsis">
-      Refactoring for DIP
+      Corrected Implementation:
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#key-benefits" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#key-improvements" class="md-nav__link">
     <span class="md-ellipsis">
-      Key Benefits
+      Key Improvements
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#best-practices-for-applying-dip" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#common-pitfalls" class="md-nav__link">
     <span class="md-ellipsis">
-      Best Practices for Applying DIP
+      Common Pitfalls
     </span>
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#takeaway" class="md-nav__link">
+  <a href="#key-takeaways" class="md-nav__link">
     <span class="md-ellipsis">
-      Takeaway
+      Key Takeaways
     </span>
   </a>
   
@@ -1054,100 +1182,124 @@
 
 
 <h1 id="dependency-inversion-principle-dip">Dependency Inversion Principle (DIP)</h1>
-<h2 id="understanding-the-dependency-inversion-principle">Understanding the Dependency Inversion Principle</h2>
-<p>The <strong>Dependency Inversion Principle (DIP)</strong> is the fifth of the five SOLID principles of object-oriented design. It states:</p>
 <blockquote>
-<p><strong>High-level modules should not depend on low-level modules. Both should depend on abstractions.</strong><br />
-<strong>Abstractions should not depend on details. Details should depend on abstractions.</strong></p>
+<p>"High-level modules should not depend on low-level modules. Both should depend on abstractions. Abstractions should not depend on details. Details should depend on abstractions." — Robert C. Martin (Uncle Bob)</p>
 </blockquote>
-<p><strong>DIP</strong> means your core logic (high-level modules) should depend on <strong>interfaces or abstractions</strong>, not on concrete implementations (low-level modules). This decouples your business logic from infrastructure and details, making your codebase more flexible, testable, and maintainable.</p>
-<h3 id="why-dip-matters">Why DIP Matters</h3>
-<p>When DIP is violated:</p>
-<ul>
-<li>High-level code is tightly coupled to low-level details.</li>
-<li>Changing infrastructure or implementation details requires changes in core logic.</li>
-<li>Testing and extending the system becomes difficult.</li>
-</ul>
-<p>By following DIP, you:</p>
-<ul>
-<li>Enable clean architecture boundaries.</li>
-<li>Make your code easier to adapt and test.</li>
-<li>Reduce the risk of breaking core logic when details change.</li>
-</ul>
+<h2 id="overview">Overview</h2>
+<p>The <em>Dependency Inversion Principle (DIP)</em> dictates that both high-level and low-level modules should depend on abstractions, not on concrete implementations. DIP is a cornerstone of SOLID that enables <strong>flexible</strong>, <strong>decoupled</strong>, and <strong>testable</strong> software design.</p>
+<h3 id="what-it-means">What It Means</h3>
+<p>DIP encourages you to program to interfaces or abstract types, not to concrete classes. High-level modules (business logic) should define contracts (interfaces), and low-level modules (implementations) should fulfill those contracts. This reduces coupling and makes it easier to substitute implementations.</p>
+<h3 id="why-it-matters">Why It Matters</h3>
+<p>Following DIP allows you to change, replace, or mock dependencies without modifying core logic. It supports <strong>unit testing</strong>, <strong>maintainability</strong>, and <strong>extensibility</strong>, making your system robust to change.</p>
 <hr />
-<h2 id="example-dip-violation">Example: DIP Violation</h2>
-<p>Suppose your application logic directly instantiates concrete classes:</p>
-<pre><code class="language-csharp">public class VehicleInspectionProcessor
+<h2 id="code-example-violation-vs-resolution">Code Example: Violation vs. Resolution</h2>
+<h3 id="violation-example"><strong>Violation Example:</strong></h3>
+<pre><code class="language-csharp">public interface IVehicle 
 {
-    public bool ProcessInspection(IVehicle vehicle)
+    public string Make { get; set; }
+    public string Model { get; set; }
+    public bool IsRegistered { get; set; }
+    public decimal Mileage { get; set; }
+}
+
+public interface IVehicleTaxService 
+{
+    decimal CalculateTax(IVehicle vehicle);
+}
+
+public interface IVehicleRegistrationService 
+{
+    void CreateRegistration(IVehicle vehicle);
+}
+
+public class SimpleVehicleTaxService 
+{
+    public decimal CalculateTax(IVehicle vehicle)
     {
-        var service = new SimpleInspectionService(); // ⚠ tightly coupled to a concrete class
-        return service.Verify(vehicle);
+        return vehicle.Mileage &gt; 10000 ? 100 : 50;
+    }
+}
+
+public class SimpleVehicleRegistrationService 
+{
+    private readonly IVehicleTaxService _vehicleTaxService = new SimpleVehicleTaxService();
+
+    public void CreateRegistration(IVehicle vehicle)
+    {
+        if(_vehicleTaxService.CalculateTax(vehicle) &lt; 100)
+        {
+            vehicle.IsRegistered = true;
+        }
     }
 }
 </code></pre>
-<p><strong>Problems:</strong></p>
-<ul>
-<li>The processor is tightly bound to a specific implementation.</li>
-<li>Hard to swap out the inspection logic or test the processor in isolation.</li>
-</ul>
-<hr />
-<h2 id="refactoring-for-dip">Refactoring for DIP</h2>
-<p>Refactor the processor to depend on an abstraction (<code>IInspectionService</code>) and inject the dependency:</p>
-<pre><code class="language-csharp">public interface IInspectionService
+<p><em>Problem: <code>SimpleVehicleRegistrationService</code> directly instantiates and depends on the concrete <code>SimpleVehicleTaxService</code>. This tight coupling makes it difficult to substitute, extend, or test the tax service logic. The high-level registration service should not depend on low-level implementation details.</em></p>
+<h3 id="corrected-implementation"><strong>Corrected Implementation:</strong></h3>
+<pre><code class="language-csharp">public interface IVehicle 
 {
-    bool Verify(IVehicle vehicle);
+    public string Make { get; set; }
+    public string Model { get; set; }
+    public bool IsRegistered { get; set; }
+    public decimal Mileage { get; set; }
 }
 
-public class SimpleInspectionService : IInspectionService
+public interface IVehicleTaxService 
 {
-    public bool Verify(IVehicle vehicle)
+    decimal CalculateTax(IVehicle vehicle);
+}
+
+public interface IVehicleRegistrationService 
+{
+    void CreateRegistration(IVehicle vehicle);
+}
+
+public class SimpleVehicleTaxService 
+{
+    public decimal CalculateTax(IVehicle vehicle)
     {
-        return vehicle.Mileage &lt; 100000;
+        return vehicle.Mileage &gt; 10000 ? 100 : 50;
+    }
+}
+
+public class SimpleVehicleRegistrationService 
+{
+    private readonly IVehicleTaxService _vehicleTaxService;
+
+    public SimpleVehicleRegistrationService(IVehicleTaxService vehicleTaxService) =&gt; (_vehicleTaxService) = vehicleTaxService;
+
+    public void CreateRegistration(IVehicle vehicle)
+    {
+        if(_vehicleTaxService.CalculateTax(vehicle) &lt; 100)
+        {
+            vehicle.IsRegistered = true;
+        }
     }
 }
 </code></pre>
-<details>
-<summary>Exercise: Refactor the VehicleInspectionProcessor for DIP</summary>
-
-
-<pre><code class="language-csharp">public class VehicleInspectionProcessor
-{
-    private readonly IInspectionService _inspectionService;
-
-    public VehicleInspectionProcessor(IInspectionService inspectionService)
-    {
-        _inspectionService = inspectionService;
-    }
-
-    public bool ProcessInspection(IVehicle vehicle)
-    {
-        return _inspectionService.Verify(vehicle);
-    }
-}
-</code></pre>
-
-</details>
-
-<hr />
-<h2 id="key-benefits">Key Benefits</h2>
+<p><em>Now, <code>SimpleVehicleRegistrationService</code> depends only on the abstraction <code>IVehicleTaxService</code>. Any implementation (real, mock, or alternative strategy) can be injected, supporting DIP.</em></p>
+<h3 id="key-improvements"><strong>Key Improvements</strong></h3>
 <ul>
-<li><strong>Decoupled design:</strong> High-level modules depend on abstractions, not concrete implementations.</li>
-<li><strong>Easier testing:</strong> Dependencies are injected, making the code easier to test and extend.</li>
-<li><strong>Flexible architecture:</strong> Infrastructure and business logic are separated.</li>
+<li><strong>Decouples business logic from implementation details</strong></li>
+<li><strong>Enables easy substitution and unit testing</strong></li>
+<li><strong>Supports extensibility and maintainability</strong></li>
+<li><strong>Promotes interface-driven, flexible design</strong></li>
+</ul>
+<h3 id="common-pitfalls"><strong>Common Pitfalls</strong></h3>
+<ul>
+<li><strong>Directly instantiating dependencies</strong> in high-level modules</li>
+<li><strong>Tightly coupling business logic to infrastructure or frameworks</strong></li>
+<li><strong>Failing to define abstractions for core dependencies</strong></li>
+<li><strong>Overusing dependency injection without meaningful abstractions</strong></li>
 </ul>
 <hr />
-<h2 id="best-practices-for-applying-dip">Best Practices for Applying DIP</h2>
+<h2 id="key-takeaways">Key Takeaways</h2>
 <ul>
-<li>Depend on <strong>interfaces</strong> or <strong>abstract classes</strong>, not concrete types.</li>
-<li>Use <strong>dependency injection</strong> to provide implementations at runtime.</li>
-<li>Keep abstractions in core layers; implement details in outer layers.</li>
-<li>Avoid new-ing up dependencies inside your business logic.</li>
+<li>High-level modules should depend on <strong>abstractions</strong>, not concretions.</li>
+<li>Both business logic and implementations should rely on interfaces.</li>
+<li>DIP enables <strong>flexible, testable, and maintainable</strong> architectures.</li>
+<li>Use dependency injection to supply implementations at runtime.</li>
+<li>DIP is essential for <strong>robust, decoupled, and adaptable</strong> software systems.</li>
 </ul>
-<hr />
-<h2 id="takeaway">Takeaway</h2>
-<p>DIP encourages designing your system around <strong>interfaces</strong> and <strong>injection</strong>, not <strong>instantiation</strong>.<br />
-This decouples your core logic from infrastructure and allows for clean architecture boundaries.</p>
 
 
 
@@ -1245,7 +1397,7 @@ This decouples your core logic from infrastructure and allows for clean architec
       <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.footer", "navigation.instant", "navigation.tabs", "navigation.path", "navigation.indexes", "navigation.top"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
       
         <script src="../../assets/mkdocs_puml/puml.js"></script>
       

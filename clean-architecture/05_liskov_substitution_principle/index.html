@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../../assets/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
     
     
       
@@ -361,14 +361,6 @@
       
         
       
-        
-      
-        
-      
-        
-      
-        
-      
     
     
     
@@ -388,7 +380,7 @@
   
   
   <span class="md-ellipsis">
-    Design Principles
+    Principles
     
   </span>
   
@@ -398,6 +390,63 @@
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            Principles
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1_3_1" id="__nav_1_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Design Principles
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_3_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1_3_1">
             <span class="md-nav__icon md-icon"></span>
             Design Principles
           </label>
@@ -529,19 +578,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#what-is-the-liskov-substitution-principle" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
-      What is the Liskov Substitution Principle?
+      Overview
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="What is the Liskov Substitution Principle?">
+    <nav class="md-nav" aria-label="Overview">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#why-lsp-matters" class="md-nav__link">
+  <a href="#what-it-means" class="md-nav__link">
     <span class="md-ellipsis">
-      Why LSP Matters
+      What It Means
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-it-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why It Matters
     </span>
   </a>
   
@@ -553,19 +611,46 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#example-lsp-violation" class="md-nav__link">
+  <a href="#code-example-violation-vs-resolution" class="md-nav__link">
     <span class="md-ellipsis">
-      Example: LSP Violation
+      Code Example: Violation vs. Resolution
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Example: LSP Violation">
+    <nav class="md-nav" aria-label="Code Example: Violation vs. Resolution">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#refactoring-for-lsp" class="md-nav__link">
+  <a href="#violation-example" class="md-nav__link">
     <span class="md-ellipsis">
-      Refactoring for LSP
+      Violation Example:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#corrected-implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Corrected Implementation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-improvements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Improvements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-pitfalls" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Pitfalls
     </span>
   </a>
   
@@ -577,18 +662,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#best-practices-for-applying-lsp" class="md-nav__link">
+  <a href="#key-takeaways" class="md-nav__link">
     <span class="md-ellipsis">
-      Best Practices for Applying LSP
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#takeaway" class="md-nav__link">
-    <span class="md-ellipsis">
-      Takeaway
+      Key Takeaways
     </span>
   </a>
   
@@ -683,10 +759,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3_2" >
         
           
-          <label class="md-nav__link" for="__nav_1_4" id="__nav_1_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_1_3_2" id="__nav_1_3_2_label" tabindex="0">
             
   
   
@@ -699,8 +775,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_1_4">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_3_2">
             <span class="md-nav__icon md-icon"></span>
             Component Principles
           </label>
@@ -783,6 +859,14 @@
 
               
             
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
               
                 
   
@@ -809,10 +893,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_4" >
         
           
-          <label class="md-nav__link" for="__nav_1_5" id="__nav_1_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_1_4" id="__nav_1_4_label" tabindex="0">
             
   
   
@@ -825,8 +909,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_1_5">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_4">
             <span class="md-nav__icon md-icon"></span>
             Architectural Patterns
           </label>
@@ -932,6 +1016,29 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../template/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Template
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -966,19 +1073,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#what-is-the-liskov-substitution-principle" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
-      What is the Liskov Substitution Principle?
+      Overview
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="What is the Liskov Substitution Principle?">
+    <nav class="md-nav" aria-label="Overview">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#why-lsp-matters" class="md-nav__link">
+  <a href="#what-it-means" class="md-nav__link">
     <span class="md-ellipsis">
-      Why LSP Matters
+      What It Means
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-it-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why It Matters
     </span>
   </a>
   
@@ -990,19 +1106,46 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#example-lsp-violation" class="md-nav__link">
+  <a href="#code-example-violation-vs-resolution" class="md-nav__link">
     <span class="md-ellipsis">
-      Example: LSP Violation
+      Code Example: Violation vs. Resolution
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Example: LSP Violation">
+    <nav class="md-nav" aria-label="Code Example: Violation vs. Resolution">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#refactoring-for-lsp" class="md-nav__link">
+  <a href="#violation-example" class="md-nav__link">
     <span class="md-ellipsis">
-      Refactoring for LSP
+      Violation Example:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#corrected-implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Corrected Implementation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-improvements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Improvements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-pitfalls" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Pitfalls
     </span>
   </a>
   
@@ -1014,18 +1157,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#best-practices-for-applying-lsp" class="md-nav__link">
+  <a href="#key-takeaways" class="md-nav__link">
     <span class="md-ellipsis">
-      Best Practices for Applying LSP
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#takeaway" class="md-nav__link">
-    <span class="md-ellipsis">
-      Takeaway
+      Key Takeaways
     </span>
   </a>
   
@@ -1048,139 +1182,120 @@
 
 
 <h1 id="liskov-substitution-principle-lsp">Liskov Substitution Principle (LSP)</h1>
-<h2 id="what-is-the-liskov-substitution-principle">What is the Liskov Substitution Principle?</h2>
-<p>The <strong>Liskov Substitution Principle (LSP)</strong> is the third of the five SOLID principles of object-oriented design. It states:</p>
 <blockquote>
-<p><strong>Objects of a superclass should be replaceable with objects of its subclasses without affecting the correctness of the program.</strong><br />
-– Barbara Liskov</p>
+<p>"Objects of a superclass should be replaceable with objects of a subclass without affecting the correctness of the program." — Barbara Liskov</p>
 </blockquote>
-<p>LSP means that you should be able to use any subtype of an interface or base class <strong>without altering the expected behavior</strong> of the program. Subtypes must honor the contract and intent of their base types, ensuring consistent and predictable behavior.</p>
-<h3 id="why-lsp-matters">Why LSP Matters</h3>
-<p>When LSP is violated:</p>
-<ul>
-<li>Subtypes break expectations, causing bugs or unexpected behavior.</li>
-<li>Code that works with the base type may fail or behave incorrectly with certain subtypes.</li>
-<li>The abstraction becomes unreliable and hard to maintain.</li>
-</ul>
-<p>By following LSP, you ensure your abstractions are robust and your code is easier to extend and reason about.</p>
+<h2 id="overview">Overview</h2>
+<p>The <em>Liskov Substitution Principle (LSP)</em> ensures that subclasses can stand in for their base classes without altering the desirable properties of a program—correctness, task completion, and expected behavior. LSP is a core SOLID principle that enables safe polymorphism and reliable inheritance.</p>
+<h3 id="what-it-means">What It Means</h3>
+<p>LSP means that derived classes must be fully substitutable for their base classes. This requires that subclasses honor the contracts, invariants, and expectations established by the base class, including method behavior, preconditions, and postconditions. Violating LSP leads to unexpected behavior, bugs, and fragile code.</p>
+<h3 id="why-it-matters">Why It Matters</h3>
+<p>Adhering to LSP allows for robust polymorphic code, enabling developers to extend systems safely by introducing new subclasses. It ensures that code using base types can work seamlessly with any derived type, supporting maintainability, scalability, and correctness.</p>
 <hr />
-<h2 id="example-lsp-violation">Example: LSP Violation</h2>
-<p>In this example, a subclass <code>UnregisteredVehicle</code> throws an exception when trying to register, violating the contract of <code>Vehicle</code>. If a method expects any <code>IVehicle</code> and calls <code>CreateRegistration()</code>, this will throw unexpectedly—a clear violation of LSP.</p>
-<pre><code class="language-csharp">public interface IVehicle
+<h2 id="code-example-violation-vs-resolution">Code Example: Violation vs. Resolution</h2>
+<h3 id="violation-example"><strong>Violation Example:</strong></h3>
+<pre><code class="language-csharp">public interface IVehicle 
 {
-    string Make { get; }
-    string Model { get; }
-    decimal Mileage { get; }
+    public string Make { get; set; }
+    public string Model { get; set; }
+    public bool IsRegistered { get; set; }
+    public decimal Mileage { get; set; }
 
-    double CalculateTax();
-    void CreateRegistration();
-    bool VerifyPeriodicTechnicalInspection();
+    public decimal FuelLevel { get; set; }
+    void FillUp(decimal amount);
 }
 
-public class UnregisteredVehicle : IVehicle
+public class ClassicVehicle : IVehicle 
 {
-    public string Make =&gt; &quot;Prototype&quot;;
-    public string Model =&gt; &quot;Test Rig&quot;;
-    public bool IsRegistered =&gt; false;
-    public decimal Mileage =&gt; 0;
+    public string Make { get; set; }
+    public string Model { get; set; }
+    public bool IsRegistered { get; set; }
+    public decimal Mileage { get; set; }
 
-    public double CalculateTax()
-    {
-        return 0;
-    }
+    public decimal FuelLevel { get; set; }
+    void FillUp(decimal amount) =&gt; FuelLevel += amount;
+}
 
-    public void CreateRegistration()
-    {
-        throw new NotSupportedException(&quot;This vehicle cannot be registered.&quot;);
-    }
+public class ElectricVehicle : IVehicle 
+{
+    public string Make { get; set; }
+    public string Model { get; set; }
+    public bool IsRegistered { get; set; }
+    public decimal Mileage { get; set; }
 
-    public bool VerifyPeriodicTechnicalInspection()
-    {
-        return false;
-    }
+    public decimal FuelLevel { get; set; }
+    void FillUp(decimal amount) =&gt; throw new InvalidOperationException();
+
+    public decimal BatteryLevel { get; set; }
+    void ChargeUp(decimal amount) =&gt; BatteryLevel += amount;
 }
 </code></pre>
-<p>This breaks the expectation that all <code>IVehicle</code> objects can be registered.</p>
-<h3 id="refactoring-for-lsp">Refactoring for LSP</h3>
-<p>To comply with LSP, only types that support registration should expose registration behavior. Move registration to a separate interface, so unsupported operations are not part of the contract.</p>
-<pre><code class="language-csharp">public interface IVehicle
+<p><em>Problem: Substituting <code>ElectricVehicle</code> for <code>IVehicle</code> may cause runtime exceptions if the wrong method is called. This violates LSP, as not all implementations support all operations safely.</em></p>
+<h3 id="corrected-implementation"><strong>Corrected Implementation</strong></h3>
+<pre><code class="language-csharp">public interface IVehicle 
 {
-    string Make { get; }
-    string Model { get; }
-    decimal Mileage { get; }
-
-    double CalculateTax();
-    bool VerifyPeriodicTechnicalInspection();
+    public string Make { get; set; }
+    public string Model { get; set; }
+    public bool IsRegistered { get; set; }
+    public decimal Mileage { get; set; }
 }
 
-public interface IRegistrableVehicle : IVehicle
+public interface IClassicVehicle : IVehicle
 {
-    bool IsRegistered { get; }
-    void Register();
+    public decimal FuelLevel { get; set; }
+    void ChargeUp(decimal amount);
 }
 
-public class UnregisteredVehicle : IVehicle
+public interface IElectricVehicle : IVehicle
 {
-    public string Make =&gt; &quot;Prototype&quot;;
-    public string Model =&gt; &quot;Test Rig&quot;;
-    public bool IsRegistered =&gt; false;
-    public decimal Mileage =&gt; 0;
-
-    public double CalculateTax()
-    {
-        return 0;
-    }
-
-    public bool VerifyPeriodicTechnicalInspection()
-    {
-        return false;
-    }
-}
-</code></pre>
-<details>
-<summary>Exercise: Complete the refactoring for the Register method</summary>
-
-<pre><code class="language-csharp">public interface IRegistractionService 
-{
-    bool Register(IVehicle vehicle);
+    public decimal BatteryLevel { get; set; }
+    void FillUp(decimal amount);
 }
 
-public class SimpleRegistractionService : IRegistractionService
+public class ClassicVehicle : IClassicVehicle
 {
-    public bool Register(IVehicle vehicle)
-    {
-        if (vehicle is IRegistrableVehicle registrable &amp;&amp; !registrable.IsRegistered)
-        {
-            registrable.Register();
-            return true;
-        }
-        return false;
-    }
+    public string Make { get; set; }
+    public string Model { get; set; }
+    public bool IsRegistered { get; set; }
+    public decimal Mileage { get; set; }
+
+    public decimal FuelLevel { get; set; }
+    void FillUp(decimal amount) =&gt; FuelLevel += amount;
+}
+
+public class ElectricVehicle : IElectricVehicle 
+{
+    public string Make { get; set; }
+    public string Model { get; set; }
+    public bool IsRegistered { get; set; }
+    public decimal Mileage { get; set; }
+
+    public decimal BatteryLevel { get; set; }
+    void ChargeUp(decimal amount) =&gt; BatteryLevel += amount;
 }
 </code></pre>
-
-</details>
-
-<p><strong>Key improvements:</strong></p>
+<p><em>Now, each vehicle type only exposes operations it supports. Substitution is safe, and LSP is satisfied.</em></p>
+<h3 id="key-improvements"><strong>Key Improvements</strong></h3>
 <ul>
-<li>Only vehicles that support registration implement the registration interface.</li>
-<li>The contract for <code>IVehicle</code> is clear and safe for all subtypes.</li>
-<li>Code that works with <code>IVehicle</code> does not risk unexpected exceptions.</li>
+<li><strong>Safe substitution:</strong> No runtime exceptions from unsupported operations.</li>
+<li><strong>Clear contracts:</strong> Each interface defines only valid operations for its type.</li>
+<li><strong>Extensible design:</strong> New vehicle types can implement relevant interfaces without risk.</li>
+<li><strong>Improved robustness:</strong> Client code can rely on interface contracts.</li>
+</ul>
+<h3 id="common-pitfalls"><strong>Common Pitfalls</strong></h3>
+<ul>
+<li><strong>Forcing all implementations to support all operations,</strong> leading to exceptions or undefined behavior.</li>
+<li><strong>Ignoring interface segregation,</strong> resulting in bloated interfaces and LSP violations.</li>
+<li><strong>Breaking contracts</strong> by changing method behavior or allowed inputs/outputs in subclasses.</li>
 </ul>
 <hr />
-<h2 id="best-practices-for-applying-lsp">Best Practices for Applying LSP</h2>
+<h2 id="key-takeaways">Key Takeaways</h2>
 <ul>
-<li><strong>Design clear contracts:</strong> Only include methods and properties in base interfaces or classes that make sense for all subtypes.</li>
-<li><strong>Avoid unsupported operations:</strong> Don’t force subtypes to implement methods they can’t support—move those to separate interfaces.</li>
-<li><strong>Honor invariants:</strong> Subtypes should not weaken preconditions or strengthen postconditions of base type methods.</li>
-<li><strong>Test substitutability:</strong> Regularly verify that your subtypes can replace base types in real scenarios without breaking behavior.</li>
-<li><strong>Document expectations:</strong> Clearly state the intended use and constraints of your abstractions.</li>
+<li>Subclasses or implementations must be <strong>fully substitutable</strong> for their base types.</li>
+<li>Avoid exposing operations that are not universally supported.</li>
+<li>LSP enables <strong>robust polymorphism</strong> and <strong>safe code extension</strong>.</li>
+<li>Use interface segregation to maintain clear, safe contracts.</li>
 </ul>
-<hr />
-<h2 id="takeaway">Takeaway</h2>
-<p>Subtypes must honor the intent of their base types.<br />
-If a method or property doesn’t make sense for all variants, don’t put it in the base interface.<br />
-This keeps your abstractions reliable and your codebase robust.</p>
 
 
 
@@ -1278,7 +1393,7 @@ This keeps your abstractions reliable and your codebase robust.</p>
       <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.footer", "navigation.instant", "navigation.tabs", "navigation.path", "navigation.indexes", "navigation.top"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
       
         <script src="../../assets/mkdocs_puml/puml.js"></script>
       

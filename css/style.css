@@ -3,29 +3,6 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: bold !important;
 }
 
-/* Justify all body text */
-.md-typeset p {
-    text-align: justify;
-}
-
-/* Add more space between list items */
-.md-typeset ul li,
-.md-typeset ol li {
-    margin-bottom: 0.8em; /* Adjust this value as needed */
-}
-
-/* Optional: If you want to control line-height within list items */
-.md-typeset ul li p,
-.md-typeset ol li p {
-    line-height: 1.6; /* Adjust line height for paragraphs within list items */
-}
-
-/* Add extra indentation to blockquotes and more space after them */
-.md-typeset blockquote {
-    margin-left: 2em;    /* Existing: Add 2 'em' units of left margin for indentation */
-    margin-bottom: 1.5em; /* NEW: Add 1.5 'em' units of space below the blockquote */
-}
-
 /* Move the MkDocs site title closer to the logo */
 .md-header__title {
     margin-left: 0.2rem !important; /* Reduce the left margin. Adjust as needed. */
