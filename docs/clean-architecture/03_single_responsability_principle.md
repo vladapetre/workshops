@@ -85,11 +85,11 @@ These enhancements lead to cleaner, more robust, and adaptable software.
 
 ## Key Takeaways
 
-- A class should have **only one reason to change**[1][2][3].  
-- SRP promotes **separation of concerns** by isolating responsibilities[1][7].  
-- It improves **maintainability** and **testability** by reducing coupling[2][4].  
-- Avoid mixing unrelated tasks in the same class or module[2][5].  
-- Over-fragmentation can lead to **unnecessary complexity**; keep responsibilities meaningful[4][6].  
-- SRP applies at all levels: classes, methods, and components[7].  
-- Identify **reasons to change** based on stakeholders or concerns[6].  
-- Clear responsibilities lead to **cleaner, modular, and adaptable code**[1][3][7].
+- A class should have **only one reason to change**.  
+- SRP promotes **separation of concerns** by isolating responsibilities.  
+- It improves **maintainability** and **testability** by reducing coupling.  
+- Avoid mixing unrelated tasks in the same class or module.  
+- Over-fragmentation can lead to **unnecessary complexity**; keep responsibilities meaningful.  
+- SRP applies at all levels: classes, methods, and components.  
+- Identify **reasons to change** based on stakeholders or concerns.  
+- Clear responsibilities lead to **cleaner, modular, and adaptable code**.

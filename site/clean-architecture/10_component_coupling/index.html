@@ -59,7 +59,16 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -462,7 +471,7 @@
   
   
   <span class="md-ellipsis">
-    Intro
+    Overview
     
   </span>
   
@@ -659,7 +668,7 @@
   
   
   <span class="md-ellipsis">
-    Intro
+    Overview
     
   </span>
   
@@ -777,10 +786,52 @@
   
 </li>
         
-          <li class="md-nav__item">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#code-example-violation-vs-resolution" class="md-nav__link">
     <span class="md-ellipsis">
       Code Example: Violation vs. Resolution
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Code Example: Violation vs. Resolution">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#violation-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Violation Example:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#corrected-implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Corrected Implementation:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-improvements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Improvements:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-pitfalls" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Pitfalls
     </span>
   </a>
   
@@ -792,27 +843,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#common-pitfalls" class="md-nav__link">
-    <span class="md-ellipsis">
-      Common Pitfalls
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#key-takeaways" class="md-nav__link">
     <span class="md-ellipsis">
       Key Takeaways
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#related-concepts-further-reading" class="md-nav__link">
-    <span class="md-ellipsis">
-      Related Concepts / Further Reading
     </span>
   </a>
   
@@ -851,6 +884,10 @@
   
     
     
+      
+        
+      
+        
       
         
       
@@ -904,7 +941,7 @@
   
   
   <span class="md-ellipsis">
-    Intro
+    Overview
     
   </span>
   
@@ -951,6 +988,52 @@
   
   <span class="md-ellipsis">
     Onion Architecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../14_hexagonal_architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Hexagonal Architecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../15_clean_architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Clean Architecture
     
   </span>
   
@@ -1076,10 +1159,52 @@
   
 </li>
         
-          <li class="md-nav__item">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#code-example-violation-vs-resolution" class="md-nav__link">
     <span class="md-ellipsis">
       Code Example: Violation vs. Resolution
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Code Example: Violation vs. Resolution">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#violation-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Violation Example:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#corrected-implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Corrected Implementation:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-improvements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Improvements:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-pitfalls" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Pitfalls
     </span>
   </a>
   
@@ -1091,27 +1216,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#common-pitfalls" class="md-nav__link">
-    <span class="md-ellipsis">
-      Common Pitfalls
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#key-takeaways" class="md-nav__link">
     <span class="md-ellipsis">
       Key Takeaways
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#related-concepts-further-reading" class="md-nav__link">
-    <span class="md-ellipsis">
-      Related Concepts / Further Reading
     </span>
   </a>
   
@@ -1135,62 +1242,134 @@
 
 <h1 id="component-coupling-principles">Component Coupling Principles</h1>
 <blockquote>
-<p>"The dependency graph of components must have no cycles." — Robert C. Martin</p>
+<p>"The dependencies between components should be managed to maximize flexibility and minimize the impact of change." — Robert C. Martin (Uncle Bob)</p>
 </blockquote>
 <h2 id="overview">Overview</h2>
-<p><strong>Component Coupling</strong> is about managing how components depend on each other.<br />
-Good coupling ensures your system is <strong>stable, flexible, and testable</strong> as it grows.</p>
+<p>The <em>Component Coupling Principles</em> define how components (such as namespaces, packages, or modules) should depend on each other in Clean Architecture. Proper coupling ensures that components remain <strong>flexible</strong>, <strong>replaceable</strong>, and <strong>robust</strong> in the face of change.</p>
 <h3 id="what-it-means">What It Means</h3>
-<p>Coupling principles help you:</p>
+<p>Component coupling principles guide architects to structure dependencies so that:</p>
 <ul>
-<li>Keep dependencies acyclic and flowing in one direction</li>
-<li>Depend on stable, abstract components rather than unstable, concrete ones</li>
-<li>Use interfaces to invert dependencies and decouple modules</li>
+<li>Components are <strong>not tightly bound</strong> to the internal details of other components.</li>
+<li><strong>Changes in one component</strong> do not unnecessarily cascade to others.</li>
+<li>The system supports <strong>independent development, testing, and deployment</strong>.</li>
+</ul>
+<p>Three key coupling principles are:</p>
+<ul>
+<li>
+<p><strong>ADP: The Acyclic Dependencies Principle</strong><br />
+  The dependency graph of components must have no cycles. Cyclic dependencies make maintenance and deployment difficult.</p>
+</li>
+<li>
+<p><strong>SDP: The Stable Dependencies Principle</strong><br />
+  Depend in the direction of stability. Components that are hard to change (stable) should not depend on components that are easy to change (unstable).</p>
+</li>
+<li>
+<p><strong>SAP: The Stable Abstractions Principle</strong><br />
+  Stable components should be abstract, not concrete. This allows flexible extension without modifying stable code.</p>
+</li>
 </ul>
 <h3 id="why-it-matters">Why It Matters</h3>
-<p>Applying coupling principles leads to:</p>
+<p>Applying coupling principles results in:</p>
 <ul>
-<li><strong>Predictable builds:</strong> No circular dependencies or fragile deployments.</li>
-<li><strong>Stable architecture:</strong> Core components are abstract and rarely change.</li>
-<li><strong>Flexible design:</strong> You can extend or replace modules without breaking the system.</li>
+<li><strong>Easier maintenance:</strong> Local changes do not ripple across the system.</li>
+<li><strong>Greater flexibility:</strong> Components can be replaced or upgraded independently.</li>
+<li><strong>Simpler testing:</strong> Dependencies can be mocked or substituted.</li>
+<li><strong>Improved scalability:</strong> Teams can work on different components without conflict.</li>
 </ul>
 <hr />
-<h3 id="code-example-violation-vs-resolution">Code Example: Violation vs. Resolution</h3>
-<p><strong>Violation Example:</strong><br />
-Circular dependency between components.</p>
-<pre><code class="language-plaintext">Component A --&gt; Component B --&gt; Component C --&gt; Component A
-// Problem: Cycles make builds and deployments unpredictable.
-</code></pre>
-<p><strong>Corrected Implementation:</strong><br />
-Acyclic, stable dependencies.</p>
-<pre><code class="language-plaintext">Component A --&gt; Component B --&gt; Component C
-// Dependencies flow in one direction; no cycles.
-</code></pre>
-<p><strong>Key Improvements:</strong></p>
+<h2 id="code-example-violation-vs-resolution">Code Example: Violation vs. Resolution</h2>
+<h3 id="violation-example"><strong>Violation Example:</strong></h3>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">namespace</span><span class="w"> </span><span class="nn">Component.Vehicle.Tax</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="p">{</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">SimpleVehicleTaxService</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="kt">decimal</span><span class="w"> </span><span class="nf">CalculateTax</span><span class="p">(</span><span class="n">IVehicle</span><span class="w"> </span><span class="n">vehicle</span><span class="p">)</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">        </span><span class="p">{</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">            </span><span class="c1">// ...</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">            </span><span class="kt">var</span><span class="w"> </span><span class="n">registrationService</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SimpleVehicleRegistrationService</span><span class="p">();</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">            </span><span class="n">registrationService</span><span class="p">.</span><span class="n">CreateRegistration</span><span class="p">(</span><span class="n">vehicle</span><span class="p">);</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">            </span><span class="c1">// ...</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="p">}</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="k">namespace</span><span class="w"> </span><span class="nn">Component.Vehicle.Registration</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="p">{</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">SimpleVehicleRegistrationService</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">CreateRegistration</span><span class="p">(</span><span class="n">IVehicle</span><span class="w"> </span><span class="n">vehicle</span><span class="p">)</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">        </span><span class="p">{</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">            </span><span class="c1">// ...</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="p">}</span>
+</span></code></pre></div>
+<p><em>Problem: <code>SimpleVehicleTaxService</code> directly depends on the concrete <code>SimpleVehicleRegistrationService</code>. This creates a tight, potentially cyclic dependency between the Tax and Registration components. Changes in one component can force changes or redeployment in the other, violating ADP and SDP.</em></p>
+<h3 id="corrected-implementation"><strong>Corrected Implementation:</strong></h3>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">namespace</span><span class="w"> </span><span class="nn">Component.Vehicle.Tax</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="p">{</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">SimpleVehicleTaxService</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">        </span><span class="k">private</span><span class="w"> </span><span class="k">readonly</span><span class="w"> </span><span class="n">IVehicleRegistrationService</span><span class="w"> </span><span class="n">registrationService</span><span class="p">;</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="nf">SimpleVehicleTaxService</span><span class="p">(</span><span class="n">IVehicleRegistrationService</span><span class="w"> </span><span class="n">registrationService</span><span class="p">)</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">            </span><span class="p">{</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">                </span><span class="k">this</span><span class="p">.</span><span class="n">registrationService</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">registrationService</span><span class="p">;</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">            </span><span class="p">}</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">            </span><span class="k">public</span><span class="w"> </span><span class="kt">decimal</span><span class="w"> </span><span class="nf">CalculateTax</span><span class="p">(</span><span class="n">IVehicle</span><span class="w"> </span><span class="n">vehicle</span><span class="p">)</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">            </span><span class="p">{</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">                </span><span class="c1">// ...</span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">                </span><span class="n">registrationService</span><span class="p">.</span><span class="n">CreateRegistration</span><span class="p">(</span><span class="n">vehicle</span><span class="p">);</span>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">                </span><span class="c1">// ...</span>
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">            </span><span class="p">}</span>
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="p">}</span>
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="k">namespace</span><span class="w"> </span><span class="nn">Component.Vehicle.Contracts.Registration</span><span class="w"> </span>
+</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="p">{</span>
+</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">interface</span><span class="w"> </span><span class="n">IVehicleRegistrationService</span>
+</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="w">        </span><span class="k">void</span><span class="w"> </span><span class="nf">CreateRegistration</span><span class="p">(</span><span class="n">IVehicle</span><span class="w"> </span><span class="n">vehicle</span><span class="p">);</span>
+</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a>
+</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a><span class="p">}</span>
+</span><span id="__span-1-29"><a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a>
+</span><span id="__span-1-30"><a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a><span class="k">namespace</span><span class="w"> </span><span class="nn">Component.Vehicle.Registration</span>
+</span><span id="__span-1-31"><a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a><span class="p">{</span>
+</span><span id="__span-1-32"><a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a>
+</span><span id="__span-1-33"><a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">SimpleVehicleRegistrationService</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">IVehicleRegistrationService</span>
+</span><span id="__span-1-34"><a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-1-35"><a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a><span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">CreateRegistration</span><span class="p">(</span><span class="n">IVehicle</span><span class="w"> </span><span class="n">vehicle</span><span class="p">)</span>
+</span><span id="__span-1-36"><a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a><span class="w">        </span><span class="p">{</span>
+</span><span id="__span-1-37"><a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a><span class="w">            </span><span class="c1">// ...</span>
+</span><span id="__span-1-38"><a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-1-39"><a id="__codelineno-1-39" name="__codelineno-1-39" href="#__codelineno-1-39"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-1-40"><a id="__codelineno-1-40" name="__codelineno-1-40" href="#__codelineno-1-40"></a><span class="p">}</span>
+</span></code></pre></div>
+<p><em>By placing <code>IVehicleRegistrationService</code> in a dedicated contracts module (<code>Component.Vehicle.Contracts.Registration</code>), both Tax and Registration components depend only on the abstraction. This eliminates cycles, aligns dependencies with abstractions, and supports flexible substitution, adhering to ADP, SDP, and SAP.</em></p>
+<h3 id="key-improvements"><strong>Key Improvements:</strong></h3>
 <ul>
-<li>Eliminates cycles and fragile builds</li>
-<li>Core components remain stable and abstract</li>
-<li>System is easier to extend and maintain</li>
+<li><strong>Acyclic dependencies:</strong> No cycles between components.</li>
+<li><strong>Stable abstractions:</strong> Dependencies point to interfaces, not implementations.</li>
+<li><strong>Replaceability:</strong> Components can be substituted or updated independently.</li>
+<li><strong>Simpler testing:</strong> Interfaces can be mocked for unit tests.</li>
+<li><strong>Greater flexibility:</strong> Components can evolve without breaking others.</li>
 </ul>
-<hr />
-<h2 id="common-pitfalls">Common Pitfalls</h2>
+<h3 id="common-pitfalls"><strong>Common Pitfalls</strong></h3>
 <ul>
-<li>Allowing cycles in the dependency graph</li>
-<li>Depending on unstable, concrete components from stable ones</li>
-<li>Failing to use interfaces to invert dependencies</li>
+<li><strong>Cyclic dependencies:</strong> Components that depend on each other directly or indirectly.</li>
+<li><strong>Concrete dependencies:</strong> Relying on specific implementations instead of abstractions.</li>
+<li><strong>Stable concrete classes:</strong> Making stable components hard to extend or adapt.</li>
+<li><strong>Ignoring dependency direction:</strong> Allowing unstable components to be depended on by stable ones.</li>
 </ul>
 <hr />
 <h2 id="key-takeaways">Key Takeaways</h2>
 <ul>
-<li>Keep the dependency graph acyclic—no circular dependencies.</li>
-<li>Depend on stable, abstract components.</li>
-<li>Use interfaces to decouple and invert dependencies.</li>
-</ul>
-<hr />
-<h2 id="related-concepts-further-reading">Related Concepts / Further Reading</h2>
-<ul>
-<li><a href="../09_component_cohesion/">Component Cohesion Principles</a></li>
-<li><a href="https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html">The Clean Architecture (Uncle Bob's Blog)</a></li>
+<li>Manage component dependencies to avoid cycles and promote stability.</li>
+<li>Depend on <strong>abstractions</strong>, not concretions, to maximize flexibility.</li>
+<li>Apply ADP, SDP, and SAP to build scalable, maintainable architectures.</li>
+<li>Proper coupling enables <strong>independent evolution, testing, and deployment</strong> of components.</li>
 </ul>
 
 
@@ -1244,13 +1423,13 @@ Acyclic, stable dependencies.</p>
         
         
           
-          <a href="../11_architectural_patterns/" class="md-footer__link md-footer__link--next" aria-label="Next: Intro">
+          <a href="../11_architectural_patterns/" class="md-footer__link md-footer__link--next" aria-label="Next: Overview">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Intro
+                Overview
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -1286,7 +1465,7 @@ Acyclic, stable dependencies.</p>
     
     
       
-      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.footer", "navigation.instant", "navigation.tabs", "navigation.path", "navigation.indexes", "navigation.top"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.footer", "navigation.instant", "navigation.tabs", "navigation.path", "navigation.indexes", "navigation.top", "content.code.copy", "content.code.select"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
@@ -1298,5 +1477,7 @@ Acyclic, stable dependencies.</p>
         <script src="../../assets/mkdocs_puml/interaction.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>

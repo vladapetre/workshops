@@ -2,82 +2,83 @@
 
 ## What Are Architectural Patterns?
 
-**Architectural patterns** are proven, high-level strategies for organizing software systems. They provide reusable solutions to common structural challenges and help you manage complexity as your application grows. In the context of **Clean Architecture**, these patterns guide how you separate concerns, enforce boundaries, and structure dependencies—ensuring your core business logic remains independent and adaptable.
+Architectural patterns are high-level strategies for organizing software systems. They provide reusable solutions to common structural challenges and help manage complexity as systems grow. In the context of **Clean Architecture**, these patterns guide how to separate concerns, enforce boundaries, and structure dependencies—ensuring core business logic remains independent, adaptable, and testable.
 
-Applying the right architectural pattern is crucial for:
+Applying the right architectural pattern is essential for:
 
-- Achieving clear separation of concerns
-- Supporting testability and maintainability
-- Enabling flexibility and scalability
-- Reducing the risk of tight coupling between system parts
+- Achieving clear separation of concerns  
+- Supporting testability and maintainability  
+- Enabling flexibility and scalability  
+- Minimizing tight coupling between system parts  
 
----
 
-## Common Architectural Patterns
+## Core Architectural Patterns Related to Clean Architecture
 
-Below are several widely used architectural patterns, each with its own strengths and ideal use cases:
+The following architectural patterns are foundational to Clean Architecture and share its core principles of separation, independence, and adaptability.
 
-### 1. **Layered Architecture (N-Tier)**
-- **Definition:** Organizes code into horizontal layers (e.g., Presentation, Application, Domain, Infrastructure), each with a specific responsibility.
-- **Strengths:**
-  - Clear separation of concerns
-  - Easy to understand and implement
-  - Supports independent development and testing of layers
-- **Typical Use:** Traditional enterprise applications, web apps, and systems where responsibilities are naturally separated.
+### 1. Layered Architecture (N-Tier)
 
-### 2. **Onion Architecture**
-- **Definition:** Structures the system in concentric circles, with the innermost circle being the domain model and outer circles handling infrastructure and external concerns.
-- **Strengths:**
-  - Enforces strict dependency direction toward the core
-  - Keeps business logic isolated and protected
-  - Flexible to change in external layers
-- **Typical Use:** Domain-driven design projects, complex business applications.
+**Definition**: Organizes code into horizontal layers (such as Presentation, Application, Domain, Infrastructure), each with a distinct responsibility.
 
-### 3. **Hexagonal Architecture (Ports and Adapters)**
-- **Definition:** Centers the application core and connects it to the outside world through ports (interfaces) and adapters (implementations).
-- **Strengths:**
-  - Decouples business logic from external systems (UI, database, APIs)
-  - Makes it easy to swap out technologies or frameworks
-  - Enhances testability by isolating the core
-- **Typical Use:** Applications needing strong independence from frameworks or infrastructure.
+**Strengths**:
 
-### 4. **Clean Architecture**
-- **Definition:** Combines ideas from layered, hexagonal, and onion architectures. Places business rules at the center, surrounded by layers for use cases, interfaces, and frameworks.
-- **Strengths:**
-  - Maximizes independence of business logic
-  - Supports testability, flexibility, and maintainability
-  - Adapts well to evolving requirements and technologies
-- **Typical Use:** Systems where long-term adaptability and testability are priorities.
+- Promotes clear separation of concerns
+- Facilitates independent development and testing of layers
+- Straightforward to understand and implement
 
-### 5. **Microkernel Architecture (Plugin Architecture)**
-- **Definition:** Core system provides minimal functionality, with additional features added via plugins.
-- **Strengths:**
-  - Highly extensible and customizable
-  - Core remains stable while plugins evolve independently
-- **Typical Use:** IDEs, extensible platforms, systems requiring frequent feature additions.
+**Typical Use**: Enterprise applications and systems where responsibilities are naturally separated.
 
-### 6. **Microservices Architecture**
-- **Definition:** Decomposes the application into small, independently deployable services, each responsible for a specific business capability.
-- **Strengths:**
-  - Enables independent scaling, deployment, and development
-  - Isolates failures and reduces system-wide risk
-  - Supports technology diversity across services
-- **Typical Use:** Large-scale, distributed systems, organizations needing rapid delivery and scaling.
 
----
+### 2. Onion Architecture
+
+**Definition**: Structures the system as concentric circles, with the domain model at the center and outer layers handling infrastructure and external concerns.
+
+**Strengths**:
+
+- Strictly enforces dependency direction toward the core
+- Isolates and protects business logic
+- Allows flexible adaptation of external layers
+
+**Typical Use**: Domain-driven design projects and complex business applications.
+
+
+### 3. Hexagonal Architecture (Ports and Adapters)
+
+**Definition**: Centers the application core and connects it to the outside world via ports (interfaces) and adapters (implementations).
+
+**Strengths**:
+
+- Decouples business logic from external systems (UI, databases, APIs)
+- Simplifies technology swaps and framework changes
+- Enhances testability by isolating the core
+
+**Typical Use**: Applications requiring strong independence from frameworks or infrastructure.
+
+
+### 4. Clean Architecture
+
+**Definition**: Synthesizes concepts from layered, hexagonal, and onion architectures. Business rules reside at the center, surrounded by layers for use cases, interfaces, and frameworks.
+
+**Strengths**:
+
+- Maximizes independence of business logic
+- Supports testability, flexibility, and maintainability
+- Adapts readily to evolving requirements and technologies
+
+**Typical Use**: Systems prioritizing long-term adaptability and testability.
+
 
 ## Choosing the Right Pattern
 
 When selecting an architectural pattern:
 
-- **Align with your business needs:** Consider complexity, team expertise, and future growth.
-- **Prioritize separation of concerns:** Ensure your core logic is insulated from external changes.
-- **Balance flexibility and simplicity:** Don’t over-engineer—choose the simplest pattern that meets your requirements.
+- **Align with business needs**: Assess complexity, team expertise, and anticipated growth.  
+- **Prioritize separation of concerns**: Ensure core logic is insulated from external changes.  
+- **Balance flexibility and simplicity**: Choose the simplest pattern that meets your requirements.  
 
 ---
 
 ## Takeaway
 
-Architectural patterns are foundational to Clean Architecture.  
-They help you structure your system for clarity, adaptability, and long-term success.  
-Choose the pattern that best fits your context, and always keep your business logic at the center of your design.
+Architectural patterns closely related to Clean Architecture—**Layered**, **Onion**, **Hexagonal**, and **Clean Architecture** itself—are foundational for structuring systems that are clear, adaptable, and maintainable.  
+Select the pattern that best fits your context, always placing core business logic at the center of your design.

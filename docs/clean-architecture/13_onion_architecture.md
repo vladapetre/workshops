@@ -1,16 +1,15 @@
 # Onion Architecture
 
-## What Is Onion Architecture?
+## Overview
 
-**Onion Architecture** is a layered architectural pattern that places the **domain model** at the core of your application. All dependencies point inward, ensuring that business logic remains isolated from external concerns like databases, frameworks, and user interfaces. This approach aligns closely with the goals of **Clean Architecture**—keeping your core logic independent, testable, and adaptable.
+*Onion Architecture* is an architectural style that structures an application as a series of concentric circles (layers), with the core domain model at the center. Each outer layer depends only on the next inner layer, never the other way around. This design enforces a strict separation between business logic and external concerns, ensuring that the core remains independent, testable, and adaptable.
 
-### Key Characteristics
+### Typical Layers
 
-- **Domain-centric:** The domain model (business rules) is at the center.
-- **Concentric layers:** Each layer wraps around the core, with clear boundaries.
-- **Dependency inversion:** Outer layers depend on inner layers, never the reverse.
-- **Interfaces for boundaries:** Communication between layers happens through interfaces or contracts.
-- **Infrastructure as outermost:** Databases, frameworks, and external systems are at the edge.
+- **Domain Model (Core):** Contains business entities and domain logic. No dependencies on any other layer.
+- **Domain Services/Application Services:** Implements business use cases and orchestrates domain objects. Depends only on the domain model.
+- **Interfaces (Ports):** Defines contracts for external operations (repositories, services, etc.) required by the core.
+- **Infrastructure (Adapters):** Provides implementations for interfaces (e.g., database, external APIs, frameworks). Depends on interfaces, not the core.
 
 ```puml
 @startuml OnionArchitecture
@@ -66,51 +65,48 @@ package "Presentation Layer\n(API / UI / CLI)" {
 @enduml
 ```
 
-
 ---
 
 ## Strengths and Weaknesses
 
-| Strengths                                         | Weaknesses                                      |
-|---------------------------------------------------|-------------------------------------------------|
-| Strong separation of concerns                     | Can introduce complexity for small projects      |
-| Business logic is insulated from infrastructure   | May require more upfront design and abstraction  |
-| Highly testable and maintainable core             | Not always a natural fit for CRUD-only systems   |
-| Easy to swap out infrastructure or UI             | Can be overkill for simple applications         |
-| Supports long-term adaptability and refactoring   | Requires discipline to enforce boundaries        |
+| Strengths                                         | Weaknesses                                        |
+|---------------------------------------------------|---------------------------------------------------|
+| Strict separation of concerns                     | Can be overkill for simple or CRUD-heavy systems  |
+| Core business logic is isolated and protected     | May require more upfront design and abstraction   |
+| Highly testable and maintainable                  | More interfaces and indirection to manage         |
+| Flexible adaptation to infrastructure changes     | Can be harder for teams unfamiliar with DDD       |
+| Supports long-term evolution and refactoring      | Potential for boilerplate code                    |
 
 ---
 
 ## When to Use Onion Architecture
 
-**Onion Architecture** is a strong choice when:
+**Onion Architecture** is a good fit when:
 
-- Your application has complex or evolving business rules.
-- You want to maximize testability and maintainability.
-- You need to support multiple UIs or data sources (e.g., web, mobile, APIs).
-- You expect to swap out infrastructure or frameworks over time.
-- You are practicing domain-driven design (DDD).
+- Business logic is complex, central, and expected to evolve.
+- You need to protect core logic from infrastructure and framework changes.
+- Testability and long-term maintainability are high priorities.
+- Your team is comfortable with domain-driven design concepts.
 
 **Examples:**
 
-- Enterprise systems with rich business logic and multiple integration points.
-- Applications that must support both web and mobile interfaces.
-- Systems where business rules must remain stable even as technology changes.
-- Projects where automated testing and long-term maintainability are top priorities.
+- Enterprise systems with rich business rules
+- Applications requiring strong isolation from databases, frameworks, or UI
+- Systems where core logic must be reused across multiple interfaces (e.g., web, mobile, services)
 
 ---
 
 ## Practical Tips
 
-- **Start with the domain model:** Define your core business entities and rules first.
-- **Use interfaces for boundaries:** Let outer layers (like repositories or services) depend on abstractions defined in the core.
-- **Keep infrastructure at the edge:** Implement data access, messaging, and frameworks in the outermost layer.
-- **Test the core in isolation:** Write unit tests for your domain logic without involving databases or frameworks.
-- **Resist shortcuts:** Avoid letting infrastructure concerns leak into your core logic.
+- **Keep the domain model pure:** Avoid dependencies on frameworks, databases, or UI in the core.
+- **Define interfaces in the inner layers:** Let outer layers provide implementations, injected via dependency inversion.
+- **Test the core in isolation:** Use mocks or stubs for infrastructure dependencies.
+- **Resist shortcutting the architecture:** Don’t let infrastructure concerns leak inward.
+- **Document boundaries and dependencies:** Make the direction of dependencies explicit for your team.
 
 ---
 
 ## Takeaway
 
-Onion Architecture helps you build systems that are robust, adaptable, and easy to maintain.  
-By keeping your business logic at the center and pushing dependencies outward, you future-proof your application against technology changes and make it easier to test and evolve.
+Onion Architecture enforces a strong separation between business logic and external concerns, keeping your core model pure and adaptable.  
+It is ideal for complex, long-lived systems where business rules must remain insulated from infrastructure changes, but may introduce additional complexity for simple applications.

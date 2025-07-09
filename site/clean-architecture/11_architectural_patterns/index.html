@@ -20,7 +20,7 @@
     
     
       
-        <title>Intro - Workshops</title>
+        <title>Overview - Workshops</title>
       
     
     
@@ -59,7 +59,16 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -111,7 +120,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Intro
+              Overview
             
           </span>
         </div>
@@ -460,7 +469,7 @@
   
   
   <span class="md-ellipsis">
-    Intro
+    Overview
     
   </span>
   
@@ -655,7 +664,7 @@
   
   
   <span class="md-ellipsis">
-    Intro
+    Overview
     
   </span>
   
@@ -745,6 +754,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -800,7 +813,7 @@
   
   
   <span class="md-ellipsis">
-    Intro
+    Overview
     
   </span>
   
@@ -813,7 +826,7 @@
   
   
   <span class="md-ellipsis">
-    Intro
+    Overview
     
   </span>
   
@@ -845,13 +858,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#common-architectural-patterns" class="md-nav__link">
+  <a href="#core-architectural-patterns-related-to-clean-architecture" class="md-nav__link">
     <span class="md-ellipsis">
-      Common Architectural Patterns
+      Core Architectural Patterns Related to Clean Architecture
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Common Architectural Patterns">
+    <nav class="md-nav" aria-label="Core Architectural Patterns Related to Clean Architecture">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -885,24 +898,6 @@
   <a href="#4-clean-architecture" class="md-nav__link">
     <span class="md-ellipsis">
       4. Clean Architecture
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5-microkernel-architecture-plugin-architecture" class="md-nav__link">
-    <span class="md-ellipsis">
-      5. Microkernel Architecture (Plugin Architecture)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#6-microservices-architecture" class="md-nav__link">
-    <span class="md-ellipsis">
-      6. Microservices Architecture
     </span>
   </a>
   
@@ -976,6 +971,52 @@
   
   <span class="md-ellipsis">
     Onion Architecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../14_hexagonal_architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Hexagonal Architecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../15_clean_architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Clean Architecture
     
   </span>
   
@@ -1083,13 +1124,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#common-architectural-patterns" class="md-nav__link">
+  <a href="#core-architectural-patterns-related-to-clean-architecture" class="md-nav__link">
     <span class="md-ellipsis">
-      Common Architectural Patterns
+      Core Architectural Patterns Related to Clean Architecture
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Common Architectural Patterns">
+    <nav class="md-nav" aria-label="Core Architectural Patterns Related to Clean Architecture">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1123,24 +1164,6 @@
   <a href="#4-clean-architecture" class="md-nav__link">
     <span class="md-ellipsis">
       4. Clean Architecture
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5-microkernel-architecture-plugin-architecture" class="md-nav__link">
-    <span class="md-ellipsis">
-      5. Microkernel Architecture (Plugin Architecture)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#6-microservices-architecture" class="md-nav__link">
-    <span class="md-ellipsis">
-      6. Microservices Architecture
     </span>
   </a>
   
@@ -1187,83 +1210,63 @@
 
 <h1 id="architectural-patterns-in-clean-architecture">Architectural Patterns in Clean Architecture</h1>
 <h2 id="what-are-architectural-patterns">What Are Architectural Patterns?</h2>
-<p><strong>Architectural patterns</strong> are proven, high-level strategies for organizing software systems. They provide reusable solutions to common structural challenges and help you manage complexity as your application grows. In the context of <strong>Clean Architecture</strong>, these patterns guide how you separate concerns, enforce boundaries, and structure dependencies—ensuring your core business logic remains independent and adaptable.</p>
-<p>Applying the right architectural pattern is crucial for:</p>
+<p>Architectural patterns are high-level strategies for organizing software systems. They provide reusable solutions to common structural challenges and help manage complexity as systems grow. In the context of <strong>Clean Architecture</strong>, these patterns guide how to separate concerns, enforce boundaries, and structure dependencies—ensuring core business logic remains independent, adaptable, and testable.</p>
+<p>Applying the right architectural pattern is essential for:</p>
 <ul>
-<li>Achieving clear separation of concerns</li>
-<li>Supporting testability and maintainability</li>
-<li>Enabling flexibility and scalability</li>
-<li>Reducing the risk of tight coupling between system parts</li>
+<li>Achieving clear separation of concerns  </li>
+<li>Supporting testability and maintainability  </li>
+<li>Enabling flexibility and scalability  </li>
+<li>Minimizing tight coupling between system parts  </li>
 </ul>
-<hr />
-<h2 id="common-architectural-patterns">Common Architectural Patterns</h2>
-<p>Below are several widely used architectural patterns, each with its own strengths and ideal use cases:</p>
-<h3 id="1-layered-architecture-n-tier">1. <strong>Layered Architecture (N-Tier)</strong></h3>
+<h2 id="core-architectural-patterns-related-to-clean-architecture">Core Architectural Patterns Related to Clean Architecture</h2>
+<p>The following architectural patterns are foundational to Clean Architecture and share its core principles of separation, independence, and adaptability.</p>
+<h3 id="1-layered-architecture-n-tier">1. Layered Architecture (N-Tier)</h3>
+<p><strong>Definition</strong>: Organizes code into horizontal layers (such as Presentation, Application, Domain, Infrastructure), each with a distinct responsibility.</p>
+<p><strong>Strengths</strong>:</p>
 <ul>
-<li><strong>Definition:</strong> Organizes code into horizontal layers (e.g., Presentation, Application, Domain, Infrastructure), each with a specific responsibility.</li>
-<li><strong>Strengths:</strong></li>
-<li>Clear separation of concerns</li>
-<li>Easy to understand and implement</li>
-<li>Supports independent development and testing of layers</li>
-<li><strong>Typical Use:</strong> Traditional enterprise applications, web apps, and systems where responsibilities are naturally separated.</li>
+<li>Promotes clear separation of concerns</li>
+<li>Facilitates independent development and testing of layers</li>
+<li>Straightforward to understand and implement</li>
 </ul>
-<h3 id="2-onion-architecture">2. <strong>Onion Architecture</strong></h3>
+<p><strong>Typical Use</strong>: Enterprise applications and systems where responsibilities are naturally separated.</p>
+<h3 id="2-onion-architecture">2. Onion Architecture</h3>
+<p><strong>Definition</strong>: Structures the system as concentric circles, with the domain model at the center and outer layers handling infrastructure and external concerns.</p>
+<p><strong>Strengths</strong>:</p>
 <ul>
-<li><strong>Definition:</strong> Structures the system in concentric circles, with the innermost circle being the domain model and outer circles handling infrastructure and external concerns.</li>
-<li><strong>Strengths:</strong></li>
-<li>Enforces strict dependency direction toward the core</li>
-<li>Keeps business logic isolated and protected</li>
-<li>Flexible to change in external layers</li>
-<li><strong>Typical Use:</strong> Domain-driven design projects, complex business applications.</li>
+<li>Strictly enforces dependency direction toward the core</li>
+<li>Isolates and protects business logic</li>
+<li>Allows flexible adaptation of external layers</li>
 </ul>
-<h3 id="3-hexagonal-architecture-ports-and-adapters">3. <strong>Hexagonal Architecture (Ports and Adapters)</strong></h3>
+<p><strong>Typical Use</strong>: Domain-driven design projects and complex business applications.</p>
+<h3 id="3-hexagonal-architecture-ports-and-adapters">3. Hexagonal Architecture (Ports and Adapters)</h3>
+<p><strong>Definition</strong>: Centers the application core and connects it to the outside world via ports (interfaces) and adapters (implementations).</p>
+<p><strong>Strengths</strong>:</p>
 <ul>
-<li><strong>Definition:</strong> Centers the application core and connects it to the outside world through ports (interfaces) and adapters (implementations).</li>
-<li><strong>Strengths:</strong></li>
-<li>Decouples business logic from external systems (UI, database, APIs)</li>
-<li>Makes it easy to swap out technologies or frameworks</li>
+<li>Decouples business logic from external systems (UI, databases, APIs)</li>
+<li>Simplifies technology swaps and framework changes</li>
 <li>Enhances testability by isolating the core</li>
-<li><strong>Typical Use:</strong> Applications needing strong independence from frameworks or infrastructure.</li>
 </ul>
-<h3 id="4-clean-architecture">4. <strong>Clean Architecture</strong></h3>
+<p><strong>Typical Use</strong>: Applications requiring strong independence from frameworks or infrastructure.</p>
+<h3 id="4-clean-architecture">4. Clean Architecture</h3>
+<p><strong>Definition</strong>: Synthesizes concepts from layered, hexagonal, and onion architectures. Business rules reside at the center, surrounded by layers for use cases, interfaces, and frameworks.</p>
+<p><strong>Strengths</strong>:</p>
 <ul>
-<li><strong>Definition:</strong> Combines ideas from layered, hexagonal, and onion architectures. Places business rules at the center, surrounded by layers for use cases, interfaces, and frameworks.</li>
-<li><strong>Strengths:</strong></li>
 <li>Maximizes independence of business logic</li>
 <li>Supports testability, flexibility, and maintainability</li>
-<li>Adapts well to evolving requirements and technologies</li>
-<li><strong>Typical Use:</strong> Systems where long-term adaptability and testability are priorities.</li>
+<li>Adapts readily to evolving requirements and technologies</li>
 </ul>
-<h3 id="5-microkernel-architecture-plugin-architecture">5. <strong>Microkernel Architecture (Plugin Architecture)</strong></h3>
-<ul>
-<li><strong>Definition:</strong> Core system provides minimal functionality, with additional features added via plugins.</li>
-<li><strong>Strengths:</strong></li>
-<li>Highly extensible and customizable</li>
-<li>Core remains stable while plugins evolve independently</li>
-<li><strong>Typical Use:</strong> IDEs, extensible platforms, systems requiring frequent feature additions.</li>
-</ul>
-<h3 id="6-microservices-architecture">6. <strong>Microservices Architecture</strong></h3>
-<ul>
-<li><strong>Definition:</strong> Decomposes the application into small, independently deployable services, each responsible for a specific business capability.</li>
-<li><strong>Strengths:</strong></li>
-<li>Enables independent scaling, deployment, and development</li>
-<li>Isolates failures and reduces system-wide risk</li>
-<li>Supports technology diversity across services</li>
-<li><strong>Typical Use:</strong> Large-scale, distributed systems, organizations needing rapid delivery and scaling.</li>
-</ul>
-<hr />
+<p><strong>Typical Use</strong>: Systems prioritizing long-term adaptability and testability.</p>
 <h2 id="choosing-the-right-pattern">Choosing the Right Pattern</h2>
 <p>When selecting an architectural pattern:</p>
 <ul>
-<li><strong>Align with your business needs:</strong> Consider complexity, team expertise, and future growth.</li>
-<li><strong>Prioritize separation of concerns:</strong> Ensure your core logic is insulated from external changes.</li>
-<li><strong>Balance flexibility and simplicity:</strong> Don’t over-engineer—choose the simplest pattern that meets your requirements.</li>
+<li><strong>Align with business needs</strong>: Assess complexity, team expertise, and anticipated growth.  </li>
+<li><strong>Prioritize separation of concerns</strong>: Ensure core logic is insulated from external changes.  </li>
+<li><strong>Balance flexibility and simplicity</strong>: Choose the simplest pattern that meets your requirements.  </li>
 </ul>
 <hr />
 <h2 id="takeaway">Takeaway</h2>
-<p>Architectural patterns are foundational to Clean Architecture.<br />
-They help you structure your system for clarity, adaptability, and long-term success.<br />
-Choose the pattern that best fits your context, and always keep your business logic at the center of your design.</p>
+<p>Architectural patterns closely related to Clean Architecture—<strong>Layered</strong>, <strong>Onion</strong>, <strong>Hexagonal</strong>, and <strong>Clean Architecture</strong> itself—are foundational for structuring systems that are clear, adaptable, and maintainable.<br />
+Select the pattern that best fits your context, always placing core business logic at the center of your design.</p>
 
 
 
@@ -1358,7 +1361,7 @@ Choose the pattern that best fits your context, and always keep your business lo
     
     
       
-      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.footer", "navigation.instant", "navigation.tabs", "navigation.path", "navigation.indexes", "navigation.top"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.footer", "navigation.instant", "navigation.tabs", "navigation.path", "navigation.indexes", "navigation.top", "content.code.copy", "content.code.select"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
@@ -1370,5 +1373,7 @@ Choose the pattern that best fits your context, and always keep your business lo
         <script src="../../assets/mkdocs_puml/interaction.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>

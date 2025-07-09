@@ -59,7 +59,16 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -462,7 +471,7 @@
   
   
   <span class="md-ellipsis">
-    Intro
+    Overview
     
   </span>
   
@@ -659,7 +668,7 @@
   
   
   <span class="md-ellipsis">
-    Intro
+    Overview
     
   </span>
   
@@ -754,10 +763,52 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#code-example-violation-vs-resolution" class="md-nav__link">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-violation-vs-resolution" class="md-nav__link">
     <span class="md-ellipsis">
-      Code Example: Violation vs. Resolution
+      Example: Violation vs. Resolution
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Example: Violation vs. Resolution">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#violation-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Violation Example:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#corrected-implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Corrected Implementation:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-improvements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Improvements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-pitfalls" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Pitfalls
     </span>
   </a>
   
@@ -769,27 +820,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#common-pitfalls" class="md-nav__link">
-    <span class="md-ellipsis">
-      Common Pitfalls
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#key-takeaways" class="md-nav__link">
     <span class="md-ellipsis">
       Key Takeaways
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#related-concepts-further-reading" class="md-nav__link">
-    <span class="md-ellipsis">
-      Related Concepts / Further Reading
     </span>
   </a>
   
@@ -858,6 +891,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -904,7 +941,7 @@
   
   
   <span class="md-ellipsis">
-    Intro
+    Overview
     
   </span>
   
@@ -951,6 +988,52 @@
   
   <span class="md-ellipsis">
     Onion Architecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../14_hexagonal_architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Hexagonal Architecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../15_clean_architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Clean Architecture
     
   </span>
   
@@ -1076,10 +1159,52 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#code-example-violation-vs-resolution" class="md-nav__link">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-violation-vs-resolution" class="md-nav__link">
     <span class="md-ellipsis">
-      Code Example: Violation vs. Resolution
+      Example: Violation vs. Resolution
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Example: Violation vs. Resolution">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#violation-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Violation Example:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#corrected-implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Corrected Implementation:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-improvements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Improvements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-pitfalls" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Pitfalls
     </span>
   </a>
   
@@ -1091,27 +1216,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#common-pitfalls" class="md-nav__link">
-    <span class="md-ellipsis">
-      Common Pitfalls
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#key-takeaways" class="md-nav__link">
     <span class="md-ellipsis">
       Key Takeaways
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#related-concepts-further-reading" class="md-nav__link">
-    <span class="md-ellipsis">
-      Related Concepts / Further Reading
     </span>
   </a>
   
@@ -1135,64 +1242,96 @@
 
 <h1 id="component-cohesion-principles">Component Cohesion Principles</h1>
 <blockquote>
-<p>"Classes that change together should be packaged together." — Robert C. Martin</p>
+<p>"The classes in a component should be grouped together because they belong together. They should share a common purpose." — Robert C. Martin (Uncle Bob)</p>
 </blockquote>
 <h2 id="overview">Overview</h2>
-<p><strong>Component Cohesion</strong> is about how you group classes and modules into components or packages.<br />
-Well-cohesive components are easier to maintain, reuse, and release.</p>
+<p>Component Cohesion Principles guide how classes and modules are grouped into components (also called packages or modules) in Clean Architecture. Cohesion measures how strongly the classes within a component are related to one another. High cohesion ensures that a component has a clear, focused purpose and that its classes change for related reasons.</p>
 <h3 id="what-it-means">What It Means</h3>
-<p>Cohesion principles help you:</p>
+<p>Cohesive components encapsulate a single, well-defined area of functionality. All classes within a component should be related by their purpose, such as implementing a feature, policy, or business rule. When cohesion is high, changes to a requirement are likely to affect only one component.</p>
+<p>Three primary cohesion principles are:</p>
 <ul>
-<li>Group related classes by their reasons to change or be reused</li>
-<li>Release and version components as a unit</li>
-<li>Avoid unnecessary coupling between unrelated code</li>
+<li>
+<p><strong>REP: The Reuse/Release Equivalence Principle</strong><br />
+  The unit of reuse is the unit of release. Only group classes into a component if you intend to reuse and release them together.</p>
+</li>
+<li>
+<p><strong>CCP: The Common Closure Principle</strong><br />
+  Classes that change for the same reasons should be grouped together. A component should not have multiple, unrelated reasons to change.</p>
+</li>
+<li>
+<p><strong>CRP: The Common Reuse Principle</strong><br />
+  Classes that are reused together should be packaged together. Avoid forcing clients to depend on classes they do not use.</p>
+</li>
 </ul>
 <h3 id="why-it-matters">Why It Matters</h3>
-<p>Applying cohesion principles leads to:</p>
+<p>Applying cohesion principles leads to components that are:</p>
 <ul>
-<li><strong>Stable releases:</strong> Components that are reused together are released together.</li>
-<li><strong>Focused modules:</strong> Each component has a clear, unified purpose.</li>
-<li><strong>Reduced risk:</strong> Changes in one area don't break unrelated code.</li>
+<li><strong>Easier to maintain</strong>: Related changes are localized.</li>
+<li><strong>Simpler to reuse</strong>: Components have clear, focused APIs.</li>
+<li><strong>Less prone to ripple effects</strong>: Unrelated changes in one component do not impact others.</li>
+<li><strong>More robust to change</strong>: Components are shielded from unrelated modifications.</li>
 </ul>
 <hr />
-<h3 id="code-example-violation-vs-resolution">Code Example: Violation vs. Resolution</h3>
-<p><strong>Violation Example:</strong><br />
-A component contains unrelated classes that change for different reasons.</p>
-<pre><code class="language-plaintext">Component X: [OrderService, UserService, EmailSender]
-// Problem: Changes in one class force unnecessary releases of others.
-</code></pre>
-<p><strong>Corrected Implementation:</strong><br />
-Group classes by their reasons to change.</p>
-<pre><code class="language-plaintext">OrderComponent: [OrderService]
-UserComponent: [UserService]
-EmailComponent: [EmailSender]
-// Each component is focused and released independently.
-</code></pre>
-<p><strong>Key Improvements:</strong></p>
+<h2 id="example-violation-vs-resolution">Example: Violation vs. Resolution</h2>
+<h3 id="violation-example"><strong>Violation Example:</strong></h3>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">namespace</span><span class="w"> </span><span class="nn">Component.Utility</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="p">{</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">DateHelper</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="cm">/*...*/</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">interface</span><span class="w"> </span><span class="n">IVehicle</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="cm">/*...*/</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">interface</span><span class="w"> </span><span class="n">IVehicleTaxService</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="cm">/*...*/</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">SimpleVehicleTaxService</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="cm">/*...*/</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">interface</span><span class="w"> </span><span class="n">IVehicleRegistrationService</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="cm">/*...*/</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">SimpleVehicleRegistrationService</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="cm">/*...*/</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">FileExporter</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="cm">/*...*/</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="p">}</span>
+</span></code></pre></div>
+<p><em>Problem: The <code>Component.Utility</code> namespace violates cohesion principles by grouping unrelated classes (date helpers and file exporters) together. These classes do not share a common purpose and are unlikely to change or be reused together. This can force clients to depend on code they do not need and complicate maintenance and release management.</em></p>
+<h3 id="corrected-implementation"><strong>Corrected Implementation:</strong></h3>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">namespace</span><span class="w"> </span><span class="nn">Component.Utility</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="p">{</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">DateHelper</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="cm">/*...*/</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">FileExporter</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="cm">/*...*/</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="p">}</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="k">namespace</span><span class="w"> </span><span class="nn">Component.Vehicle</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="p">{</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">interface</span><span class="w"> </span><span class="n">IVehicle</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="cm">/*...*/</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="p">}</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="k">namespace</span><span class="w"> </span><span class="nn">Component.Vehicle.Tax</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="p">{</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">interface</span><span class="w"> </span><span class="n">IVehicleTaxService</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="cm">/*...*/</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">SimpleVehicleTaxService</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="cm">/*...*/</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="p">}</span>
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="k">namespace</span><span class="w"> </span><span class="nn">Component.Vehicle.Registration</span>
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="p">{</span>
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">interface</span><span class="w"> </span><span class="n">IVehicleRegistrationService</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="cm">/*...*/</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">SimpleVehicleRegistrationService</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="cm">/*...*/</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="p">}</span>
+</span></code></pre></div>
+<p><em>Resolution: Classes are grouped into components based on their shared purpose. The registration and tax functionalities are separated into distinct namespaces, each encapsulating related classes. This aligns with REP, CCP, and CRP, ensuring that changes, reuse, and releases are managed coherently.</em></p>
+<h3 id="key-improvements"><strong>Key Improvements</strong></h3>
 <ul>
-<li>Components are easier to maintain and release</li>
-<li>Reduces unnecessary dependencies and version mismatches</li>
-<li>Supports focused, modular development</li>
+<li><strong>Focused components:</strong> Each namespace encapsulates a single area of responsibility.</li>
+<li><strong>Localized change:</strong> Modifications are isolated to relevant components.</li>
+<li><strong>Reduced unnecessary dependencies:</strong> Clients only depend on what they use.</li>
+<li><strong>Simplified release and reuse:</strong> Components can be versioned and deployed independently.</li>
 </ul>
-<hr />
-<h2 id="common-pitfalls">Common Pitfalls</h2>
+<h3 id="common-pitfalls"><strong>Common Pitfalls</strong></h3>
 <ul>
-<li>Grouping classes by technical similarity instead of reasons to change</li>
-<li>Creating "kitchen sink" components with unrelated responsibilities</li>
-<li>Not refactoring components as the system evolves</li>
+<li><strong>Utility or "god" components:</strong> Grouping unrelated classes for convenience.</li>
+<li><strong>Overly broad components:</strong> Mixing multiple features or responsibilities.</li>
+<li><strong>Ignoring reuse boundaries:</strong> Bundling classes that are never reused together.</li>
+<li><strong>Premature fragmentation:</strong> Creating too many trivial components.</li>
 </ul>
 <hr />
 <h2 id="key-takeaways">Key Takeaways</h2>
 <ul>
-<li>Group classes that change together into the same component.</li>
-<li>Release and version components as a unit.</li>
-<li>Keep components focused and relevant to their purpose.</li>
-</ul>
-<hr />
-<h2 id="related-concepts-further-reading">Related Concepts / Further Reading</h2>
-<ul>
-<li><a href="../10_component_coupling/">Component Coupling Principles</a></li>
-<li><a href="https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html">The Clean Architecture (Uncle Bob's Blog)</a></li>
+<li>Group classes into components based on <strong>shared purpose and change reasons</strong>.</li>
+<li>Apply REP, CCP, and CRP to maximize cohesion and minimize unnecessary dependencies.</li>
+<li>Cohesive components are <strong>easier to maintain, reuse, and evolve</strong>.</li>
+<li>High cohesion at the component level is essential for robust, scalable architecture.</li>
 </ul>
 
 
@@ -1229,7 +1368,7 @@ EmailComponent: [EmailSender]
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../08_component_principles/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Intro">
+          <a href="../08_component_principles/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Overview">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1239,7 +1378,7 @@ EmailComponent: [EmailSender]
                 Previous
               </span>
               <div class="md-ellipsis">
-                Intro
+                Overview
               </div>
             </div>
           </a>
@@ -1288,7 +1427,7 @@ EmailComponent: [EmailSender]
     
     
       
-      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.footer", "navigation.instant", "navigation.tabs", "navigation.path", "navigation.indexes", "navigation.top"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.footer", "navigation.instant", "navigation.tabs", "navigation.path", "navigation.indexes", "navigation.top", "content.code.copy", "content.code.select"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
@@ -1300,5 +1439,7 @@ EmailComponent: [EmailSender]
         <script src="../../assets/mkdocs_puml/interaction.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>

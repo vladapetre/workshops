@@ -1,17 +1,16 @@
 # Layered Architecture
 
-## What Is Layered Architecture?
+## Overview
 
-**Layered Architecture** (also known as **N-Tier Architecture**) is one of the most widely used architectural patterns in software development. It organizes an application into horizontal layers, each with a distinct responsibility. In the context of **Clean Architecture**, the layered approach helps you separate concerns, enforce boundaries, and keep your business logic insulated from technical details.
+The *Layered Architecture* (also known as N-Tier Architecture) is a classic architectural style that structures an application into a series of horizontal layers. Each layer has a specific role and responsibility, and communicates only with the layers directly above or below it. This approach enforces clear boundaries between technical concerns, making systems easier to understand, develop, and maintain.
 
 ### Typical Layers
 
-- **Presentation Layer:** Handles user interface and user interaction.
-- **Application Layer:** Coordinates application activity and orchestrates use cases.
-- **Domain Layer:** Contains business rules and core logic (the heart of your system).
-- **Infrastructure Layer:** Manages technical details like databases, file systems, and external services.
+- **Presentation Layer:** Handles user interface and user interaction logic.
+- **Application Layer:** Coordinates application activity and workflow (sometimes merged with business logic).
+- **Domain (Business Logic) Layer:** Encapsulates core business rules and domain logic.
+- **Infrastructure/Data Access Layer:** Manages data persistence, external services, and infrastructure concerns.
 
-Each layer communicates only with the layer directly beneath it, creating a clear and maintainable structure.
 
 ```puml
 @startuml CleanArchitectureLayers
@@ -65,18 +64,17 @@ package "Infrastructure Layer\n(Frameworks & Drivers)" {
 @enduml
 ```
 
-
 ---
 
 ## Strengths and Weaknesses
 
-| Strengths                                   | Weaknesses                                      |
-|----------------------------------------------|-------------------------------------------------|
-| Simple, well-understood structure            | Can lead to rigid, hard-to-change dependencies   |
-| Clear separation of concerns                 | Risk of “leaky” abstractions between layers     |
-| Supports independent development and testing | May encourage “anemic” domain models            |
-| Easy to onboard new team members             | Changes in lower layers can ripple upward       |
-| Works well for traditional business systems  | Not ideal for highly dynamic or cross-cutting concerns |
+| Strengths                                        | Weaknesses                                         |
+|--------------------------------------------------|----------------------------------------------------|
+| Clear separation of concerns                     | Can become rigid and hard to adapt to change       |
+| Easy to understand and communicate               | Risk of "leaky" abstractions between layers        |
+| Supports independent development and testing     | May encourage anemic domain models                 |
+| Facilitates code reuse within layers             | Tendency toward over-engineering with too many layers |
+| Well-supported by frameworks and tooling         | Not ideal for highly complex or rapidly evolving domains |
 
 ---
 
@@ -110,19 +108,3 @@ package "Infrastructure Layer\n(Frameworks & Drivers)" {
 
 Layered Architecture provides a clear, time-tested way to organize your codebase.  
 It’s easy to understand and works well for many business applications, but be mindful of its limitations as your system grows in complexity or requires more flexibility.
-
-<!-- | Architecture characteristic | Star rating        |
-|----------------------------|--------------------|
-| Partitioning type          | Technical          |
-| Number of quanta           | 1                  |
-| Deployability              | ⭐                 |
-| Elasticity                 | ⭐                 |
-| Evolutionary               | ⭐                 |
-| Fault tolerance            | ⭐                 |
-| Modularity                 | ⭐                 |
-| Overall cost               | ⭐⭐⭐⭐⭐             |
-| Performance                | ⭐⭐                |
-| Reliability                | ⭐⭐⭐              |
-| Scalability                | ⭐                 |
-| Simplicity                 | ⭐⭐⭐⭐             |
-| Testability                | ⭐                 | -->

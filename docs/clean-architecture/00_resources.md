@@ -70,6 +70,9 @@ Expand your understanding of Clean Architecture with these recommended books, ar
 - **Architecture the Lost Years (Robert C. Martin, NDC Conference)**  
     - [https://www.youtube.com/watch?v=WpkDN78P884](https://www.youtube.com/watch?v=WpkDN78P884)
 
+- **Clean Architecture & DDD Series (Milan Jovanović)**
+    - [https://www.youtube.com/playlist?list=PLYpjLpq5ZDGstQ5afRz-34o_0dexr1RGa](https://www.youtube.com/playlist?list=PLYpjLpq5ZDGstQ5afRz-34o_0dexr1RGa)
+
 ---
 
 ## Best Practices
