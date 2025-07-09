@@ -20,7 +20,7 @@
     
     
       
-        <title>Intro - Workshops</title>
+        <title>Overview - Workshops</title>
       
     
     
@@ -59,7 +59,16 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -111,7 +120,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Intro
+              Overview
             
           </span>
         </div>
@@ -473,7 +482,7 @@
   
   
   <span class="md-ellipsis">
-    Intro
+    Overview
     
   </span>
   
@@ -486,7 +495,7 @@
   
   
   <span class="md-ellipsis">
-    Intro
+    Overview
     
   </span>
   
@@ -719,7 +728,7 @@
   
   
   <span class="md-ellipsis">
-    Intro
+    Overview
     
   </span>
   
@@ -807,6 +816,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -853,7 +866,7 @@
   
   
   <span class="md-ellipsis">
-    Intro
+    Overview
     
   </span>
   
@@ -900,6 +913,52 @@
   
   <span class="md-ellipsis">
     Onion Architecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../14_hexagonal_architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Hexagonal Architecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../15_clean_architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Clean Architecture
     
   </span>
   
@@ -1036,47 +1095,47 @@
 <ul>
 <li>
 <p><strong>Domain-Centric Approach</strong><br />
-  The business domain and its rules are placed at the center of the architecture, isolating core logic from external concerns like UI, databases, or frameworks[1].</p>
+  The business domain and its rules are placed at the center of the architecture, isolating core logic from external concerns like UI, databases, or frameworks.</p>
 </li>
 <li>
 <p><strong>Separation of Concerns</strong><br />
-  Different parts of the system (business logic, UI, database, infrastructure) are isolated into distinct layers to reduce complexity and improve maintainability[1][5].</p>
+  Different parts of the system (business logic, UI, database, infrastructure) are isolated into distinct layers to reduce complexity and improve maintainability.</p>
 </li>
 <li>
 <p><strong>Layered Architecture with Dependency Rule</strong><br />
-  The system is organized into concentric layers (Entities, Use Cases, Interface Adapters, Frameworks &amp; Drivers) where dependencies always point inward toward the domain core. Outer layers depend on inner layers, but not vice versa. This is also known as the Dependency Inversion Principle[1][2][5].</p>
+  The system is organized into concentric layers (Entities, Use Cases, Interface Adapters, Frameworks &amp; Drivers) where dependencies always point inward toward the domain core. Outer layers depend on inner layers, but not vice versa. This is also known as the Dependency Inversion Principle.</p>
 </li>
 <li>
 <p><strong>Dependency Inversion Principle (DIP)</strong><br />
-  High-level modules (business logic) should not depend on low-level modules (infrastructure); both depend on abstractions (interfaces). Abstractions do not depend on details; details depend on abstractions[2][5].</p>
+  High-level modules (business logic) should not depend on low-level modules (infrastructure); both depend on abstractions (interfaces). Abstractions do not depend on details; details depend on abstractions.</p>
 </li>
 <li>
 <p><strong>Use of Abstractions and Interfaces</strong><br />
-  Interfaces define boundaries between layers, enabling flexibility, testability, and easier substitution of components without affecting core logic[1][2].</p>
+  Interfaces define boundaries between layers, enabling flexibility, testability, and easier substitution of components without affecting core logic.</p>
 </li>
 <li>
 <p><strong>Single Responsibility Principle (SRP)</strong><br />
-  Each component or module should have one reason to change, focusing on a single responsibility to improve clarity and maintainability[2].</p>
+  Each component or module should have one reason to change, focusing on a single responsibility to improve clarity and maintainability.</p>
 </li>
 <li>
 <p><strong>Interface Segregation Principle (ISP)</strong><br />
-  Interfaces should be fine-grained and client-specific, avoiding forcing clients to depend on methods they do not use[2].</p>
+  Interfaces should be fine-grained and client-specific, avoiding forcing clients to depend on methods they do not use.</p>
 </li>
 <li>
 <p><strong>Open-Closed Principle (OCP)</strong><br />
-  Software entities should be open for extension but closed for modification, allowing behavior to be extended without changing existing code[2].</p>
+  Software entities should be open for extension but closed for modification, allowing behavior to be extended without changing existing code.</p>
 </li>
 <li>
 <p><strong>Low Coupling Between Layers</strong><br />
-  Layers and components are loosely coupled, minimizing ripple effects when changes occur and enabling independent evolution of parts of the system[7].</p>
+  Layers and components are loosely coupled, minimizing ripple effects when changes occur and enabling independent evolution of parts of the system.</p>
 </li>
 <li>
 <p><strong>Use Case-Oriented Design</strong><br />
-  The architecture centers around use cases that represent application-specific business rules and user intentions, organizing code to reflect real-world scenarios[7].</p>
+  The architecture centers around use cases that represent application-specific business rules and user intentions, organizing code to reflect real-world scenarios.</p>
 </li>
 <li>
 <p><strong>Postponing Technical Decisions</strong><br />
-  Decisions about frameworks, databases, and UI implementations are deferred to outer layers, keeping the core domain free from technology-specific dependencies[7].</p>
+  Decisions about frameworks, databases, and UI implementations are deferred to outer layers, keeping the core domain free from technology-specific dependencies.</p>
 </li>
 </ul>
 <hr />
@@ -1107,14 +1166,14 @@
 </tr>
 </tbody>
 </table>
-<p>This layered structure, combined with the principles above, ensures that the core business logic remains isolated and protected, enabling maintainable, testable, and adaptable software systems[1][3][5][6].</p>
+<p>This layered structure, combined with the principles above, ensures that the core business logic remains isolated and protected, enabling maintainable, testable, and adaptable software systems.</p>
 <hr />
 <h3 id="references">References</h3>
 <ul>
-<li>Domain-Centric approach and Dependency Rule: [1], [5]  </li>
-<li>Dependency Inversion, Interface Segregation, Single Responsibility, Open-Closed Principles: [2]  </li>
-<li>Use Case Orientation and Low Coupling: [7]  </li>
-<li>Layered structure and separation of concerns: [3], [6]</li>
+<li>Domain-Centric approach and Dependency Rule: ,   </li>
+<li>Dependency Inversion, Interface Segregation, Single Responsibility, Open-Closed Principles:   </li>
+<li>Use Case Orientation and Low Coupling:   </li>
+<li>Layered structure and separation of concerns: , </li>
 </ul>
 
 
@@ -1210,7 +1269,7 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.footer", "navigation.instant", "navigation.tabs", "navigation.path", "navigation.indexes", "navigation.top"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.footer", "navigation.instant", "navigation.tabs", "navigation.path", "navigation.indexes", "navigation.top", "content.code.copy", "content.code.select"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
@@ -1222,5 +1281,7 @@
         <script src="../../assets/mkdocs_puml/interaction.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>

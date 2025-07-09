@@ -59,7 +59,16 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -460,7 +469,7 @@
   
   
   <span class="md-ellipsis">
-    Intro
+    Overview
     
   </span>
   
@@ -655,7 +664,7 @@
   
   
   <span class="md-ellipsis">
-    Intro
+    Overview
     
   </span>
   
@@ -745,6 +754,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -791,7 +804,7 @@
   
   
   <span class="md-ellipsis">
-    Intro
+    Overview
     
   </span>
   
@@ -859,13 +872,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#what-is-layered-architecture" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
-      What Is Layered Architecture?
+      Overview
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="What Is Layered Architecture?">
+    <nav class="md-nav" aria-label="Overview">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -940,6 +953,52 @@
   
   <span class="md-ellipsis">
     Onion Architecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../14_hexagonal_architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Hexagonal Architecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../15_clean_architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Clean Architecture
     
   </span>
   
@@ -1038,13 +1097,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#what-is-layered-architecture" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
-      What Is Layered Architecture?
+      Overview
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="What Is Layered Architecture?">
+    <nav class="md-nav" aria-label="Overview">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1114,16 +1173,15 @@
 
 
 <h1 id="layered-architecture">Layered Architecture</h1>
-<h2 id="what-is-layered-architecture">What Is Layered Architecture?</h2>
-<p><strong>Layered Architecture</strong> (also known as <strong>N-Tier Architecture</strong>) is one of the most widely used architectural patterns in software development. It organizes an application into horizontal layers, each with a distinct responsibility. In the context of <strong>Clean Architecture</strong>, the layered approach helps you separate concerns, enforce boundaries, and keep your business logic insulated from technical details.</p>
+<h2 id="overview">Overview</h2>
+<p>The <em>Layered Architecture</em> (also known as N-Tier Architecture) is a classic architectural style that structures an application into a series of horizontal layers. Each layer has a specific role and responsibility, and communicates only with the layers directly above or below it. This approach enforces clear boundaries between technical concerns, making systems easier to understand, develop, and maintain.</p>
 <h3 id="typical-layers">Typical Layers</h3>
 <ul>
-<li><strong>Presentation Layer:</strong> Handles user interface and user interaction.</li>
-<li><strong>Application Layer:</strong> Coordinates application activity and orchestrates use cases.</li>
-<li><strong>Domain Layer:</strong> Contains business rules and core logic (the heart of your system).</li>
-<li><strong>Infrastructure Layer:</strong> Manages technical details like databases, file systems, and external services.</li>
+<li><strong>Presentation Layer:</strong> Handles user interface and user interaction logic.</li>
+<li><strong>Application Layer:</strong> Coordinates application activity and workflow (sometimes merged with business logic).</li>
+<li><strong>Domain (Business Logic) Layer:</strong> Encapsulates core business rules and domain logic.</li>
+<li><strong>Infrastructure/Data Access Layer:</strong> Manages data persistence, external services, and infrastructure concerns.</li>
 </ul>
-<p>Each layer communicates only with the layer directly beneath it, creating a clear and maintainable structure.</p>
 <div class='puml-container'><div class="puml light" style=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" data-diagram-type="DESCRIPTION" height="410px" preserveAspectRatio="xMidYMid meet" style="width:796px;height:410px;" version="1.1" viewBox="0 0 796 410" width="796px" zoomAndPan="magnify" class="diagram"><defs><filter height="300%" id="fdw9wdu3ytx9y" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4" dy="4" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><g class="cluster" data-entity="UI Layer.n.Presentation." data-source-line="17" data-uid="ent0002" id="cluster_UI Layer.n.Presentation."><rect fill="none" filter="url(#fdw9wdu3ytx9y)" height="103.3" rx="5" ry="5" style="stroke:#4C566A;stroke-width:1;" width="224" x="16" y="7"/><text fill="#2E3440" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="65.3447" x="95.3276" y="21.9951">UI Layer</text><text fill="#2E3440" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="114.4678" x="70.7661" y="38.292">(Presentation)</text></g><g class="cluster" data-entity="Application Layer.n.Use Cases." data-source-line="22" data-uid="ent0005" id="cluster_Application Layer.n.Use Cases."><rect fill="none" filter="url(#fdw9wdu3ytx9y)" height="103.29" rx="5" ry="5" style="stroke:#4C566A;stroke-width:1;" width="273" x="7" y="143.3"/><text fill="#2E3440" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="138.0654" x="74.4673" y="158.2951">Application Layer</text><text fill="#2E3440" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="92.75" x="97.125" y="174.592">(Use Cases)</text></g><g class="cluster" data-entity="Domain Layer.n.Enterprise Business Rules." data-source-line="27" data-uid="ent0008" id="cluster_Domain Layer.n.Enterprise Business Rules."><rect fill="none" filter="url(#fdw9wdu3ytx9y)" height="103.3" rx="5" ry="5" style="stroke:#4C566A;stroke-width:1;" width="402" x="222" y="295.59"/><text fill="#2E3440" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="108.8076" x="368.5962" y="310.5851">Domain Layer</text><text fill="#2E3440" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="217.9912" x="314.0044" y="326.882">(Enterprise Business Rules)</text></g><g class="cluster" data-entity="Infrastructure Layer.n.Frameworks . Drivers." data-source-line="33" data-uid="ent0012" id="cluster_Infrastructure Layer.n.Frameworks . Drivers."><rect fill="none" filter="url(#fdw9wdu3ytx9y)" height="103.29" rx="5" ry="5" style="stroke:#4C566A;stroke-width:1;" width="480" x="304" y="143.3"/><text fill="#2E3440" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="159.6396" x="464.1802" y="158.2951">Infrastructure Layer</text><text fill="#2E3440" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="189.0342" x="449.4829" y="174.592">(Frameworks &amp; Drivers)</text></g><g class="entity" data-entity="Controllers" data-source-line="18" data-uid="ent0003" id="entity_Controllers"><rect fill="#ECEFF4" filter="url(#fdw9wdu3ytx9y)" height="36.2969" rx="5" ry="5" style="stroke:#4C566A;stroke-width:0.5;" width="96.4668" x="31.77" y="58"/><text fill="#2E3440" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="76.4668" x="41.77" y="80.9951">Controllers</text></g><g class="entity" data-entity="Views" data-source-line="19" data-uid="ent0004" id="entity_Views"><rect fill="#ECEFF4" filter="url(#fdw9wdu3ytx9y)" height="36.2969" rx="5" ry="5" style="stroke:#4C566A;stroke-width:0.5;" width="60.8242" x="163.59" y="58"/><text fill="#2E3440" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="40.8242" x="173.59" y="80.9951">Views</text></g><g class="entity" data-entity="Use Case Services" data-source-line="23" data-uid="ent0006" id="entity_Use Case Services"><rect fill="#ECEFF4" filter="url(#fdw9wdu3ytx9y)" height="36.2969" rx="5" ry="5" style="stroke:#4C566A;stroke-width:0.5;" width="148.3516" x="22.82" y="194.3"/><text fill="#2E3440" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="128.3516" x="32.82" y="217.2951">Use Case Services</text></g><g class="entity" data-entity="DTOs" data-source-line="24" data-uid="ent0007" id="entity_DTOs"><rect fill="#ECEFF4" filter="url(#fdw9wdu3ytx9y)" height="36.2969" rx="5" ry="5" style="stroke:#4C566A;stroke-width:0.5;" width="57.6455" x="206.18" y="194.3"/><text fill="#2E3440" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="37.6455" x="216.18" y="217.2951">DTOs</text></g><g class="entity" data-entity="Entities" data-source-line="28" data-uid="ent0009" id="entity_Entities"><rect fill="#ECEFF4" filter="url(#fdw9wdu3ytx9y)" height="36.2969" rx="5" ry="5" style="stroke:#4C566A;stroke-width:0.5;" width="72.3838" x="237.81" y="346.59"/><text fill="#2E3440" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="52.3838" x="247.81" y="369.5851">Entities</text></g><g class="entity" data-entity="Interfaces" data-source-line="29" data-uid="ent0010" id="entity_Interfaces"><rect fill="#ECEFF4" filter="url(#fdw9wdu3ytx9y)" height="36.2969" rx="5" ry="5" style="stroke:#4C566A;stroke-width:0.5;" width="89.9727" x="345.01" y="346.59"/><text fill="#2E3440" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="69.9727" x="355.01" y="369.5851">Interfaces</text></g><g class="entity" data-entity="Domain Services" data-source-line="30" data-uid="ent0011" id="entity_Domain Services"><rect fill="#ECEFF4" filter="url(#fdw9wdu3ytx9y)" height="36.2969" rx="5" ry="5" style="stroke:#4C566A;stroke-width:0.5;" width="137.8105" x="470.09" y="346.59"/><text fill="#2E3440" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="117.8105" x="480.09" y="369.5851">Domain Services</text></g><g class="entity" data-entity="Database Access" data-source-line="34" data-uid="ent0013" id="entity_Database Access"><rect fill="#ECEFF4" filter="url(#fdw9wdu3ytx9y)" height="36.2969" rx="5" ry="5" style="stroke:#4C566A;stroke-width:0.5;" width="139.4238" x="320.29" y="194.3"/><text fill="#2E3440" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="119.4238" x="330.29" y="217.2951">Database Access</text></g><g class="entity" data-entity="External APIs" data-source-line="35" data-uid="ent0014" id="entity_External APIs"><rect fill="#ECEFF4" filter="url(#fdw9wdu3ytx9y)" height="36.2969" rx="5" ry="5" style="stroke:#4C566A;stroke-width:0.5;" width="112.2236" x="494.89" y="194.3"/><text fill="#2E3440" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="92.2236" x="504.89" y="217.2951">External APIs</text></g><g class="entity" data-entity="Email Gateway" data-source-line="36" data-uid="ent0015" id="entity_Email Gateway"><rect fill="#ECEFF4" filter="url(#fdw9wdu3ytx9y)" height="36.2969" rx="5" ry="5" style="stroke:#4C566A;stroke-width:0.5;" width="125.1367" x="642.43" y="194.3"/><text fill="#2E3440" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="105.1367" x="652.43" y="217.2951">Email Gateway</text></g><g class="link" data-entity-1="Controllers" data-entity-2="Use Case Services" data-source-line="39" data-uid="lnk16" id="link_Controllers_Use Case Services"><path d="M82.22,94.7 C85.48,120.44 90.7661,162.1876 94.0261,187.9276" fill="none" id="Controllers-to-Use Case Services" style="stroke:#000000;stroke-width:1;"/><polygon fill="#000000" points="94.78,193.88,97.6175,184.4487,94.1518,188.9196,89.6809,185.4539,94.78,193.88" style="stroke:#000000;stroke-width:1;"/></g><g class="link" data-entity-1="Views" data-entity-2="Use Case Services" data-source-line="40" data-uid="lnk17" id="link_Views_Use Case Services"><path d="M181.32,94.7 C162.73,120.44 131.7942,163.2768 113.1942,189.0168" fill="none" id="Views-to-Use Case Services" style="stroke:#000000;stroke-width:1;"/><polygon fill="#000000" points="109.68,193.88,118.1934,188.928,112.6085,189.8274,111.7092,184.2424,109.68,193.88" style="stroke:#000000;stroke-width:1;"/></g><g class="link" data-entity-1="Use Case Services" data-entity-2="Entities" data-source-line="42" data-uid="lnk18" id="link_Use Case Services_Entities"><path d="M117.65,230.98 C151.76,259.94 214.8866,313.5462 248.9066,342.4362" fill="none" id="Use Case Services-to-Entities" style="stroke:#000000;stroke-width:1;"/><polygon fill="#000000" points="253.48,346.32,249.209,337.4454,249.6688,343.0835,244.0307,343.5433,253.48,346.32" style="stroke:#000000;stroke-width:1;"/></g><g class="link" data-entity-1="Use Case Services" data-entity-2="Interfaces" data-source-line="43" data-uid="lnk19" id="link_Use Case Services_Interfaces"><path d="M132.2,231.06 C149.09,239.02 169.78,248.08 189,254.59 C249.13,274.98 274.21,253.85 328,287.59 C351.4,302.27 366.9273,323.7225 377.4373,341.2725" fill="none" id="Use Case Services-to-Interfaces" style="stroke:#000000;stroke-width:1;"/><polygon fill="#000000" points="380.52,346.42,379.3277,336.6436,377.9511,342.1304,372.4643,340.7538,380.52,346.42" style="stroke:#000000;stroke-width:1;"/></g><g class="link" data-entity-1="Database Access" data-entity-2="Interfaces" data-source-line="45" data-uid="lnk20" id="link_Database Access_Interfaces"><path d="M390,230.98 C390,259.94 390,311.43 390,340.32" fill="none" id="Database Access-to-Interfaces" style="stroke:#000000;stroke-width:1;stroke-dasharray:7,7;"/><polygon fill="#000000" points="390,346.32,394,337.32,390,341.32,386,337.32,390,346.32" style="stroke:#000000;stroke-width:1;"/><text fill="#4C566A" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="76.9082" x="391" y="275.6569">implements</text></g><g class="link" data-entity-1="External APIs" data-entity-2="Interfaces" data-source-line="46" data-uid="lnk21" id="link_External APIs_Interfaces"><path d="M534.92,231.03 C520.66,245.73 498.64,266.37 476,279.59 C466.66,285.05 461.89,281.42 453,287.59 C430.45,303.26 414.7291,324.0459 403.6691,341.2159" fill="none" id="External APIs-to-Interfaces" style="stroke:#000000;stroke-width:1;stroke-dasharray:7,7;"/><polygon fill="#000000" points="400.42,346.26,408.6565,340.8599,403.1276,342.0566,401.931,336.5277,400.42,346.26" style="stroke:#000000;stroke-width:1;"/><text fill="#4C566A" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="76.9082" x="499" y="275.6569">implements</text></g><g class="link" data-entity-1="Email Gateway" data-entity-2="Interfaces" data-source-line="47" data-uid="lnk22" id="link_Email Gateway_Interfaces"><path d="M680.91,230.8 C657.44,246.66 620.12,269.18 584,279.59 C555.98,287.67 479,274.38 453,287.59 C427.92,300.34 412.0659,322.783 401.7859,341.023" fill="none" id="Email Gateway-to-Interfaces" style="stroke:#000000;stroke-width:1;stroke-dasharray:7,7;"/><polygon fill="#000000" points="398.84,346.25,406.7435,340.3734,401.2949,341.8942,399.7742,336.4455,398.84,346.25" style="stroke:#000000;stroke-width:1;"/><text fill="#4C566A" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="76.9082" x="627" y="275.6569">implements</text></g></g></svg></div><div class="puml dark" style=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" data-diagram-type="DESCRIPTION" height="410px" preserveAspectRatio="xMidYMid meet" style="width:796px;height:410px;" version="1.1" viewBox="0 0 796 410" width="796px" zoomAndPan="magnify" class="diagram"><defs><filter height="300%" id="f1e6ihemxu9pst" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4" dy="4" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><g class="cluster" data-entity="UI Layer.n.Presentation." data-source-line="17" data-uid="ent0002" id="cluster_UI Layer.n.Presentation."><rect fill="none" filter="url(#f1e6ihemxu9pst)" height="103.3" rx="5" ry="5" style="stroke:#4C566A;stroke-width:1;" width="224" x="16" y="7"/><text fill="#D8DEE9" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="65.3447" x="95.3276" y="21.9951">UI Layer</text><text fill="#D8DEE9" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="114.4678" x="70.7661" y="38.292">(Presentation)</text></g><g class="cluster" data-entity="Application Layer.n.Use Cases." data-source-line="22" data-uid="ent0005" id="cluster_Application Layer.n.Use Cases."><rect fill="none" filter="url(#f1e6ihemxu9pst)" height="103.29" rx="5" ry="5" style="stroke:#4C566A;stroke-width:1;" width="273" x="7" y="143.3"/><text fill="#D8DEE9" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="138.0654" x="74.4673" y="158.2951">Application Layer</text><text fill="#D8DEE9" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="92.75" x="97.125" y="174.592">(Use Cases)</text></g><g class="cluster" data-entity="Domain Layer.n.Enterprise Business Rules." data-source-line="27" data-uid="ent0008" id="cluster_Domain Layer.n.Enterprise Business Rules."><rect fill="none" filter="url(#f1e6ihemxu9pst)" height="103.3" rx="5" ry="5" style="stroke:#4C566A;stroke-width:1;" width="402" x="222" y="295.59"/><text fill="#D8DEE9" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="108.8076" x="368.5962" y="310.5851">Domain Layer</text><text fill="#D8DEE9" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="217.9912" x="314.0044" y="326.882">(Enterprise Business Rules)</text></g><g class="cluster" data-entity="Infrastructure Layer.n.Frameworks . Drivers." data-source-line="33" data-uid="ent0012" id="cluster_Infrastructure Layer.n.Frameworks . Drivers."><rect fill="none" filter="url(#f1e6ihemxu9pst)" height="103.29" rx="5" ry="5" style="stroke:#4C566A;stroke-width:1;" width="480" x="304" y="143.3"/><text fill="#D8DEE9" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="159.6396" x="464.1802" y="158.2951">Infrastructure Layer</text><text fill="#D8DEE9" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="189.0342" x="449.4829" y="174.592">(Frameworks &amp; Drivers)</text></g><g class="entity" data-entity="Controllers" data-source-line="18" data-uid="ent0003" id="entity_Controllers"><rect fill="#2E3440" filter="url(#f1e6ihemxu9pst)" height="36.2969" rx="5" ry="5" style="stroke:#4C566A;stroke-width:2.5;" width="96.4668" x="31.77" y="58"/><text fill="#D8DEE9" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="76.4668" x="41.77" y="80.9951">Controllers</text></g><g class="entity" data-entity="Views" data-source-line="19" data-uid="ent0004" id="entity_Views"><rect fill="#2E3440" filter="url(#f1e6ihemxu9pst)" height="36.2969" rx="5" ry="5" style="stroke:#4C566A;stroke-width:2.5;" width="60.8242" x="163.59" y="58"/><text fill="#D8DEE9" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="40.8242" x="173.59" y="80.9951">Views</text></g><g class="entity" data-entity="Use Case Services" data-source-line="23" data-uid="ent0006" id="entity_Use Case Services"><rect fill="#2E3440" filter="url(#f1e6ihemxu9pst)" height="36.2969" rx="5" ry="5" style="stroke:#4C566A;stroke-width:2.5;" width="148.3516" x="22.82" y="194.3"/><text fill="#D8DEE9" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="128.3516" x="32.82" y="217.2951">Use Case Services</text></g><g class="entity" data-entity="DTOs" data-source-line="24" data-uid="ent0007" id="entity_DTOs"><rect fill="#2E3440" filter="url(#f1e6ihemxu9pst)" height="36.2969" rx="5" ry="5" style="stroke:#4C566A;stroke-width:2.5;" width="57.6455" x="206.18" y="194.3"/><text fill="#D8DEE9" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="37.6455" x="216.18" y="217.2951">DTOs</text></g><g class="entity" data-entity="Entities" data-source-line="28" data-uid="ent0009" id="entity_Entities"><rect fill="#2E3440" filter="url(#f1e6ihemxu9pst)" height="36.2969" rx="5" ry="5" style="stroke:#4C566A;stroke-width:2.5;" width="72.3838" x="237.81" y="346.59"/><text fill="#D8DEE9" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="52.3838" x="247.81" y="369.5851">Entities</text></g><g class="entity" data-entity="Interfaces" data-source-line="29" data-uid="ent0010" id="entity_Interfaces"><rect fill="#2E3440" filter="url(#f1e6ihemxu9pst)" height="36.2969" rx="5" ry="5" style="stroke:#4C566A;stroke-width:2.5;" width="89.9727" x="345.01" y="346.59"/><text fill="#D8DEE9" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="69.9727" x="355.01" y="369.5851">Interfaces</text></g><g class="entity" data-entity="Domain Services" data-source-line="30" data-uid="ent0011" id="entity_Domain Services"><rect fill="#2E3440" filter="url(#f1e6ihemxu9pst)" height="36.2969" rx="5" ry="5" style="stroke:#4C566A;stroke-width:2.5;" width="137.8105" x="470.09" y="346.59"/><text fill="#D8DEE9" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="117.8105" x="480.09" y="369.5851">Domain Services</text></g><g class="entity" data-entity="Database Access" data-source-line="34" data-uid="ent0013" id="entity_Database Access"><rect fill="#2E3440" filter="url(#f1e6ihemxu9pst)" height="36.2969" rx="5" ry="5" style="stroke:#4C566A;stroke-width:2.5;" width="139.4238" x="320.29" y="194.3"/><text fill="#D8DEE9" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="119.4238" x="330.29" y="217.2951">Database Access</text></g><g class="entity" data-entity="External APIs" data-source-line="35" data-uid="ent0014" id="entity_External APIs"><rect fill="#2E3440" filter="url(#f1e6ihemxu9pst)" height="36.2969" rx="5" ry="5" style="stroke:#4C566A;stroke-width:2.5;" width="112.2236" x="494.89" y="194.3"/><text fill="#D8DEE9" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="92.2236" x="504.89" y="217.2951">External APIs</text></g><g class="entity" data-entity="Email Gateway" data-source-line="36" data-uid="ent0015" id="entity_Email Gateway"><rect fill="#2E3440" filter="url(#f1e6ihemxu9pst)" height="36.2969" rx="5" ry="5" style="stroke:#4C566A;stroke-width:2.5;" width="125.1367" x="642.43" y="194.3"/><text fill="#D8DEE9" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="105.1367" x="652.43" y="217.2951">Email Gateway</text></g><g class="link" data-entity-1="Controllers" data-entity-2="Use Case Services" data-source-line="39" data-uid="lnk16" id="link_Controllers_Use Case Services"><path d="M82.22,94.7 C85.48,120.44 90.7661,162.1876 94.0261,187.9276" fill="none" id="Controllers-to-Use Case Services" style="stroke:#000000;stroke-width:1;"/><polygon fill="#000000" points="94.78,193.88,97.6175,184.4487,94.1518,188.9196,89.6809,185.4539,94.78,193.88" style="stroke:#000000;stroke-width:1;"/></g><g class="link" data-entity-1="Views" data-entity-2="Use Case Services" data-source-line="40" data-uid="lnk17" id="link_Views_Use Case Services"><path d="M181.32,94.7 C162.73,120.44 131.7942,163.2768 113.1942,189.0168" fill="none" id="Views-to-Use Case Services" style="stroke:#000000;stroke-width:1;"/><polygon fill="#000000" points="109.68,193.88,118.1934,188.928,112.6085,189.8274,111.7092,184.2424,109.68,193.88" style="stroke:#000000;stroke-width:1;"/></g><g class="link" data-entity-1="Use Case Services" data-entity-2="Entities" data-source-line="42" data-uid="lnk18" id="link_Use Case Services_Entities"><path d="M117.65,230.98 C151.76,259.94 214.8866,313.5462 248.9066,342.4362" fill="none" id="Use Case Services-to-Entities" style="stroke:#000000;stroke-width:1;"/><polygon fill="#000000" points="253.48,346.32,249.209,337.4454,249.6688,343.0835,244.0307,343.5433,253.48,346.32" style="stroke:#000000;stroke-width:1;"/></g><g class="link" data-entity-1="Use Case Services" data-entity-2="Interfaces" data-source-line="43" data-uid="lnk19" id="link_Use Case Services_Interfaces"><path d="M132.2,231.06 C149.09,239.02 169.78,248.08 189,254.59 C249.13,274.98 274.21,253.85 328,287.59 C351.4,302.27 366.9273,323.7225 377.4373,341.2725" fill="none" id="Use Case Services-to-Interfaces" style="stroke:#000000;stroke-width:1;"/><polygon fill="#000000" points="380.52,346.42,379.3277,336.6436,377.9511,342.1304,372.4643,340.7538,380.52,346.42" style="stroke:#000000;stroke-width:1;"/></g><g class="link" data-entity-1="Database Access" data-entity-2="Interfaces" data-source-line="45" data-uid="lnk20" id="link_Database Access_Interfaces"><path d="M390,230.98 C390,259.94 390,311.43 390,340.32" fill="none" id="Database Access-to-Interfaces" style="stroke:#000000;stroke-width:1;stroke-dasharray:7,7;"/><polygon fill="#000000" points="390,346.32,394,337.32,390,341.32,386,337.32,390,346.32" style="stroke:#000000;stroke-width:1;"/><text fill="#81A1C1" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="76.9082" x="391" y="275.6569">implements</text></g><g class="link" data-entity-1="External APIs" data-entity-2="Interfaces" data-source-line="46" data-uid="lnk21" id="link_External APIs_Interfaces"><path d="M534.92,231.03 C520.66,245.73 498.64,266.37 476,279.59 C466.66,285.05 461.89,281.42 453,287.59 C430.45,303.26 414.7291,324.0459 403.6691,341.2159" fill="none" id="External APIs-to-Interfaces" style="stroke:#000000;stroke-width:1;stroke-dasharray:7,7;"/><polygon fill="#000000" points="400.42,346.26,408.6565,340.8599,403.1276,342.0566,401.931,336.5277,400.42,346.26" style="stroke:#000000;stroke-width:1;"/><text fill="#81A1C1" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="76.9082" x="499" y="275.6569">implements</text></g><g class="link" data-entity-1="Email Gateway" data-entity-2="Interfaces" data-source-line="47" data-uid="lnk22" id="link_Email Gateway_Interfaces"><path d="M680.91,230.8 C657.44,246.66 620.12,269.18 584,279.59 C555.98,287.67 479,274.38 453,287.59 C427.92,300.34 412.0659,322.783 401.7859,341.023" fill="none" id="Email Gateway-to-Interfaces" style="stroke:#000000;stroke-width:1;stroke-dasharray:7,7;"/><polygon fill="#000000" points="398.84,346.25,406.7435,340.3734,401.2949,341.8942,399.7742,336.4455,398.84,346.25" style="stroke:#000000;stroke-width:1;"/><text fill="#81A1C1" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="76.9082" x="627" y="275.6569">implements</text></g></g></svg></div></div>
 
 <hr />
@@ -1137,24 +1195,24 @@
 </thead>
 <tbody>
 <tr>
-<td>Simple, well-understood structure</td>
-<td>Can lead to rigid, hard-to-change dependencies</td>
+<td>Clear separation of concerns</td>
+<td>Can become rigid and hard to adapt to change</td>
 </tr>
 <tr>
-<td>Clear separation of concerns</td>
-<td>Risk of “leaky” abstractions between layers</td>
+<td>Easy to understand and communicate</td>
+<td>Risk of "leaky" abstractions between layers</td>
 </tr>
 <tr>
 <td>Supports independent development and testing</td>
-<td>May encourage “anemic” domain models</td>
+<td>May encourage anemic domain models</td>
 </tr>
 <tr>
-<td>Easy to onboard new team members</td>
-<td>Changes in lower layers can ripple upward</td>
+<td>Facilitates code reuse within layers</td>
+<td>Tendency toward over-engineering with too many layers</td>
 </tr>
 <tr>
-<td>Works well for traditional business systems</td>
-<td>Not ideal for highly dynamic or cross-cutting concerns</td>
+<td>Well-supported by frameworks and tooling</td>
+<td>Not ideal for highly complex or rapidly evolving domains</td>
 </tr>
 </tbody>
 </table>
@@ -1185,21 +1243,6 @@
 <h2 id="takeaway">Takeaway</h2>
 <p>Layered Architecture provides a clear, time-tested way to organize your codebase.<br />
 It’s easy to understand and works well for many business applications, but be mindful of its limitations as your system grows in complexity or requires more flexibility.</p>
-<!-- | Architecture characteristic | Star rating        |
-|----------------------------|--------------------|
-| Partitioning type          | Technical          |
-| Number of quanta           | 1                  |
-| Deployability              | ⭐                 |
-| Elasticity                 | ⭐                 |
-| Evolutionary               | ⭐                 |
-| Fault tolerance            | ⭐                 |
-| Modularity                 | ⭐                 |
-| Overall cost               | ⭐⭐⭐⭐⭐             |
-| Performance                | ⭐⭐                |
-| Reliability                | ⭐⭐⭐              |
-| Scalability                | ⭐                 |
-| Simplicity                 | ⭐⭐⭐⭐             |
-| Testability                | ⭐                 | -->
 
 
 
@@ -1235,7 +1278,7 @@ It’s easy to understand and works well for many business applications, but be 
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../11_architectural_patterns/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Intro">
+          <a href="../11_architectural_patterns/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Overview">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1245,7 +1288,7 @@ It’s easy to understand and works well for many business applications, but be 
                 Previous
               </span>
               <div class="md-ellipsis">
-                Intro
+                Overview
               </div>
             </div>
           </a>
@@ -1294,7 +1337,7 @@ It’s easy to understand and works well for many business applications, but be 
     
     
       
-      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.footer", "navigation.instant", "navigation.tabs", "navigation.path", "navigation.indexes", "navigation.top"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.footer", "navigation.instant", "navigation.tabs", "navigation.path", "navigation.indexes", "navigation.top", "content.code.copy", "content.code.select"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
@@ -1306,5 +1349,7 @@ It’s easy to understand and works well for many business applications, but be 
         <script src="../../assets/mkdocs_puml/interaction.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>

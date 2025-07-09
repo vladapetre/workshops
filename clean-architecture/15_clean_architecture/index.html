@@ -1,0 +1,1360 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../14_hexagonal_architecture/">
+      
+      
+        <link rel="next" href="../00_resources/">
+      
+      
+      <link rel="icon" href="../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
+    
+    
+      
+        <title>Clean Architecture - Workshops</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/style.css">
+    
+      <link rel="stylesheet" href="../../assets/mkdocs_puml/puml.css">
+    
+      <link rel="stylesheet" href="../../assets/mkdocs_puml/interaction.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#clean-architecture" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Workshops" class="md-header__button md-logo" aria-label="Workshops" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Workshops
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Clean Architecture
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="blue"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Clean Architecture
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Workshops" class="md-nav__button md-logo" aria-label="Workshops" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    Workshops
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Clean Architecture
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Clean Architecture
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01_introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_3" id="__nav_1_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Principles
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            Principles
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_3_1" id="__nav_1_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Design Principles
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            Design Principles
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02_design_principles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03_single_responsability_principle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Single Responsability Principle
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04_open_closed_principle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Open Closed Principle
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05_liskov_substitution_principle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Liskov Substitution Principle
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06_interface_segregation_principle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Interface Segregation Principle
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07_dependency_inversion_principle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Dependency Inversion Principle
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_3_2" id="__nav_1_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Component Principles
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Component Principles
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08_component_principles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09_component_cohesion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Component Cohesion
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10_component_coupling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Component Coupling
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1_4" id="__nav_1_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Architectural Patterns
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            Architectural Patterns
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11_architectural_patterns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12_layered_architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Layered Architecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../13_onion_architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Onion Architecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../14_hexagonal_architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Hexagonal Architecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Clean Architecture
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Clean Architecture
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#typical-layers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Typical Layers
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#strengths-and-weaknesses" class="md-nav__link">
+    <span class="md-ellipsis">
+      Strengths and Weaknesses
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-to-use-clean-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      When to Use Clean Architecture
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practical-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      Practical Tips
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#takeaway" class="md-nav__link">
+    <span class="md-ellipsis">
+      Takeaway
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../00_resources/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Resources
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../template/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Template
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#typical-layers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Typical Layers
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#strengths-and-weaknesses" class="md-nav__link">
+    <span class="md-ellipsis">
+      Strengths and Weaknesses
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-to-use-clean-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      When to Use Clean Architecture
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practical-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      Practical Tips
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#takeaway" class="md-nav__link">
+    <span class="md-ellipsis">
+      Takeaway
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="clean-architecture">Clean Architecture</h1>
+<h2 id="overview">Overview</h2>
+<p><em>Clean Architecture</em> is a modern architectural style that organizes software systems into concentric circles, each representing a different level of abstraction. The innermost circles contain business rules and core logic, while the outer circles handle implementation details such as UI, databases, and frameworks. The key principle is that <strong>dependencies always point inward</strong>, ensuring that the core of the system is isolated from external concerns.</p>
+<h3 id="typical-layers">Typical Layers</h3>
+<ul>
+<li><strong>Entities (Enterprise Business Rules):</strong><br />
+  Core business objects and logic, independent of any application or technology.</li>
+<li><strong>Use Cases (Application Business Rules):</strong><br />
+  Application-specific business rules, orchestrating entities to fulfill system requirements.</li>
+<li><strong>Interface Adapters:</strong><br />
+  Adapters and gateways that translate data between the core and external systems (e.g., controllers, presenters, repositories).</li>
+<li><strong>Frameworks &amp; Drivers:</strong><br />
+  External agents such as UI, databases, web frameworks, and other infrastructure.</li>
+</ul>
+<div class='puml-container'><div class="puml light" style=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" data-diagram-type="DESCRIPTION" height="644px" preserveAspectRatio="xMidYMid meet" style="width:598px;height:644px;" version="1.1" viewBox="0 0 598 644" width="598px" zoomAndPan="magnify" class="diagram"><defs><filter height="300%" id="fpf5px4ou52mz" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4" dy="4" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><g class="cluster" data-entity="Entities Layer.n.Enterprise Business Rules." data-source-line="12" data-uid="ent0002" id="cluster_Entities Layer.n.Enterprise Business Rules."><rect fill="none" filter="url(#fpf5px4ou52mz)" height="103.3" rx="5" ry="5" style="stroke:#4C566A;stroke-width:1;" width="233" x="301" y="529.18"/><text fill="#2E3440" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="109.1084" x="304" y="544.1751">Entities Layer</text><text fill="#2E3440" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="217.9912" x="304" y="560.472">(Enterprise Business Rules)</text></g><g class="cluster" data-entity="Use Cases Layer.n.Application Business Rules." data-source-line="18" data-uid="ent0005" id="cluster_Use Cases Layer.n.Application Business Rules."><rect fill="none" filter="url(#fpf5px4ou52mz)" height="103.29" rx="5" ry="5" style="stroke:#4C566A;stroke-width:1;" width="241" x="289" y="392.89"/><text fill="#2E3440" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="128.7207" x="292" y="407.8851">Use Cases Layer</text><text fill="#2E3440" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="225.1143" x="292" y="424.182">(Application Business Rules)</text></g><g class="cluster" data-entity="Interface Adapters Layer.n.Controllers. Gateways. Presenters." data-source-line="24" data-uid="ent0008" id="cluster_Interface Adapters Layer.n.Controllers. Gateways. Presenters."><rect fill="none" filter="url(#fpf5px4ou52mz)" height="103.3" rx="5" ry="5" style="stroke:#4C566A;stroke-width:1;" width="558" x="28" y="256.59"/><text fill="#2E3440" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="196.9912" x="31" y="271.5851">Interface Adapters Layer</text><text fill="#2E3440" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="283.4316" x="31" y="287.882">(Controllers, Gateways, Presenters)</text></g><g class="cluster" data-entity="Frameworks . Drivers Layer.n.UI. DB. External Services." data-source-line="32" data-uid="ent0013" id="cluster_Frameworks . Drivers Layer.n.UI. DB. External Services."><rect fill="none" filter="url(#fpf5px4ou52mz)" height="200.59" rx="5" ry="5" style="stroke:#4C566A;stroke-width:1;" width="392" x="7" y="7"/><text fill="#2E3440" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="225.0049" x="10" y="21.9951">Frameworks &amp; Drivers Layer</text><text fill="#2E3440" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="209.3574" x="10" y="38.292">(UI, DB, External Services)</text></g><g class="entity" data-entity="Entity" data-source-line="13" data-uid="ent0003" id="entity_Entity"><rect fill="#ECEFF4" filter="url(#fpf5px4ou52mz)" height="36.2969" rx="5" ry="5" style="stroke:#4C566A;stroke-width:0.5;" width="60.8721" x="316.56" y="580.18"/><text fill="#2E3440" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="40.8721" x="326.56" y="603.1751">Entity</text></g><g class="entity" data-entity="ValueObject" data-source-line="14" data-uid="ent0004" id="entity_ValueObject"><rect fill="#ECEFF4" filter="url(#fpf5px4ou52mz)" height="36.2969" rx="5" ry="5" style="stroke:#4C566A;stroke-width:0.5;" width="105.1279" x="412.44" y="580.18"/><text fill="#2E3440" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="85.1279" x="422.44" y="603.1751">ValueObject</text></g><g class="entity" data-entity="UseCase" data-source-line="19" data-uid="ent0006" id="entity_UseCase"><rect fill="#ECEFF4" filter="url(#fpf5px4ou52mz)" height="36.2969" rx="5" ry="5" style="stroke:#4C566A;stroke-width:0.5;" width="80.416" x="306.79" y="443.89"/><text fill="#2E3440" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="60.416" x="316.79" y="466.8851">UseCase</text></g><g class="entity" data-entity="Interactor" data-source-line="20" data-uid="ent0007" id="entity_Interactor"><rect fill="#ECEFF4" filter="url(#fpf5px4ou52mz)" height="36.2969" rx="5" ry="5" style="stroke:#4C566A;stroke-width:0.5;" width="88.9473" x="422.53" y="443.89"/><text fill="#2E3440" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="68.9473" x="432.53" y="466.8851">Interactor</text></g><g class="entity" data-entity="Controller" data-source-line="25" data-uid="ent0009" id="entity_Controller"><rect fill="#ECEFF4" filter="url(#fpf5px4ou52mz)" height="36.2969" rx="5" ry="5" style="stroke:#4C566A;stroke-width:0.5;" width="89.1729" x="241.41" y="307.59"/><text fill="#2E3440" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="69.1729" x="251.41" y="330.5851">Controller</text></g><g class="entity" data-entity="Presenter" data-source-line="26" data-uid="ent0010" id="entity_Presenter"><rect fill="#ECEFF4" filter="url(#fpf5px4ou52mz)" height="36.2969" rx="5" ry="5" style="stroke:#4C566A;stroke-width:0.5;" width="87.4502" x="365.27" y="307.59"/><text fill="#2E3440" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="67.4502" x="375.27" y="330.5851">Presenter</text></g><g class="entity" data-entity="Gateway" data-source-line="27" data-uid="ent0011" id="entity_Gateway"><rect fill="#ECEFF4" filter="url(#fpf5px4ou52mz)" height="36.2969" rx="5" ry="5" style="stroke:#4C566A;stroke-width:0.5;" width="81.8447" x="488.08" y="307.59"/><text fill="#2E3440" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="61.8447" x="498.08" y="330.5851">Gateway</text></g><g class="entity" data-entity="Repository Interface" data-source-line="28" data-uid="ent0012" id="entity_Repository Interface"><rect fill="#ECEFF4" filter="url(#fpf5px4ou52mz)" height="36.2969" rx="5" ry="5" style="stroke:#4C566A;stroke-width:0.5;" width="162.2012" x="43.9" y="307.59"/><text fill="#2E3440" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="142.2012" x="53.9" y="330.5851">Repository Interface</text></g><g class="entity" data-entity="Web UI" data-source-line="33" data-uid="ent0014" id="entity_Web UI"><rect fill="#ECEFF4" filter="url(#fpf5px4ou52mz)" height="36.2969" rx="5" ry="5" style="stroke:#4C566A;stroke-width:0.5;" width="70.1689" x="143.92" y="58"/><text fill="#2E3440" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="50.1689" x="153.92" y="80.9951">Web UI</text></g><g class="entity" data-entity="Database" data-source-line="34" data-uid="ent0015" id="entity_Database"><rect fill="#ECEFF4" filter="url(#fpf5px4ou52mz)" height="36.2969" rx="5" ry="5" style="stroke:#4C566A;stroke-width:0.5;" width="86.8008" x="22.6" y="58"/><text fill="#2E3440" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="66.8008" x="32.6" y="80.9951">Database</text></g><g class="entity" data-entity="External Service" data-source-line="35" data-uid="ent0016" id="entity_External Service"><rect fill="#ECEFF4" filter="url(#fpf5px4ou52mz)" height="36.2969" rx="5" ry="5" style="stroke:#4C566A;stroke-width:0.5;" width="134.5225" x="248.74" y="58"/><text fill="#2E3440" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="114.5225" x="258.74" y="80.9951">External Service</text></g><g class="entity" data-entity="Repository Implementation" data-source-line="36" data-uid="ent0017" id="entity_Repository Implementation"><rect fill="#ECEFF4" filter="url(#fpf5px4ou52mz)" height="36.2969" rx="5" ry="5" style="stroke:#4C566A;stroke-width:0.5;" width="210.6885" x="22.66" y="155.29"/><text fill="#2E3440" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="190.6885" x="32.66" y="178.2851">Repository Implementation</text></g><g class="link" data-entity-1="Web UI" data-entity-2="Controller" data-source-line="40" data-uid="lnk18" id="link_Web UI_Controller"><path d="M200.65,94.76 C217.01,109.28 238.7,131.33 251,155.29 C277.12,206.21 283.4351,269.1783 285.1151,301.1483" fill="none" id="Web UI-to-Controller" style="stroke:#000000;stroke-width:1;"/><polygon fill="#000000" points="285.43,307.14,288.9522,297.9425,285.1676,302.1469,280.9632,298.3623,285.43,307.14" style="stroke:#000000;stroke-width:1;"/></g><g class="link" data-entity-1="Controller" data-entity-2="UseCase" data-source-line="41" data-uid="lnk19" id="link_Controller_UseCase"><path d="M293.97,344.29 C305.67,370.03 324.8489,412.267 336.5389,438.007" fill="none" id="Controller-to-UseCase" style="stroke:#000000;stroke-width:1;"/><polygon fill="#000000" points="339.02,443.47,338.9404,433.6215,336.9525,438.9175,331.6564,436.9295,339.02,443.47" style="stroke:#000000;stroke-width:1;"/></g><g class="link" data-entity-1="Presenter" data-entity-2="UseCase" data-source-line="42" data-uid="lnk20" id="link_Presenter_UseCase"><path d="M400.89,344.29 C389.01,370.03 369.5043,412.2822 357.6243,438.0222" fill="none" id="Presenter-to-UseCase" style="stroke:#000000;stroke-width:1;"/><polygon fill="#000000" points="355.11,443.47,362.5134,436.9746,357.2053,438.9302,355.2497,433.6221,355.11,443.47" style="stroke:#000000;stroke-width:1;"/></g><g class="link" data-entity-1="Gateway" data-entity-2="UseCase" data-source-line="43" data-uid="lnk21" id="link_Gateway_UseCase"><path d="M507.71,344.33 C496.96,352.49 483.38,361.71 470,367.89 C442.89,380.4 429.85,368.33 405,384.89 C382.74,399.72 368.4526,420.7743 358.7526,438.2443" fill="none" id="Gateway-to-UseCase" style="stroke:#000000;stroke-width:1;"/><polygon fill="#000000" points="355.84,443.49,363.706,437.5632,358.2672,439.1186,356.7118,433.6798,355.84,443.49" style="stroke:#000000;stroke-width:1;"/></g><g class="link" data-entity-1="Repository Implementation" data-entity-2="Repository Interface" data-source-line="44" data-uid="lnk22" id="link_Repository Implementation_Repository Interface"><path d="M127.65,191.98 C127.07,220.94 126.0384,272.4312 125.4684,301.3112" fill="none" id="Repository Implementation-to-Repository Interface" style="stroke:#000000;stroke-width:1;stroke-dasharray:7,7;"/><polygon fill="#000000" points="125.35,307.31,129.5268,298.3907,125.4487,302.311,121.5284,298.2328,125.35,307.31" style="stroke:#000000;stroke-width:1;"/><text fill="#4C566A" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="76.9082" x="128" y="236.6569">implements</text></g><g class="link" data-entity-1="Database" data-entity-2="Repository Implementation" data-source-line="45" data-uid="lnk23" id="link_Database_Repository Implementation"><path d="M77.37,94.62 C88.56,111.82 102.2675,132.891 113.4275,150.041" fill="none" id="Database-to-Repository Implementation" style="stroke:#000000;stroke-width:1;"/><polygon fill="#000000" points="116.7,155.07,115.1439,145.3448,113.9729,150.8792,108.4386,149.7082,116.7,155.07" style="stroke:#000000;stroke-width:1;"/></g><g class="link" data-entity-1="External Service" data-entity-2="Gateway" data-source-line="46" data-uid="lnk24" id="link_External Service_Gateway"><path d="M332.62,94.78 C361.34,125.45 421.8,190.84 470,248.59 C486.4,268.23 500.6671,286.8022 512.3971,302.4222" fill="none" id="External Service-to-Gateway" style="stroke:#000000;stroke-width:1;"/><polygon fill="#000000" points="516,307.22,513.7941,297.6214,512.9975,303.2218,507.3971,302.4253,516,307.22" style="stroke:#000000;stroke-width:1;"/></g><g class="link" data-entity-1="UseCase" data-entity-2="Entity" data-source-line="47" data-uid="lnk25" id="link_UseCase_Entity"><path d="M347,480.59 C347,506.33 347,548.03 347,573.77" fill="none" id="UseCase-to-Entity" style="stroke:#000000;stroke-width:1;"/><polygon fill="#000000" points="347,579.77,351,570.77,347,574.77,343,570.77,347,579.77" style="stroke:#000000;stroke-width:1;"/></g><g class="link" data-entity-1="UseCase" data-entity-2="Repository Interface" data-source-line="48" data-uid="lnk26" id="link_UseCase_Repository Interface"><path d="M317.97,443.47 C275.42,417.73 201.7037,373.1356 159.1537,347.3956" fill="none" id="UseCase-to-Repository Interface" style="stroke:#000000;stroke-width:1;"/><polygon fill="#000000" points="154.02,344.29,159.6502,352.3709,158.2981,346.878,163.791,345.5259,154.02,344.29" style="stroke:#000000;stroke-width:1;"/></g></g></svg></div><div class="puml dark" style=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" data-diagram-type="DESCRIPTION" height="644px" preserveAspectRatio="xMidYMid meet" style="width:598px;height:644px;" version="1.1" viewBox="0 0 598 644" width="598px" zoomAndPan="magnify" class="diagram"><defs><filter height="300%" id="fla6ng3i6o0ng" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4" dy="4" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><g class="cluster" data-entity="Entities Layer.n.Enterprise Business Rules." data-source-line="12" data-uid="ent0002" id="cluster_Entities Layer.n.Enterprise Business Rules."><rect fill="none" filter="url(#fla6ng3i6o0ng)" height="103.3" rx="5" ry="5" style="stroke:#4C566A;stroke-width:1;" width="233" x="301" y="529.18"/><text fill="#D8DEE9" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="109.1084" x="304" y="544.1751">Entities Layer</text><text fill="#D8DEE9" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="217.9912" x="304" y="560.472">(Enterprise Business Rules)</text></g><g class="cluster" data-entity="Use Cases Layer.n.Application Business Rules." data-source-line="18" data-uid="ent0005" id="cluster_Use Cases Layer.n.Application Business Rules."><rect fill="none" filter="url(#fla6ng3i6o0ng)" height="103.29" rx="5" ry="5" style="stroke:#4C566A;stroke-width:1;" width="241" x="289" y="392.89"/><text fill="#D8DEE9" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="128.7207" x="292" y="407.8851">Use Cases Layer</text><text fill="#D8DEE9" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="225.1143" x="292" y="424.182">(Application Business Rules)</text></g><g class="cluster" data-entity="Interface Adapters Layer.n.Controllers. Gateways. Presenters." data-source-line="24" data-uid="ent0008" id="cluster_Interface Adapters Layer.n.Controllers. Gateways. Presenters."><rect fill="none" filter="url(#fla6ng3i6o0ng)" height="103.3" rx="5" ry="5" style="stroke:#4C566A;stroke-width:1;" width="558" x="28" y="256.59"/><text fill="#D8DEE9" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="196.9912" x="31" y="271.5851">Interface Adapters Layer</text><text fill="#D8DEE9" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="283.4316" x="31" y="287.882">(Controllers, Gateways, Presenters)</text></g><g class="cluster" data-entity="Frameworks . Drivers Layer.n.UI. DB. External Services." data-source-line="32" data-uid="ent0013" id="cluster_Frameworks . Drivers Layer.n.UI. DB. External Services."><rect fill="none" filter="url(#fla6ng3i6o0ng)" height="200.59" rx="5" ry="5" style="stroke:#4C566A;stroke-width:1;" width="392" x="7" y="7"/><text fill="#D8DEE9" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="225.0049" x="10" y="21.9951">Frameworks &amp; Drivers Layer</text><text fill="#D8DEE9" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="209.3574" x="10" y="38.292">(UI, DB, External Services)</text></g><g class="entity" data-entity="Entity" data-source-line="13" data-uid="ent0003" id="entity_Entity"><rect fill="#2E3440" filter="url(#fla6ng3i6o0ng)" height="36.2969" rx="5" ry="5" style="stroke:#4C566A;stroke-width:2.5;" width="60.8721" x="316.56" y="580.18"/><text fill="#D8DEE9" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="40.8721" x="326.56" y="603.1751">Entity</text></g><g class="entity" data-entity="ValueObject" data-source-line="14" data-uid="ent0004" id="entity_ValueObject"><rect fill="#2E3440" filter="url(#fla6ng3i6o0ng)" height="36.2969" rx="5" ry="5" style="stroke:#4C566A;stroke-width:2.5;" width="105.1279" x="412.44" y="580.18"/><text fill="#D8DEE9" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="85.1279" x="422.44" y="603.1751">ValueObject</text></g><g class="entity" data-entity="UseCase" data-source-line="19" data-uid="ent0006" id="entity_UseCase"><rect fill="#2E3440" filter="url(#fla6ng3i6o0ng)" height="36.2969" rx="5" ry="5" style="stroke:#4C566A;stroke-width:2.5;" width="80.416" x="306.79" y="443.89"/><text fill="#D8DEE9" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="60.416" x="316.79" y="466.8851">UseCase</text></g><g class="entity" data-entity="Interactor" data-source-line="20" data-uid="ent0007" id="entity_Interactor"><rect fill="#2E3440" filter="url(#fla6ng3i6o0ng)" height="36.2969" rx="5" ry="5" style="stroke:#4C566A;stroke-width:2.5;" width="88.9473" x="422.53" y="443.89"/><text fill="#D8DEE9" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="68.9473" x="432.53" y="466.8851">Interactor</text></g><g class="entity" data-entity="Controller" data-source-line="25" data-uid="ent0009" id="entity_Controller"><rect fill="#2E3440" filter="url(#fla6ng3i6o0ng)" height="36.2969" rx="5" ry="5" style="stroke:#4C566A;stroke-width:2.5;" width="89.1729" x="241.41" y="307.59"/><text fill="#D8DEE9" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="69.1729" x="251.41" y="330.5851">Controller</text></g><g class="entity" data-entity="Presenter" data-source-line="26" data-uid="ent0010" id="entity_Presenter"><rect fill="#2E3440" filter="url(#fla6ng3i6o0ng)" height="36.2969" rx="5" ry="5" style="stroke:#4C566A;stroke-width:2.5;" width="87.4502" x="365.27" y="307.59"/><text fill="#D8DEE9" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="67.4502" x="375.27" y="330.5851">Presenter</text></g><g class="entity" data-entity="Gateway" data-source-line="27" data-uid="ent0011" id="entity_Gateway"><rect fill="#2E3440" filter="url(#fla6ng3i6o0ng)" height="36.2969" rx="5" ry="5" style="stroke:#4C566A;stroke-width:2.5;" width="81.8447" x="488.08" y="307.59"/><text fill="#D8DEE9" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="61.8447" x="498.08" y="330.5851">Gateway</text></g><g class="entity" data-entity="Repository Interface" data-source-line="28" data-uid="ent0012" id="entity_Repository Interface"><rect fill="#2E3440" filter="url(#fla6ng3i6o0ng)" height="36.2969" rx="5" ry="5" style="stroke:#4C566A;stroke-width:2.5;" width="162.2012" x="43.9" y="307.59"/><text fill="#D8DEE9" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="142.2012" x="53.9" y="330.5851">Repository Interface</text></g><g class="entity" data-entity="Web UI" data-source-line="33" data-uid="ent0014" id="entity_Web UI"><rect fill="#2E3440" filter="url(#fla6ng3i6o0ng)" height="36.2969" rx="5" ry="5" style="stroke:#4C566A;stroke-width:2.5;" width="70.1689" x="143.92" y="58"/><text fill="#D8DEE9" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="50.1689" x="153.92" y="80.9951">Web UI</text></g><g class="entity" data-entity="Database" data-source-line="34" data-uid="ent0015" id="entity_Database"><rect fill="#2E3440" filter="url(#fla6ng3i6o0ng)" height="36.2969" rx="5" ry="5" style="stroke:#4C566A;stroke-width:2.5;" width="86.8008" x="22.6" y="58"/><text fill="#D8DEE9" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="66.8008" x="32.6" y="80.9951">Database</text></g><g class="entity" data-entity="External Service" data-source-line="35" data-uid="ent0016" id="entity_External Service"><rect fill="#2E3440" filter="url(#fla6ng3i6o0ng)" height="36.2969" rx="5" ry="5" style="stroke:#4C566A;stroke-width:2.5;" width="134.5225" x="248.74" y="58"/><text fill="#D8DEE9" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="114.5225" x="258.74" y="80.9951">External Service</text></g><g class="entity" data-entity="Repository Implementation" data-source-line="36" data-uid="ent0017" id="entity_Repository Implementation"><rect fill="#2E3440" filter="url(#fla6ng3i6o0ng)" height="36.2969" rx="5" ry="5" style="stroke:#4C566A;stroke-width:2.5;" width="210.6885" x="22.66" y="155.29"/><text fill="#D8DEE9" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="190.6885" x="32.66" y="178.2851">Repository Implementation</text></g><g class="link" data-entity-1="Web UI" data-entity-2="Controller" data-source-line="40" data-uid="lnk18" id="link_Web UI_Controller"><path d="M200.65,94.76 C217.01,109.28 238.7,131.33 251,155.29 C277.12,206.21 283.4351,269.1783 285.1151,301.1483" fill="none" id="Web UI-to-Controller" style="stroke:#000000;stroke-width:1;"/><polygon fill="#000000" points="285.43,307.14,288.9522,297.9425,285.1676,302.1469,280.9632,298.3623,285.43,307.14" style="stroke:#000000;stroke-width:1;"/></g><g class="link" data-entity-1="Controller" data-entity-2="UseCase" data-source-line="41" data-uid="lnk19" id="link_Controller_UseCase"><path d="M293.97,344.29 C305.67,370.03 324.8489,412.267 336.5389,438.007" fill="none" id="Controller-to-UseCase" style="stroke:#000000;stroke-width:1;"/><polygon fill="#000000" points="339.02,443.47,338.9404,433.6215,336.9525,438.9175,331.6564,436.9295,339.02,443.47" style="stroke:#000000;stroke-width:1;"/></g><g class="link" data-entity-1="Presenter" data-entity-2="UseCase" data-source-line="42" data-uid="lnk20" id="link_Presenter_UseCase"><path d="M400.89,344.29 C389.01,370.03 369.5043,412.2822 357.6243,438.0222" fill="none" id="Presenter-to-UseCase" style="stroke:#000000;stroke-width:1;"/><polygon fill="#000000" points="355.11,443.47,362.5134,436.9746,357.2053,438.9302,355.2497,433.6221,355.11,443.47" style="stroke:#000000;stroke-width:1;"/></g><g class="link" data-entity-1="Gateway" data-entity-2="UseCase" data-source-line="43" data-uid="lnk21" id="link_Gateway_UseCase"><path d="M507.71,344.33 C496.96,352.49 483.38,361.71 470,367.89 C442.89,380.4 429.85,368.33 405,384.89 C382.74,399.72 368.4526,420.7743 358.7526,438.2443" fill="none" id="Gateway-to-UseCase" style="stroke:#000000;stroke-width:1;"/><polygon fill="#000000" points="355.84,443.49,363.706,437.5632,358.2672,439.1186,356.7118,433.6798,355.84,443.49" style="stroke:#000000;stroke-width:1;"/></g><g class="link" data-entity-1="Repository Implementation" data-entity-2="Repository Interface" data-source-line="44" data-uid="lnk22" id="link_Repository Implementation_Repository Interface"><path d="M127.65,191.98 C127.07,220.94 126.0384,272.4312 125.4684,301.3112" fill="none" id="Repository Implementation-to-Repository Interface" style="stroke:#000000;stroke-width:1;stroke-dasharray:7,7;"/><polygon fill="#000000" points="125.35,307.31,129.5268,298.3907,125.4487,302.311,121.5284,298.2328,125.35,307.31" style="stroke:#000000;stroke-width:1;"/><text fill="#81A1C1" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="76.9082" x="128" y="236.6569">implements</text></g><g class="link" data-entity-1="Database" data-entity-2="Repository Implementation" data-source-line="45" data-uid="lnk23" id="link_Database_Repository Implementation"><path d="M77.37,94.62 C88.56,111.82 102.2675,132.891 113.4275,150.041" fill="none" id="Database-to-Repository Implementation" style="stroke:#000000;stroke-width:1;"/><polygon fill="#000000" points="116.7,155.07,115.1439,145.3448,113.9729,150.8792,108.4386,149.7082,116.7,155.07" style="stroke:#000000;stroke-width:1;"/></g><g class="link" data-entity-1="External Service" data-entity-2="Gateway" data-source-line="46" data-uid="lnk24" id="link_External Service_Gateway"><path d="M332.62,94.78 C361.34,125.45 421.8,190.84 470,248.59 C486.4,268.23 500.6671,286.8022 512.3971,302.4222" fill="none" id="External Service-to-Gateway" style="stroke:#000000;stroke-width:1;"/><polygon fill="#000000" points="516,307.22,513.7941,297.6214,512.9975,303.2218,507.3971,302.4253,516,307.22" style="stroke:#000000;stroke-width:1;"/></g><g class="link" data-entity-1="UseCase" data-entity-2="Entity" data-source-line="47" data-uid="lnk25" id="link_UseCase_Entity"><path d="M347,480.59 C347,506.33 347,548.03 347,573.77" fill="none" id="UseCase-to-Entity" style="stroke:#000000;stroke-width:1;"/><polygon fill="#000000" points="347,579.77,351,570.77,347,574.77,343,570.77,347,579.77" style="stroke:#000000;stroke-width:1;"/></g><g class="link" data-entity-1="UseCase" data-entity-2="Repository Interface" data-source-line="48" data-uid="lnk26" id="link_UseCase_Repository Interface"><path d="M317.97,443.47 C275.42,417.73 201.7037,373.1356 159.1537,347.3956" fill="none" id="UseCase-to-Repository Interface" style="stroke:#000000;stroke-width:1;"/><polygon fill="#000000" points="154.02,344.29,159.6502,352.3709,158.2981,346.878,163.791,345.5259,154.02,344.29" style="stroke:#000000;stroke-width:1;"/></g></g></svg></div></div>
+
+<hr />
+<h2 id="strengths-and-weaknesses">Strengths and Weaknesses</h2>
+<table>
+<thead>
+<tr>
+<th>Strengths</th>
+<th>Weaknesses</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Maximizes independence of business logic</td>
+<td>More upfront design and abstraction required</td>
+</tr>
+<tr>
+<td>Highly testable and maintainable</td>
+<td>Can introduce additional complexity and indirection</td>
+</tr>
+<tr>
+<td>Adapts easily to technology and infrastructure changes</td>
+<td>Steeper learning curve for teams new to the style</td>
+</tr>
+<tr>
+<td>Supports long-term evolution and refactoring</td>
+<td>Potential for boilerplate code</td>
+</tr>
+<tr>
+<td>Clear separation of concerns and boundaries</td>
+<td>May be overkill for simple or CRUD-centric systems</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="when-to-use-clean-architecture">When to Use Clean Architecture</h2>
+<p><strong>Clean Architecture</strong> is a good fit when:</p>
+<ul>
+<li>Business logic is central, complex, or expected to evolve.</li>
+<li>You require strong isolation from frameworks, databases, or external systems.</li>
+<li>Testability, maintainability, and adaptability are high priorities.</li>
+<li>Your system must support multiple interfaces (web, mobile, APIs) or adapt to changing technologies.</li>
+</ul>
+<p><strong>Examples:</strong></p>
+<ul>
+<li>Enterprise systems with rich, evolving business rules</li>
+<li>Applications that must survive multiple generations of frameworks or infrastructure</li>
+<li>Systems requiring robust automated testing and long-term maintainability</li>
+</ul>
+<hr />
+<h2 id="practical-tips">Practical Tips</h2>
+<ul>
+<li><strong>Keep business rules at the center:</strong> Avoid dependencies from the core to the outer layers.</li>
+<li><strong>Define interfaces in the core:</strong> Let outer layers provide implementations, injected via dependency inversion.</li>
+<li><strong>Test the core in isolation:</strong> Use mocks or stubs for infrastructure dependencies.</li>
+<li><strong>Explicitly document boundaries:</strong> Make dependency direction and layer responsibilities clear for all contributors.</li>
+<li><strong>Resist shortcutting:</strong> Do not allow UI, database, or framework code to leak into the core.</li>
+</ul>
+<hr />
+<h2 id="takeaway">Takeaway</h2>
+<p>Clean Architecture enforces a strong separation between business rules and implementation details, ensuring that core logic remains adaptable, testable, and independent of technology choices.<br />
+It is ideal for complex, long-lived systems where business rules must remain insulated from infrastructure changes, but may introduce extra complexity for simple scenarios.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../14_hexagonal_architecture/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Hexagonal Architecture">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Hexagonal Architecture
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../00_resources/" class="md-footer__link md-footer__link--next" aria-label="Next: Resources">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Resources
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.footer", "navigation.instant", "navigation.tabs", "navigation.path", "navigation.indexes", "navigation.top", "content.code.copy", "content.code.select"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      
+        <script src="../../assets/mkdocs_puml/puml.js"></script>
+      
+        <script src="https://unpkg.com/@panzoom/panzoom@4.5.1/dist/panzoom.min.js"></script>
+      
+        <script src="../../assets/mkdocs_puml/interaction.js"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>
