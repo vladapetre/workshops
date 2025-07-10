@@ -41,7 +41,7 @@ Expand your understanding of Clean Architecture with these recommended books, ar
 
 - **Software Architecture: The Hard Parts**  
   *Neal Ford, Mark Richards, Pramod Sadalage, Zhamak Dehghani*  
-    - [Amazon link](https://www.amazon.com/Software-Architecture-Hard-Parts-Cutting/dp/1492086895)
+    - [Amazon link](https://www.amazon.com/Software-Architecture-Trade-Off-Distributed-Architectures/dp/1492086894)
     - Deep dive into trade-offs, decision making, and real-world architectural challenges
 
 ---
@@ -52,13 +52,16 @@ Expand your understanding of Clean Architecture with these recommended books, ar
     - [https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)
 
 - **Architecture on Martin Fowler’s Website**  
-    - [https://martinfowler.com/architecture.html](https://martinfowler.com/architecture.html)
+    - [https://martinfowler.com/architecture](https://martinfowler.com/architecture)
 
 - **Onion Architecture (Jeffrey Palermo)**  
     - [https://jeffreypalermo.com/2008/07/the-onion-architecture-part-1/](https://jeffreypalermo.com/2008/07/the-onion-architecture-part-1/)
 
 - **Hexagonal Architecture (Alistair Cockburn)**  
     - [https://alistair.cockburn.us/hexagonal-architecture/](https://alistair.cockburn.us/hexagonal-architecture/)
+
+- **Software Architecture Patterns - Layered Architecture (O'Reilly, Mark Richard)**
+    - [https://www.oreilly.com/library/view/software-architecture-patterns/9781491971437/ch01.html](https://www.oreilly.com/library/view/software-architecture-patterns/9781491971437/ch01.html)
 
 ---
 
