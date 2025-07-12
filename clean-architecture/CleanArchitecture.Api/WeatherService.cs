@@ -9,12 +9,12 @@ public static class WeatherService
     
     public static ICollection<WeatherForecast> GetForecast(DateOnly day)
     {
-        return Enumerable.Range(0, 5).Select(index => new WeatherForecast
-            {
-                Date = day.AddDays(index),
-                TemperatureC = Random.Shared.Next(-20, 55),
-                Summary = Summaries[Random.Shared.Next(Summaries.Length)]
-            })
+        return Enumerable.Range(0, 5)
+            .Select(index => new WeatherForecast(
+                day.AddDays(index),
+                new(Random.Shared.Next(-20, 55)),
+                Summaries[Random.Shared.Next(Summaries.Length)]
+            ))
             .ToArray();
     }
 }
