@@ -2,7 +2,7 @@ using CleanArchitecture.Api.Domain;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.AspNetCore.Mvc.ModelBinding.Binders;
 
-namespace CleanArchitecture.Api;
+namespace CleanArchitecture.Api.Controllers.ModelBinders;
 
 public class TemperatureScaleModelBinderProvider : IModelBinderProvider
 {

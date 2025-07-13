@@ -1,6 +1,7 @@
 using CleanArchitecture.Api;
 using CleanArchitecture.Api.Application;
 using CleanArchitecture.Api.Controllers.Converters;
+using CleanArchitecture.Api.Controllers.ModelBinders;
 using CleanArchitecture.Api.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
