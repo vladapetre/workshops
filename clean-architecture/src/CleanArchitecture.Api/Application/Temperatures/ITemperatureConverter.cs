@@ -2,7 +2,7 @@ using CleanArchitecture.Api.Domain;
 
 namespace CleanArchitecture.Api.Application.Temperatures;
 
-public interface ITemperatureConvertor
+public interface ITemperatureConverter
 {
     public TemperatureScale From { get; }
     public TemperatureScale To { get; }

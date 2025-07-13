@@ -5,11 +5,11 @@ namespace CleanArchitecture.Api.Infrastructure.Temperatures;
 
 public sealed class TemperatureConversionService : ITemperatureConversionService
 {
-    private readonly IEnumerable<ITemperatureConvertor> _temperatureConvertors;
+    private readonly IEnumerable<ITemperatureConverter> _temperatureConverters;
 
-    public TemperatureConversionService(IEnumerable<ITemperatureConvertor> temperatureConvertors)
+    public TemperatureConversionService(IEnumerable<ITemperatureConverter> temperatureConverters)
     {
-        _temperatureConvertors = temperatureConvertors;
+        _temperatureConverters = temperatureConverters;
     }
 
     public Temperature Convert(Temperature temperature, TemperatureScale scale)
@@ -19,7 +19,7 @@ public sealed class TemperatureConversionService : ITemperatureConversionService
             return temperature;
         }
         
-        var convertor = _temperatureConvertors.FirstOrDefault(c => c.From == temperature.Scale && c.To == scale);
+        var convertor = _temperatureConverters.FirstOrDefault(c => c.From == temperature.Scale && c.To == scale);
         
         if (convertor is null)
         {

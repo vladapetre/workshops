@@ -1,9 +1,9 @@
 using CleanArchitecture.Api.Application.Temperatures;
 using CleanArchitecture.Api.Domain;
 
-namespace CleanArchitecture.Api.Infrastructure.Temperatures.Convertors;
+namespace CleanArchitecture.Api.Infrastructure.Temperatures.Converters;
 
-public class FahrenheitToCelsiusTemperatureConvertor : ITemperatureConvertor
+public class FahrenheitToCelsiusTemperatureConverter : ITemperatureConverter
 {
     public TemperatureScale From => TemperatureScale.Fahrenheit;
     public TemperatureScale To => TemperatureScale.Celsius;

@@ -5,7 +5,7 @@ using CleanArchitecture.Api.Controllers.Converters;
 using CleanArchitecture.Api.Controllers.ModelBinders;
 using CleanArchitecture.Api.Infrastructure;
 using CleanArchitecture.Api.Infrastructure.Temperatures;
-using CleanArchitecture.Api.Infrastructure.Temperatures.Convertors;
+using CleanArchitecture.Api.Infrastructure.Temperatures.Converters;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -24,8 +24,8 @@ builder.Services
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 
-builder.Services.AddScoped<ITemperatureConvertor, FahrenheitToCelsiusTemperatureConvertor>();
-builder.Services.AddScoped<ITemperatureConvertor, CelsiusToFahrenheitTemperatureConvertor>();
+builder.Services.AddScoped<ITemperatureConverter,FahrenheitToCelsiusTemperatureConverter>();
+builder.Services.AddScoped<ITemperatureConverter, CelsiusToFahrenheitTemperatureConverter>();
 
 
 builder.Services.AddScoped<IWeatherForecastService, WeatherForecastService>();
