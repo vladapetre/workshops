@@ -32,6 +32,8 @@ nav:
       - Template: clean-architecture/template.md
 
 theme:
+  icon:
+    repo: fontawesome/brands/github
   logo: assets/logo.png
   favicon: assets/favicon.png
   name: material
@@ -93,3 +95,6 @@ markdown_extensions:
   - pymdownx.superfences
   - admonition
   - pymdownx.details
+
+repo_url: https://github.com/vladapetre/workshops/tree/exercises
+repo_name: vladapetre/workshops
