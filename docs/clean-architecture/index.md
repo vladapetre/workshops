@@ -9,11 +9,11 @@ This guide is designed for software developers and engineers who want to build r
 
 In this workshop, you will:
 
-- Learn the fundamentals of Clean Architecture and why it matters
-- Explore the SOLID principles and how they apply at both code and architectural levels
+- Learn the fundamentals of Clean Architecture and its importance
+- Explore the SOLID principles at both code and architectural levels
 - Understand component cohesion and coupling for scalable modular design
-- Examine key architectural patterns and when to use them
-- Gain practical tips for applying these concepts in real-world projects
+- Examine key architectural patterns and their practical applications
+- Gain actionable tips for applying these concepts in real-world projects
 
 ---
 
@@ -21,8 +21,8 @@ In this workshop, you will:
 
 1. **[Introduction to Clean Architecture](01_introduction.md)**
 2. **[Core Principles of Clean Architecture](02_design_principles.md)**
-3. **[Single Responsibility Principle (SRP)](03_single_responsability_principle.md)**
-4. **[Open Closed Principle (OCP)](04_open_closed_principle.md)**
+3. **[Single Responsibility Principle (SRP)](03_single_responsibility_principle.md)**
+4. **[Open/Closed Principle (OCP)](04_open_closed_principle.md)**
 5. **[Liskov Substitution Principle (LSP)](05_liskov_substitution_principle.md)**
 6. **[Interface Segregation Principle (ISP)](06_interface_segregation_principle.md)**
 7. **[Dependency Inversion Principle (DIP)](07_dependency_inversion_principle.md)**
@@ -32,6 +32,8 @@ In this workshop, you will:
 11. **[Architectural Patterns Overview](11_architectural_patterns.md)**
 12. **[Layered Architecture](12_layered_architecture.md)**
 13. **[Onion Architecture](13_onion_architecture.md)**
+14. **[Hexagonal Architecture](14_hexagonal_architecture.md)**
+15. **[Clean Architecture Pattern](15_clean_architecture_pattern.md)**
 
 ---
 
