@@ -7,6 +7,9 @@ namespace CleanArchitecture.Api.Controllers;
 public class WeatherForecastController : ControllerBase
 {
     [HttpGet(Name = "GetWeatherForecast")]
-    public ICollection<WeatherForecast> Get([FromQuery] DateTime date, [FromQuery] int? days) =>
-        WeatherService.GetWeatherForecast(DateOnly.FromDateTime(date), days ?? 0);
+    public ICollection<WeatherForecast> Get(
+        [FromQuery] DateTime date,
+        [FromQuery] int? days,
+        [FromQuery] TemperatureScale? scale) =>
+        WeatherService.GetWeatherForecast(DateOnly.FromDateTime(date), days ?? 0, scale ?? TemperatureScale.Unknown);
 }

@@ -1,7 +1,8 @@
 namespace CleanArchitecture.Api;
 
-public sealed record TemperatureScale(string Name = "Celsius")
+public sealed record TemperatureScale(string Name = "Unknown")
 {
+    public static readonly TemperatureScale Unknown = new("Unknown");
     public static readonly TemperatureScale Celsius = new("Celsius");
     public static readonly TemperatureScale Fahrenheit = new("Fahrenheit");
 

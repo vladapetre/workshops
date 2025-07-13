@@ -4,10 +4,15 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddControllers()
+builder.Services
+    .AddControllers(options =>
+    {
+        options.ModelBinderProviders.Insert(0, new TemperatureScaleModelBinderProvider());
+    })
     .AddJsonOptions(opts =>
     {
         opts.JsonSerializerOptions.Converters.Add(new TemperatureScaleJsonConverter());
+        
     });
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();

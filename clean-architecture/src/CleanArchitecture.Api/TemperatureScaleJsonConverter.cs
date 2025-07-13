@@ -16,7 +16,7 @@ public class TemperatureScaleJsonConverter: JsonConverter<TemperatureScale>
         {
             _ when name == TemperatureScale.Celsius.Name => TemperatureScale.Celsius,
             _ when name == TemperatureScale.Fahrenheit.Name => TemperatureScale.Fahrenheit,
-            _ => throw new JsonException($"Unknown temperature scale: {name}")
+            _ => TemperatureScale.Unknown,
         };
     }
 
