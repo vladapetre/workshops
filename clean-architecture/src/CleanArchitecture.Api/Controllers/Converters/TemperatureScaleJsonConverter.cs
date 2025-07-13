@@ -1,7 +1,8 @@
 using System.Text.Json;
 using System.Text.Json.Serialization;
+using CleanArchitecture.Api.Domain;
 
-namespace CleanArchitecture.Api;
+namespace CleanArchitecture.Api.Controllers.Converters;
 
 public class TemperatureScaleJsonConverter: JsonConverter<TemperatureScale>
 {

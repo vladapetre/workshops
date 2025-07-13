@@ -4,5 +4,5 @@ namespace CleanArchitecture.Api.Application;
 
 public interface IWeatherForecastService
 {
-    public static ICollection<WeatherForecast> GetWeatherForecast(DateOnly day, int days);
+    public ICollection<WeatherForecast> GetWeatherForecast(DateOnly day, int days, TemperatureScale scale);
 }

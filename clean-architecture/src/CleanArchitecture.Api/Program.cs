@@ -1,4 +1,7 @@
 using CleanArchitecture.Api;
+using CleanArchitecture.Api.Application;
+using CleanArchitecture.Api.Controllers.Converters;
+using CleanArchitecture.Api.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +14,14 @@ builder.Services.AddControllers()
     });
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
+
+
+builder.Services.AddScoped<IWeatherForecastService, WeatherForecastService>();
+builder.Services.AddScoped<IWeatherStatisticsService, WeatherStatisticsService>();
+builder.Services.AddScoped<IWeatherSummaryService, WeatherSummaryService>();
+builder.Services.AddScoped<ITemperatureService, TemperatureService>();
+builder.Services.AddScoped<ITemperatureConversionService, TemperatureConversionService>();
+
 
 var app = builder.Build();
 

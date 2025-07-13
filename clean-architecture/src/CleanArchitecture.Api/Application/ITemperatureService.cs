@@ -2,7 +2,7 @@ using CleanArchitecture.Api.Domain;
 
 namespace CleanArchitecture.Api.Application;
 
-public interface ITemperatureGenerator
+public interface ITemperatureService
 {
-    public Temperature Generate(TemperatureScale scale);
+    public Temperature GenerateRandom();
 }

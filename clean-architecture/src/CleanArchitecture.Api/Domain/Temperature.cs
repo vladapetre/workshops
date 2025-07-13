@@ -1,10 +1,3 @@
-using System.Text.Json.Serialization;
+namespace CleanArchitecture.Api.Domain;
 
-namespace CleanArchitecture.Api;
-
-public record Temperature
-{
-    public TemperatureScale Scale => TemperatureScale.Celsius;
-    public double Value { get; set; }
-    public Temperature(double value) => Value = value;
-}
+public record Temperature(double Value, TemperatureScale Scale);

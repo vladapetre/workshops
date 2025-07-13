@@ -1,3 +1,5 @@
+using CleanArchitecture.Api.Application;
+using CleanArchitecture.Api.Domain;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CleanArchitecture.Api.Controllers;
@@ -7,6 +9,10 @@ namespace CleanArchitecture.Api.Controllers;
 public class WeatherForecastController : ControllerBase
 {
     [HttpGet(Name = "GetWeatherForecast")]
-    public ICollection<WeatherForecast> Get([FromQuery] DateTime date, [FromQuery] int? days) =>
-        WeatherService.GetWeatherForecast(DateOnly.FromDateTime(date), days ?? 0);
+    public ICollection<WeatherForecast> Get(
+        [FromQuery] DateTime date,
+        [FromQuery] int? days,
+        [FromQuery] TemperatureScale scale,    
+        [FromServices] IWeatherForecastService weatherForecastService) =>
+            weatherForecastService.GetWeatherForecast(DateOnly.FromDateTime(date), days ?? 0, scale);
 }
