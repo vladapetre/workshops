@@ -27,8 +27,7 @@ public class TemperatureScaleModelBinder : IModelBinder
         // Map string to TemperatureScale static instances
         TemperatureScale scale = value switch
         {
-            var s when s.Equals(TemperatureScale.Celsius.Name, StringComparison.OrdinalIgnoreCase) => TemperatureScale.Celsius,
-            var s when s.Equals(TemperatureScale.Fahrenheit.Name, StringComparison.OrdinalIgnoreCase) => TemperatureScale.Fahrenheit,
+            var s when !string.IsNullOrEmpty(s) => new TemperatureScale(s),
             _ => TemperatureScale.Unknown,
         };
 

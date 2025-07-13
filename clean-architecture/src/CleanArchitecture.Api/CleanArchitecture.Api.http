@@ -1,6 +1,6 @@
 @CleanArchitecture_Api_HostAddress = http://localhost:5024
 
-GET {{CleanArchitecture_Api_HostAddress}}/WeatherForecast?date=2023-05-11&days=6&scale=Celsius
+GET {{CleanArchitecture_Api_HostAddress}}/WeatherForecast?date=2023-05-11&days=6
 Accept: application/json
 
 ###

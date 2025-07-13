@@ -1,6 +1,6 @@
 using CleanArchitecture.Api.Domain;
 
-namespace CleanArchitecture.Api.Application;
+namespace CleanArchitecture.Api.Application.Temperatures;
 
 public interface ITemperatureService
 {

@@ -1,4 +1,5 @@
 using CleanArchitecture.Api.Application;
+using CleanArchitecture.Api.Application.Temperatures;
 using CleanArchitecture.Api.Domain;
 
 namespace CleanArchitecture.Api.Infrastructure;

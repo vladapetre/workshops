@@ -12,7 +12,7 @@ public class WeatherForecastController : ControllerBase
     public ICollection<WeatherForecast> Get(
         [FromQuery] DateTime date,
         [FromQuery] int? days,
-        [FromQuery] TemperatureScale scale,    
+        [FromQuery] TemperatureScale? scale,    
         [FromServices] IWeatherForecastService weatherForecastService) =>
-            weatherForecastService.GetWeatherForecast(DateOnly.FromDateTime(date), days ?? 0, scale);
+            weatherForecastService.GetWeatherForecast(DateOnly.FromDateTime(date), days ?? 0, scale ?? TemperatureScale.Unknown);
 }
