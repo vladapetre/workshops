@@ -4,48 +4,35 @@ This set of exercises will help you apply each SOLID principle to a WeatherForec
 
 ---
 
-## Exercise 1: Single Responsibility Principle (SRP)
-
-**Goal:**  
-Ensure each class or module has a single reason to change.
-
-**Current Issues:**
-- `WeatherService` handles both forecast generation and temperature management.
-- `Temperature` contains value and scale.
-- `WeatherForecast` mixes date, temperature, and summary.
-
-**Tasks:**
-1. **Extract Temperature Conversion Logic**
-   - Create a service (e.g., `ITemperatureConversionService`) for converting `Temperature` between scales.
-   - Keep `Temperature` as a simple value object.
-
-2. **Extract Weather Summary Provider**
-   - Move summary selection to an `IWeatherSummaryProvider` service.
-   - Refactor `WeatherService` to use this provider.
-
-3. **Refactor WeatherService**
-   - Make `WeatherService` orchestrate only, delegating summary and conversion to injected services.
-
----
-
 ## Exercise 2: Open/Closed Principle (OCP)
 
 **Goal:**  
-Design for extension without modifying existing code.
+Design the system to be open for extension but closed for modification by introducing a dedicated temperature conversion service.
 
-**Current Issues:**
-- `TemperatureScale` only supports Celsius and Fahrenheit.
-- Adding new scales (e.g., Kelvin) requires code changes.
-- Conversion logic is not extensible.
+**Current Issues:**  
+- Temperature conversion logic is scattered or hardcoded, limiting extensibility.  
+- Adding new temperature scales or conversions requires modifying existing code.
 
-**Tasks:**
-1. **Make TemperatureScale Extensible**
-   - Use a registry or factory pattern for scales.
-   - Ensure JSON serialization and model binding support new scales dynamically.
+**Tasks:**  
+1. **Introduce `ITemperatureConversionService` Interface**  
+   - Define a service responsible for converting `Temperature` values between scales.
 
-2. **Extend Temperature Conversion Service**
-   - Use a strategy or lookup pattern for extensible conversions.
-   - Demonstrate adding Kelvin with minimal changes.
+2. **Create `ITemperatureConverter` Interface and Implementations**  
+   - Extract individual conversion logic into separate classes implementing `ITemperatureConverter`, each handling one scale-to-scale conversion.  
+   - Each converter specifies its source (`From`) and target (`To`) scales.
+
+3. **Implement `TemperatureConversionService`**  
+   - Inject all registered `ITemperatureConverter` implementations.  
+   - At runtime, select and delegate conversion to the appropriate converter based on source and target scales.  
+   - Return the input temperature unchanged if no suitable converter is found.
+
+4. **Extend the System Without Modifying Existing Code**  
+   - Add new temperature scales by defining new `TemperatureScale` instances.  
+   - Add new conversions by creating and registering new `ITemperatureConverter` implementations.  
+   - No changes needed to existing converters or the conversion service.
+
+5. **Demonstrate OCP Compliance**  
+   - Show that new conversions can be added solely by adding new classes and registrations, without altering existing code.
 
 ---
 
