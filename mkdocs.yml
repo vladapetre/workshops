@@ -22,14 +22,7 @@ nav:
         - Onion Architecture: clean-architecture/13_onion_architecture.md
         - Hexagonal Architecture: clean-architecture/14_hexagonal_architecture.md
         - Clean Architecture: clean-architecture/15_clean_architecture.md
-
-
-      #   - Layered Architecture: clean-architecture/15_layered_architecture.md
-      #   - Hexagonal Architecture: clean-architecture/16_hexagonal_architecture.md
-      #   - Microservices: clean-architecture/17_microservices.md
-      #   - Event-Driven Architecture: clean-architecture/18_event_driven_architecture.md 
       - Resources: clean-architecture/00_resources.md
-      - Template: clean-architecture/template.md
 
 theme:
   icon:
